@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "flaticon_prooty";
+    src: url("flaticon_prooty.ttf@83a3289b7f03bae42ed8b9952f23c48b") format("truetype"),
+url("flaticon_prooty.woff@83a3289b7f03bae42ed8b9952f23c48b") format("woff"),
+url("flaticon_prooty.woff2@83a3289b7f03bae42ed8b9952f23c48b") format("woff2"),
+url("flaticon_prooty.eot@83a3289b7f03bae42ed8b9952f23c48b") format("embedded-opentype"),
+url("flaticon_prooty.svg@83a3289b7f03bae42ed8b9952f23c48b") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_prooty !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-email:before {
+    content: "\f101";
+}
+.flaticon-time:before {
+    content: "\f102";
+}
+.flaticon-calendar:before {
+    content: "\f103";
+}
+.flaticon-magnifying-glass:before {
+    content: "\f104";
+}
+.flaticon-right-arrow:before {
+    content: "\f105";
+}
+.flaticon-left-arrow:before {
+    content: "\f106";
+}
+.flaticon-globe:before {
+    content: "\f107";
+}
+.flaticon-parking:before {
+    content: "\f108";
+}
+.flaticon-measurement:before {
+    content: "\f109";
+}
+.flaticon-apartments:before {
+    content: "\f10a";
+}
+.flaticon-hotel-bed:before {
+    content: "\f10b";
+}
+.flaticon-residential:before {
+    content: "\f10c";
+}
+.flaticon-building:before {
+    content: "\f10d";
+}
+.flaticon-home-automation:before {
+    content: "\f10e";
+}
+.flaticon-play:before {
+    content: "\f10f";
+}
+.flaticon-add:before {
+    content: "\f110";
+}
+.flaticon-minus:before {
+    content: "\f111";
+}
+.flaticon-chat:before {
+    content: "\f112";
+}
+.flaticon-comments:before {
+    content: "\f113";
+}
+.flaticon-phone:before {
+    content: "\f114";
+}
+.flaticon-design:before {
+    content: "\f115";
+}
+.flaticon-pencil-and-ruler:before {
+    content: "\f116";
+}
+.flaticon-car-parking:before {
+    content: "\f117";
+}
+.flaticon-condominium:before {
+    content: "\f118";
+}
+.flaticon-bedroom:before {
+    content: "\f119";
+}
+.flaticon-star:before {
+    content: "\f11a";
+}
+.flaticon-livingroom:before {
+    content: "\f11b";
+}
+.flaticon-kitchen:before {
+    content: "\f11c";
+}
+.flaticon-bedroom-1:before {
+    content: "\f11d";
+}
+.flaticon-bathroom:before {
+    content: "\f11e";
+}
+.flaticon-storage-tank:before {
+    content: "\f11f";
+}
+.flaticon-emergency-exit:before {
+    content: "\f120";
+}
+.flaticon-solar-panel:before {
+    content: "\f121";
+}
+.flaticon-spy-camera:before {
+    content: "\f122";
+}
+.flaticon-telephone-call:before {
+    content: "\f123";
+}
+.flaticon-share:before {
+    content: "\f124";
+}

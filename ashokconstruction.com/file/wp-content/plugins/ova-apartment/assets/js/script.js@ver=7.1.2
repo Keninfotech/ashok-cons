@@ -1,0 +1,64 @@
+(function($) {
+    "use strict";
+    
+    /* Video */
+    $(".ova_apartment_single").each(function(){
+        
+        var that  = $(this);
+        var video = that.find('.icon-apartment-embed');
+
+        var modal_container = that.find('.ova-modal-container');
+        var modal_close     = that.find('.modal-close');
+        var modal_video     = that.find('.modal-video');
+
+        video.each( function() {
+            $(this).on('click', function(){
+                modal_container.css('display', 'flex');
+            });
+        });
+
+        // btn video click
+        video.on( 'click', function() {
+            var url         = get_url( video.data('src') );
+            var autoplay    = video.data('autoplay');
+            var mute        = video.data('mute');
+            var loop        = video.data('loop');
+            var option      = '?';
+            option +=  autoplay ? 'autoplay=1'  : 'autoplay=0';
+            option +=  mute     ? '&mute=1'     : '&mute=0';
+            option +=  loop     ? '&loop=1'     : '&loop=0';
+
+            if ( url != 'error' ) {
+                modal_video.attr('src', "https://www.youtube.com/embed/" + url + option );
+                modal_container.css('display', 'flex');
+            }
+        });
+
+        // close video
+        modal_close.on('click', function() {
+            modal_container.hide();
+            modal_video.removeAttr('src');
+        });
+
+        // window click
+        $(window).click( function(e) {
+            if ( e.target.className == 'ova-modal-container' ) {
+                modal_container.hide();
+                modal_video.removeAttr('src');
+            }
+        });
+
+    });
+
+    function get_url( url ) {
+        var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        var match = url.match(regExp);
+
+        if (match && match[2].length == 11) {
+            return match[2];
+        } else {
+            return 'error';
+        }
+    }
+
+})(jQuery);
