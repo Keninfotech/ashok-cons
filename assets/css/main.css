@@ -309,46 +309,41 @@ p + p { margin-top: 1em; }
 .ledger h3 { font: 400 1.08rem/1.4 var(--f-text); }
 @media (min-width: 960px) { .works__head { grid-column: 1 / 5; } .ledger { grid-column: 6 / 13; } }
 
-/* ---------- contact band (the one blue moment) ----------
-   Laid out like a drawing title block: labels in the margin, one left axis, hairline rows. */
-.reach { --rule-blue: rgba(241, 239, 234, .28); background: var(--blue); color: var(--blue-ink); padding: clamp(4.5rem, 9vw, 8rem) 0 clamp(3rem, 5vw, 4.5rem); }
-.reach .label { color: rgba(241, 239, 234, .7); }
-.reach p { color: rgba(241, 239, 234, .78); }
-.reach__top { row-gap: 1.2rem; padding-bottom: clamp(3rem, 6vw, 5rem); }
-.reach__intro { display: grid; gap: 1.4rem; }
-.reach__intro .statement { font-size: clamp(1.7rem, 3vw, 3rem); max-width: 22ch; }
-.reach__intro p { max-width: 44ch; }
-.reach__row { row-gap: .8rem; padding-block: clamp(1.4rem, 2.6vw, 2.2rem); border-top: 1px solid var(--rule-blue); align-items: baseline; }
-.reach__row:last-child { border-bottom: 1px solid var(--rule-blue); }
-.reach__phone {
-  justify-self: start; font-size: clamp(3.2rem, 11vw, 11.5rem); line-height: .82; white-space: nowrap;
-  background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px no-repeat; padding-bottom: .06em;
-  transition: background-size .6s var(--ease);
-}
-.reach__phone:hover { background-size: 100% 2px; }
-.reach__mail { justify-self: start; font: 300 clamp(1.25rem, 2.2vw, 2rem)/1.2 var(--f-text); font-style: italic; overflow-wrap: anywhere; border-bottom: 1px solid var(--rule-blue); transition: border-color .3s; }
-.reach__mail:hover { border-color: var(--blue-ink); }
-.reach__visit { display: grid; gap: .5rem; }
-.reach address { font: 400 .8rem/1.6 var(--f-mono); font-style: normal; }
+/* ---------- closing spread: photograph + invitation ----------
+   Deliberately still. It flows straight into the footer as one dark closing section. */
+.reach { display: grid; grid-template-columns: minmax(0, 1fr); }
+.reach__photo { position: relative; margin: 0; aspect-ratio: 4 / 3; }
+.reach__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.8); }
+.reach__photo .cap { position: absolute; left: var(--pad); right: var(--pad); bottom: 1rem; margin: 0; color: rgba(255, 255, 255, .85); text-shadow: 0 1px 10px rgba(0, 0, 0, .45); }
+.reach__panel { display: grid; align-content: center; gap: 1.8rem; padding: clamp(3.5rem, 8vw, 7rem) var(--pad); }
+.reach__title { font: inherit; }
+.reach__title .h-display { display: block; font-size: clamp(3.4rem, 8vw, 8.4rem); color: var(--on-night); }
+.reach__title em { display: block; max-width: 24ch; margin-top: 1rem; font-size: clamp(1.35rem, 2.2vw, 2.1rem); line-height: 1.2; color: var(--on-night); }
+.reach__note { max-width: 44ch; }
+.reach__list { margin-top: .6rem; border-top: 1px solid var(--rule-night); }
+.reach__list li { border-bottom: 1px solid var(--rule-night); }
+.reach__list a { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) 1.2rem; align-items: baseline; gap: 1rem; padding: 1.05rem 0; }
+.reach__list strong { font: 400 clamp(1.1rem, 1.6vw, 1.45rem)/1.3 var(--f-text); color: var(--on-night); overflow-wrap: anywhere; transition: color .3s; }
+.reach__list svg { width: 1.1rem; align-self: center; color: var(--on-night-2); transition: transform .45s var(--ease), color .3s; }
+.reach__list a:hover strong, .reach__list a:hover svg { color: #8ea4ff; }
+.reach__list a:hover svg { transform: translateX(4px); }
 .reach__cta {
-  justify-self: start; align-self: center; display: inline-flex; align-items: center; gap: .8rem;
-  padding: 1rem 1.3rem; background: var(--blue-ink); color: var(--blue);
+  justify-self: start; display: inline-flex; align-items: center; gap: .8rem; margin-top: .6rem;
+  padding: 1.05rem 1.4rem; background: var(--blue); color: var(--blue-ink);
   font: 500 .95rem/1 var(--f-display); font-stretch: 90%; transition: background .3s, color .3s;
 }
 .reach__cta svg { width: 1em; transition: transform .45s var(--ease); }
-.reach__cta:hover { background: var(--ink); color: var(--blue-ink); }
+.reach__cta:hover { background: var(--on-night); color: var(--ink); }
 .reach__cta:hover svg { transform: translateX(4px); }
-@media (min-width: 900px) {
-  .reach .grid > .label { grid-column: 1 / 3; }
-  .reach__intro { grid-column: 3 / 11; grid-template-columns: 1.4fr 1fr; align-items: end; column-gap: var(--gap); }
-  .reach__phone { grid-column: 3 / 13; }
-  .reach__mail { grid-column: 3 / 7; }
-  .reach__visit { grid-column: 7 / 10; }
-  .reach__cta { grid-column: 10 / 13; justify-self: end; }
+@media (min-width: 960px) {
+  .reach { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); min-height: 88vh; }
+  .reach__photo { aspect-ratio: auto; }
+  .reach__panel { padding-inline: clamp(3rem, 7vw, 8rem) var(--pad); }
 }
 
 /* ---------- footer ---------- */
 .foot { padding: clamp(3.5rem, 6vw, 5rem) 0 2rem; font-size: 1rem; }
+main:has(> .reach:last-child) + .foot { border-top: 1px solid var(--rule-night); }
 .foot__grid { row-gap: 2.5rem; }
 .foot h2 { margin-bottom: 1rem; }
 .foot li + li { margin-top: .45rem; }
