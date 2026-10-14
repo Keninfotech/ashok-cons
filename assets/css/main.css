@@ -1858,6 +1858,300 @@ main:has(> .reach:last-child) + .foot { border-top: 1px solid var(--rule-night);
 .night .reg-card .reg-badge { color: #8ea4ff; background: rgba(142, 164, 255, .15); }
 
 /* ==========================================================================
+   Contractor Registrations Section (Architectural Editorial Redesign)
+   ========================================================================== */
+.contractor-reg-section {
+  position: relative;
+  background: var(--paper);
+  padding-block: clamp(4.5rem, 6.5vw, 6.5rem);
+  overflow: hidden;
+}
+
+.contractor-reg-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  gap: clamp(2.5rem, 5vw, 5.5rem);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 1040px) {
+  .contractor-reg-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.contractor-reg__intro {
+  position: relative;
+  z-index: 2;
+}
+
+.contractor-reg__eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.contractor-reg__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contractor-reg__eyebrow .reg-eyebrow-label {
+  color: var(--ink-2);
+  font-weight: 500;
+}
+.night .contractor-reg__eyebrow .reg-eyebrow-label {
+  color: var(--on-night-2);
+}
+
+.contractor-reg__eyebrow .reg-eyebrow-sep {
+  color: var(--ink-3);
+}
+
+.contractor-reg__eyebrow .reg-eyebrow-num {
+  color: var(--blue);
+  font-weight: 600;
+}
+.night .contractor-reg__eyebrow .reg-eyebrow-num {
+  color: #8ea4ff;
+}
+
+.contractor-reg__rule-line {
+  height: 1px;
+  background: rgba(20, 21, 24, 0.15);
+  flex: 1;
+}
+.night .contractor-reg__rule-line {
+  background: var(--rule-night);
+}
+
+.contractor-reg__heading {
+  font-family: var(--f-display);
+  font-size: clamp(2.8rem, 4.6vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  font-stretch: 88%;
+  margin-bottom: 1.25rem;
+}
+.night .contractor-reg__heading {
+  color: var(--on-night);
+}
+
+.contractor-reg__accent-bar {
+  width: 44px;
+  height: 3px;
+  background: var(--blue);
+  margin-bottom: 1.5rem;
+}
+.night .contractor-reg__accent-bar {
+  background: #8ea4ff;
+}
+
+.contractor-reg__desc {
+  font-family: var(--f-text);
+  font-size: clamp(1.1rem, 1.3vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 38ch;
+  margin-bottom: 0.75rem;
+}
+.night .contractor-reg__desc {
+  color: var(--on-night);
+}
+
+.contractor-reg__sub {
+  font-family: var(--f-text);
+  font-size: clamp(0.95rem, 1.05vw, 1.05rem);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 40ch;
+}
+.night .contractor-reg__sub {
+  color: var(--on-night-2);
+}
+
+/* Understated background architectural graphic */
+.contractor-reg__bg-art {
+  position: absolute;
+  bottom: clamp(1.8rem, 4.5vw, 4.2rem);
+  left: 0;
+  width: clamp(320px, 40vw, 500px);
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  z-index: 1;
+  -webkit-mask-image: radial-gradient(ellipse 95% 85% at 0% 85%, #000 35%, transparent 85%);
+  mask-image: radial-gradient(ellipse 95% 85% at 0% 85%, #000 35%, transparent 85%);
+}
+.contractor-reg__bg-art img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.night .contractor-reg__bg-art {
+  opacity: 0.2;
+  mix-blend-mode: screen;
+}
+
+@media (max-width: 1040px) {
+  .contractor-reg__bg-art {
+    top: 3.5rem;
+    bottom: auto;
+    width: clamp(260px, 50vw, 380px);
+    opacity: 0.4;
+  }
+}
+
+/* Right Column 2x2 Grid */
+.contractor-reg__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .contractor-reg__grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+.contractor-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.85rem 1.65rem;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(20, 21, 24, 0.12);
+  border-left: 3.5px solid var(--blue);
+  border-radius: 4px;
+  min-height: 200px;
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s var(--ease);
+  box-shadow: 0 2px 6px rgba(20, 21, 24, 0.03);
+}
+.night .contractor-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--rule-night);
+  border-left-color: #8ea4ff;
+}
+
+.contractor-card:hover {
+  transform: translateY(-3px);
+  background: #ffffff;
+  border-color: rgba(20, 21, 24, 0.2);
+  border-left-color: var(--blue);
+  box-shadow: 0 8px 24px rgba(36, 71, 201, 0.09);
+}
+.night .contractor-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(142, 164, 255, 0.4);
+  border-left-color: #8ea4ff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.contractor-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 1.3rem;
+}
+
+.contractor-card__seq {
+  font-family: var(--f-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.night .contractor-card__seq {
+  color: var(--on-night);
+}
+
+.contractor-card__line {
+  height: 1px;
+  background: rgba(20, 21, 24, 0.15);
+  flex: 1;
+  margin: 0 0.9rem;
+}
+.night .contractor-card__line {
+  background: var(--rule-night);
+}
+
+.contractor-card__arrow {
+  width: 17px;
+  height: 17px;
+  color: var(--ink-3);
+  flex-shrink: 0;
+  transition: transform 0.25s var(--ease), color 0.25s var(--ease);
+}
+.contractor-card:hover .contractor-card__arrow {
+  transform: translate(2px, -2px);
+  color: var(--blue);
+}
+.night .contractor-card:hover .contractor-card__arrow {
+  color: #8ea4ff;
+}
+
+.contractor-card__dept {
+  font-family: var(--f-text);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-bottom: 1.1rem;
+  min-height: 3.4rem;
+  display: flex;
+  align-items: center;
+}
+.night .contractor-card__dept {
+  color: var(--on-night);
+}
+
+.contractor-card__divider {
+  width: 34px;
+  height: 1px;
+  background: rgba(20, 21, 24, 0.2);
+  margin-bottom: 1.3rem;
+}
+.night .contractor-card__divider {
+  background: var(--rule-night);
+}
+
+.contractor-card__badge-wrap {
+  margin-top: auto;
+}
+
+.contractor-card__badge {
+  font-family: var(--f-mono);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.04em;
+  background: rgba(36, 71, 201, 0.09);
+  padding: 0.45rem 0.9rem;
+  border-radius: 2px;
+  width: fit-content;
+  display: inline-block;
+}
+.night .contractor-card__badge {
+  color: #8ea4ff;
+  background: rgba(142, 164, 255, 0.15);
+}
+
+/* ==========================================================================
    Plant & Machinery / Construction Equipment & Plant (Matching Editorial Spec)
    ========================================================================== */
 .fleet-section {
