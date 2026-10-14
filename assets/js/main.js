@@ -351,6 +351,75 @@
     });
   }
 
+  /* ---------------------------------------------------------------- financial capability dashboard */
+  const chartPoints = $$('.fin-chart__point');
+  const tableRows = $$('.fin-table tr[data-row]');
+  const tooltip = $('#fin-tooltip');
+
+  if (chartPoints.length && tooltip) {
+    const defaultPoint = chartPoints[chartPoints.length - 1]; // Latest FY 2025-26
+    const setPoint = (pt) => {
+      chartPoints.forEach((p) => p.classList.toggle('is-active', p === pt));
+      const idx = pt.dataset.idx;
+      tableRows.forEach((r) => {
+        const isTarget = r.dataset.row === idx;
+        r.classList.toggle('is-hovered', isTarget);
+      });
+      const yearEl = $('.fin-tooltip__year', tooltip);
+      const valEl = $('.fin-tooltip__val', tooltip);
+      const exactEl = $('.fin-tooltip__exact', tooltip);
+      if (yearEl) yearEl.innerHTML = pt.dataset.year;
+      if (valEl) valEl.innerHTML = pt.dataset.cr;
+      if (exactEl) exactEl.innerHTML = pt.dataset.exact;
+    };
+
+    const resetPoint = () => {
+      setPoint(defaultPoint);
+      tableRows.forEach((r) => r.classList.remove('is-hovered'));
+    };
+
+    chartPoints.forEach((pt) => {
+      pt.addEventListener('pointerenter', () => setPoint(pt));
+      pt.addEventListener('focus', () => setPoint(pt));
+      pt.addEventListener('pointerleave', resetPoint);
+      pt.addEventListener('blur', resetPoint);
+    });
+
+    tableRows.forEach((row) => {
+      const idx = row.dataset.row;
+      const matchingPt = chartPoints.find((p) => p.dataset.idx === idx);
+      if (!matchingPt) return;
+      row.addEventListener('pointerenter', () => setPoint(matchingPt));
+      row.addEventListener('focus', () => setPoint(matchingPt));
+      row.addEventListener('pointerleave', resetPoint);
+      row.addEventListener('blur', resetPoint);
+    });
+
+    // Smooth chart line reveal on scroll arrival if motion is enabled
+    const chartSvg = $('#fin-chart-svg');
+    if (motion && chartSvg && window.ScrollTrigger && window.gsap) {
+      ScrollTrigger.create({
+        trigger: '#financials',
+        start: 'top 82%',
+        once: true,
+        onEnter: () => {
+          gsap.fromTo($('.fin-chart__line', chartSvg),
+            { strokeDashoffset: 600 },
+            { strokeDashoffset: 0, duration: 1.4, ease: 'power2.out' }
+          );
+          gsap.fromTo($('.fin-chart__area', chartSvg),
+            { opacity: 0 },
+            { opacity: 1, duration: 1.2, delay: 0.3, ease: 'power1.out' }
+          );
+          gsap.fromTo($$('.fin-chart__dot', chartSvg),
+            { scale: 0, transformOrigin: 'center' },
+            { scale: 1, duration: 0.5, stagger: 0.1, delay: 0.4, ease: 'back.out(2)' }
+          );
+        }
+      });
+    }
+  }
+
   /* ---------------------------------------------------------------- forms → email (static site) */
   $$('form[data-mailto]').forEach((form) => {
     form.addEventListener('submit', (e) => {

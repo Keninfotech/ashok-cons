@@ -551,55 +551,198 @@
   </div>
 </section>
 
-<section class="section night" id="financials" aria-labelledby="fin-title">
+<section class="section night fin-section" id="financials" aria-labelledby="fin-title">
   <div class="wrap">
-    <div class="grid cat__head">
-      <div class="cat__title">
-        <p class="label"><b>07</b> Financial Capability</p>
-        <h2 class="h-section" id="fin-title">Annual Turnover Track Record</h2>
+    <div class="fin-grid">
+      <!-- Left Column: Editorial Intro & Featured Turnover Stat Card -->
+      <div class="fin-intro">
+        <p class="fin-eyebrow">
+          <span class="fin-eyebrow__num">07</span>
+          <span class="fin-eyebrow__sep">/</span>
+          <span class="fin-eyebrow__text">FINANCIAL CAPABILITY</span>
+        </p>
+        <h2 class="h-section fin-title" id="fin-title">
+          Built on <span class="fin-title__accent">Financial Strength</span>
+        </h2>
+        <div class="fin-rule" aria-hidden="true"></div>
+        <p class="fin-desc">
+          Our financial capability is the bedrock of our operational success. Over the past nine years, we have demonstrated sustained revenue growth and maintained a healthy balance sheet with low leverage and positive operational cash flow, validating our ability to invest in resources and deliver large-scale infrastructure.
+        </p>
+
+        <!-- Featured Statistic Card -->
+        <div class="fin-stat-card">
+          <div class="fin-stat-card__head">
+            <div class="fin-stat-card__label-wrap">
+              <span class="fin-stat-card__dot" aria-hidden="true"></span>
+              <span class="fin-stat-card__label">LATEST ANNUAL TURNOVER &bull; FY 2025&ndash;26</span>
+            </div>
+            <span class="fin-stat-card__badge">Verified ITR</span>
+          </div>
+          <div class="fin-stat-card__main">
+            <div class="fin-stat-card__stat">&#8377;182.48 <span class="fin-stat-card__unit">Cr</span></div>
+            <div class="fin-stat-card__exact">&#8377;1,82,48,39,378.00</div>
+          </div>
+          <div class="fin-stat-card__footer">
+            <div class="fin-stat-card__bar-wrap" aria-hidden="true">
+              <div class="fin-stat-card__bar"></div>
+            </div>
+            <div class="fin-stat-card__meta">
+              <span class="fin-stat-card__tag">Peak Revenue Trajectory</span>
+              <span class="fin-stat-card__growth">+43.9% vs FY 2024&ndash;25</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="cat__text">
-        <p>Our financial capability is the bedrock of our operational success. Over the past nine years, we have demonstrated sustained revenue growth with low leverage and positive operational cash flow, validating our ability to invest in resources and deliver large-scale infrastructure.</p>
+
+      <!-- Right Column: Five-Year Turnover Chart & Financial Table -->
+      <div class="fin-dashboard">
+        <!-- Five-Year Turnover Chart Card -->
+        <div class="fin-card fin-card--chart">
+          <div class="fin-card__header">
+            <div>
+              <span class="fin-card__label">FIVE-YEAR TURNOVER</span>
+              <span class="fin-card__unit">INR (CRORE)</span>
+            </div>
+            <div class="fin-chart__legend">
+              <span class="fin-chart__legend-dot" aria-hidden="true"></span>
+              <span>Turnover Trend</span>
+            </div>
+          </div>
+
+          <!-- Active Point Tooltip Display -->
+          <div class="fin-tooltip" id="fin-tooltip" aria-live="polite">
+            <div class="fin-tooltip__year">FY 2025&ndash;26</div>
+            <div class="fin-tooltip__val">&#8377;182.48 Cr</div>
+            <div class="fin-tooltip__exact">&#8377;1,82,48,39,378.00</div>
+          </div>
+
+          <div class="fin-chart__wrap">
+            <svg class="fin-chart" id="fin-chart-svg" viewBox="0 0 560 220" role="img" aria-label="Five-year annual turnover chart from FY 2021-22 to FY 2025-26">
+              <defs>
+                <linearGradient id="finChartGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#6689FF" stop-opacity="0.35" />
+                  <stop offset="100%" stop-color="#6689FF" stop-opacity="0.0" />
+                </linearGradient>
+              </defs>
+
+              <!-- Horizontal Gridlines & Y-Axis Labels -->
+              <g class="fin-chart__grid">
+                <line x1="45" y1="25" x2="525" y2="25" stroke="#303238" stroke-dasharray="3 3" />
+                <text x="36" y="29" class="fin-chart__axis-y">200</text>
+
+                <line x1="45" y1="65" x2="525" y2="65" stroke="#303238" stroke-dasharray="3 3" />
+                <text x="36" y="69" class="fin-chart__axis-y">150</text>
+
+                <line x1="45" y1="105" x2="525" y2="105" stroke="#303238" stroke-dasharray="3 3" />
+                <text x="36" y="109" class="fin-chart__axis-y">100</text>
+
+                <line x1="45" y1="145" x2="525" y2="145" stroke="#303238" stroke-dasharray="3 3" />
+                <text x="36" y="149" class="fin-chart__axis-y">50</text>
+
+                <line x1="45" y1="185" x2="525" y2="185" stroke="#303238" />
+                <text x="36" y="189" class="fin-chart__axis-y">0</text>
+              </g>
+
+              <!-- Area Fill -->
+              <path class="fin-chart__area" fill="url(#finChartGrad)" d="M 45 185 L 45 120.6 L 165 140.0 L 285 98.2 L 405 83.6 L 525 39.0 L 525 185 Z" />
+
+              <!-- Line Path -->
+              <path class="fin-chart__line" fill="none" stroke="#6689FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M 45 120.6 L 165 140.0 L 285 98.2 L 405 83.6 L 525 39.0" />
+
+              <!-- Interactive Points -->
+              <g class="fin-chart__point" tabindex="0" role="button" aria-label="FY 2021-22: ₹80.54 Crore, exact ₹80,53,74,152.00" data-idx="0" data-year="FY 2021&ndash;22" data-cr="&#8377;80.54 Cr" data-exact="&#8377;80,53,74,152.00">
+                <circle cx="45" cy="120.6" r="18" class="fin-chart__hit" />
+                <circle cx="45" cy="120.6" r="4.5" class="fin-chart__dot" />
+              </g>
+
+              <g class="fin-chart__point" tabindex="0" role="button" aria-label="FY 2022-23: ₹56.27 Crore, exact ₹56,27,15,022.00" data-idx="1" data-year="FY 2022&ndash;23" data-cr="&#8377;56.27 Cr" data-exact="&#8377;56,27,15,022.00">
+                <circle cx="165" cy="140.0" r="18" class="fin-chart__hit" />
+                <circle cx="165" cy="140.0" r="4.5" class="fin-chart__dot" />
+              </g>
+
+              <g class="fin-chart__point" tabindex="0" role="button" aria-label="FY 2023-24: ₹108.52 Crore, exact ₹1,08,52,36,250.00" data-idx="2" data-year="FY 2023&ndash;24" data-cr="&#8377;108.52 Cr" data-exact="&#8377;1,08,52,36,250.00">
+                <circle cx="285" cy="98.2" r="18" class="fin-chart__hit" />
+                <circle cx="285" cy="98.2" r="4.5" class="fin-chart__dot" />
+              </g>
+
+              <g class="fin-chart__point" tabindex="0" role="button" aria-label="FY 2024-25: ₹126.75 Crore, exact ₹1,26,75,29,864.00" data-idx="3" data-year="FY 2024&ndash;25" data-cr="&#8377;126.75 Cr" data-exact="&#8377;1,26,75,29,864.00">
+                <circle cx="405" cy="83.6" r="18" class="fin-chart__hit" />
+                <circle cx="405" cy="83.6" r="4.5" class="fin-chart__dot" />
+              </g>
+
+              <g class="fin-chart__point is-active is-peak" tabindex="0" role="button" aria-label="FY 2025-26: ₹182.48 Crore, exact ₹1,82,48,39,378.00" data-idx="4" data-year="FY 2025&ndash;26" data-cr="&#8377;182.48 Cr" data-exact="&#8377;1,82,48,39,378.00">
+                <circle cx="525" cy="39.0" r="18" class="fin-chart__hit" />
+                <circle cx="525" cy="39.0" r="8" class="fin-chart__dot-halo" />
+                <circle cx="525" cy="39.0" r="5" class="fin-chart__dot" />
+              </g>
+
+              <!-- X-Axis Labels -->
+              <g class="fin-chart__axis-x">
+                <text x="45" y="208">2021–22</text>
+                <text x="165" y="208">2022–23</text>
+                <text x="285" y="208">2023–24</text>
+                <text x="405" y="208">2024–25</text>
+                <text x="525" y="208" class="fin-chart__x-peak">2025–26</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Annual Financial Table Card -->
+        <div class="fin-card fin-card--table">
+          <div class="fin-card__header">
+            <span class="fin-card__label">AUDITED INCOME TAX TURNOVER RECORD</span>
+            <span class="fin-card__tag">5-Year Series</span>
+          </div>
+
+          <div class="fin-table-wrap">
+            <table class="fin-table" aria-label="Five-year annual turnover of Ashok Construction as per Income Tax returns">
+              <thead>
+                <tr>
+                  <th scope="col">Financial Year</th>
+                  <th scope="col" class="num">Annual Turnover (INR)</th>
+                  <th scope="col" class="right">Source Reference</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-row="0">
+                  <td class="fin-table__yr">2021&ndash;22</td>
+                  <td class="num">&#8377;80,53,74,152.00</td>
+                  <td class="right fin-table__ref">IT Returns Filed</td>
+                </tr>
+                <tr data-row="1">
+                  <td class="fin-table__yr">2022&ndash;23</td>
+                  <td class="num">&#8377;56,27,15,022.00</td>
+                  <td class="right fin-table__ref">IT Returns Filed</td>
+                </tr>
+                <tr data-row="2">
+                  <td class="fin-table__yr">2023&ndash;24</td>
+                  <td class="num">&#8377;1,08,52,36,250.00</td>
+                  <td class="right fin-table__ref">IT Returns Filed</td>
+                </tr>
+                <tr data-row="3">
+                  <td class="fin-table__yr">2024&ndash;25</td>
+                  <td class="num">&#8377;1,26,75,29,864.00</td>
+                  <td class="right fin-table__ref">IT Returns Filed</td>
+                </tr>
+                <tr data-row="4" class="is-highlighted">
+                  <td class="fin-table__yr">
+                    <span class="fin-table__indicator" aria-hidden="true"></span>
+                    <strong>2025&ndash;26</strong>
+                  </td>
+                  <td class="num fin-table__num-peak"><strong>&#8377;1,82,48,39,378.00</strong></td>
+                  <td class="right fin-table__ref-peak">IT Returns Filed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="fin-table-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="fin-table-note__icon" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <span>Annual turnover as per Income Tax returns filed for the past five financial years.</span>
+          </div>
+        </div>
       </div>
-    </div>
-    <p class="label" style="margin-top:1.5rem">Annual turnover as per Income Tax returns filed for the past five financial years:</p>
-    <div style="overflow-x:auto">
-      <table class="turnover-table" aria-label="Five-year annual turnover of Ashok Construction">
-        <thead>
-          <tr>
-            <th scope="col">Financial Year</th>
-            <th scope="col" class="num">Annual Turnover (INR)</th>
-            <th scope="col" style="text-align:right">Source Reference</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2021&ndash;22</td>
-            <td class="num">&#8377;80,53,74,152.00</td>
-            <td style="text-align:right;color:var(--on-night-2)">IT Returns Filed</td>
-          </tr>
-          <tr>
-            <td>2022&ndash;23</td>
-            <td class="num">&#8377;56,27,15,022.00</td>
-            <td style="text-align:right;color:var(--on-night-2)">IT Returns Filed</td>
-          </tr>
-          <tr>
-            <td>2023&ndash;24</td>
-            <td class="num">&#8377;1,08,52,36,250.00</td>
-            <td style="text-align:right;color:var(--on-night-2)">IT Returns Filed</td>
-          </tr>
-          <tr>
-            <td>2024&ndash;25</td>
-            <td class="num">&#8377;1,26,75,29,864.00</td>
-            <td style="text-align:right;color:var(--on-night-2)">IT Returns Filed</td>
-          </tr>
-          <tr style="font-weight:600">
-            <td>2025&ndash;26</td>
-            <td class="num" style="color:#8ea4ff;font-size:1.15rem">&#8377;1,82,48,39,378.00</td>
-            <td style="text-align:right;color:#8ea4ff">IT Returns Filed</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </section>
