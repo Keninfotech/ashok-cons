@@ -78,6 +78,12 @@
     scrollToEl(target);
   });
 
+  /* video background */
+  const vHero = $('#aboutHeroVideo');
+  if (vHero && reduce) {
+    vHero.pause();
+  }
+
   /* ---------------------------------------------------------------- motion */
   if (motion) {
     // Titles: each typeset line rises out of its own mask. Used for page titles only.

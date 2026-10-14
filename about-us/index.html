@@ -47,15 +47,54 @@
   <div class="drawer__foot"><a href="tel:+919443333770">+91 9443333770</a><a href="mailto:admin@ashokconstruction.com">admin@ashokconstruction.com</a><span>#10/243, Thuraiyur Main Road, Ponneri Post, Namakkal – 637013</span></div>
 </div>
 <main id="main">
-<section class="mast">
-  <div class="wrap grid mast__grid">
-    <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../">Home</a></li><li aria-current="page">About us</li></ol></nav>
-    <h1 class="h-display"><span class="ln"><span>About us</span></span></h1>
-    <p class="lede mast__lede">A legacy of sustainable growth, operational excellence, and long-term value creation across South India.</p>
+<section class="mast about-hero" id="hero">
+  <!-- Aerial site foundation drone video background (first 10 seconds, enhanced quality) -->
+  <div class="about-hero__video-bg" aria-hidden="true">
+    <video class="about-hero__video" autoplay loop muted playsinline poster="../assets/video/about-hero-drone-poster.webp" id="aboutHeroVideo">
+      <source src="../assets/video/about-hero-drone.mp4" type="video/mp4">
+    </video>
+    <div class="about-hero__scrim"></div>
+    <div class="about-hero__pattern"></div>
+  </div>
+
+  <div class="wrap grid mast__grid about-hero__grid">
+    <!-- Top breadcrumb & section label -->
+    <div class="about-hero__meta-top">
+      <nav aria-label="Breadcrumb">
+        <ol class="crumbs">
+          <li><a href="../">Home</a></li>
+          <li aria-current="page">About Us</li>
+        </ol>
+      </nav>
+      <div class="about-hero__tag">
+        <span class="about-hero__tag-dot" aria-hidden="true"></span>
+        <span>About Ashok Construction</span>
+      </div>
+    </div>
+
+    <!-- Main editorial title (columns 1 to 7) -->
+    <h1 class="h-display about-hero__title">
+      <span class="ln"><span>Built on trust.</span></span>
+      <span class="ln"><span>Driven by <em>progress.</em></span></span>
+    </h1>
+
+    <!-- Right column intro & details (columns 8 to 12, aligned at bottom) -->
+    <div class="about-hero__side">
+      <p class="lede about-hero__intro">Established in 2017, Ashok Construction undertakes building construction, highways, bridges and infrastructure projects across South India, with a focus on quality, efficiency and timely execution.</p>
+      
+      <div class="about-hero__details">
+        <div class="about-hero__meta">
+          <span class="about-hero__meta-label">Headquarters / Operations</span>
+          <span class="about-hero__meta-value">Namakkal, Tamil Nadu</span>
+        </div>
+        <a class="about-hero__link" href="../projects/">
+          <span>Explore Our Projects</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
-
-<div class="plate plate--wide"><img src="../assets/img/blueprint-1600.webp" srcset="../assets/img/blueprint-800.webp 800w, ../assets/img/blueprint-1600.webp 1600w" sizes="100vw" alt="Engineers drafting architectural and infrastructure plans" width="1600" height="1067" fetchpriority="high"></div>
 
 <section class="section">
   <div class="wrap grid edit edit--offset">
