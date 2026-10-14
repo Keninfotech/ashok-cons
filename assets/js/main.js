@@ -79,9 +79,9 @@
   });
 
   /* video background */
-  const vHero = $('#aboutHeroVideo');
-  if (vHero && reduce) {
-    vHero.pause();
+  const heroVideos = $$('#aboutHeroVideo, #servicesHeroVideo, #projectsHeroVideo, #careersHeroVideo');
+  if (heroVideos.length && reduce) {
+    heroVideos.forEach((v) => v.pause());
   }
 
   /* ---------------------------------------------------------------- motion */

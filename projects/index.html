@@ -49,7 +49,16 @@
   <div class="drawer__foot"><a href="tel:+919443333770">+91 9443333770</a><a href="mailto:admin@ashokconstruction.com">admin@ashokconstruction.com</a><span>#10/243, Thuraiyur Main Road, Ponneri Post, Namakkal – 637013</span></div>
 </div>
 <main id="main">
-<section class="mast mast--projects">
+<section class="mast mast--projects projects-hero" id="hero">
+  <!-- Construction execution drone video background (20s-30s, enhanced quality) -->
+  <div class="projects-hero__video-bg" aria-hidden="true">
+    <video class="projects-hero__video" autoplay loop muted playsinline poster="../assets/video/projects-hero-drone-poster.webp" id="projectsHeroVideo">
+      <source src="../assets/video/projects-hero-drone.mp4" type="video/mp4">
+    </video>
+    <div class="projects-hero__scrim"></div>
+    <div class="projects-hero__pattern"></div>
+  </div>
+
   <div class="wrap grid mast__grid">
     <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../">Home</a></li><li aria-current="page">Projects</li></ol></nav>
     <h1 class="h-display"><span class="ln"><span>Projects &amp;</span></span><span class="ln"><span><em>Gallery</em></span></span></h1>
@@ -82,8 +91,6 @@
     </div>
   </div>
 </section>
-
-<div class="jump"><nav class="wrap jump__in" aria-label="Project categories"><a href="#gallery">Photo Gallery</a><a href="#completed-buildings">Completed Buildings</a><a href="#completed-roads">Roads &amp; Bridges</a><a href="#ongoing-projects">Ongoing Works</a><a href="#equipment">Equipment Fleet</a></nav></div>
 
 <!-- INTERACTIVE GALLERY SECTION -->
 <section class="section" id="gallery">
