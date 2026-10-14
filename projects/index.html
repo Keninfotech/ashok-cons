@@ -20,12 +20,14 @@
 <script>document.documentElement.className+=' js'</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&amp;display=swap">
 <link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/projects.css">
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
 <script defer src="../assets/js/main.js"></script>
+<script defer src="../assets/js/projects.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -52,12 +54,32 @@
     <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../">Home</a></li><li aria-current="page">Projects</li></ol></nav>
     <h1 class="h-display"><span class="ln"><span>Projects &amp;</span></span><span class="ln"><span><em>Gallery</em></span></span></h1>
     <ol class="toc">
-      <li><a href="#gallery"><span>01</span><strong>Project Photo Gallery</strong><small>Interactive filters &bull; 20+ photos</small></a></li>
-      <li><a href="#completed-buildings"><span>02</span><strong>Completed Buildings</strong><small>11 projects</small></a></li>
-      <li><a href="#completed-roads"><span>03</span><strong>Roads &amp; Bridges</strong><small>8 projects</small></a></li>
-      <li><a href="#ongoing-projects"><span>04</span><strong>Ongoing &amp; Proposed Works</strong><small>5 projects</small></a></li>
-      <li><a href="#equipment"><span>05</span><strong>Equipment &amp; Plant Fleet</strong><small>17 machine categories</small></a></li>
+      <li><a href="#gallery"><span>01</span><strong>Project Photo Gallery</strong><small>Interactive filters &bull; 24 photos</small></a></li>
+      <li><a href="#completed-buildings"><span>02</span><strong>Completed Buildings</strong><small>11 projects &bull; Card &amp; Register Views</small></a></li>
+      <li><a href="#completed-roads"><span>03</span><strong>Roads &amp; Bridges</strong><small>8 projects &bull; Engineering Dossiers</small></a></li>
+      <li><a href="#ongoing-projects"><span>04</span><strong>Ongoing &amp; Proposed Works</strong><small>5 projects &bull; Live Operations</small></a></li>
+      <li><a href="#equipment"><span>05</span><strong>Equipment &amp; Plant Fleet</strong><small>17 machine categories &bull; 70+ units</small></a></li>
     </ol>
+
+    <!-- Masthead Project Metrics Strip -->
+    <div class="proj-metrics scroll-reveal">
+      <div class="proj-metric-item">
+        <span class="proj-metric-val"><span data-counter-target="24" data-counter-suffix="+">24+</span></span>
+        <span class="proj-metric-lbl">Delivered Landmark Works</span>
+      </div>
+      <div class="proj-metric-item">
+        <span class="proj-metric-val"><span data-counter-target="11">11</span> <em>Bld</em></span>
+        <span class="proj-metric-lbl">Completed Buildings &amp; Housing</span>
+      </div>
+      <div class="proj-metric-item">
+        <span class="proj-metric-val"><span data-counter-target="8">8</span> <em>Infra</em></span>
+        <span class="proj-metric-lbl">Highways &amp; High-Level Bridges</span>
+      </div>
+      <div class="proj-metric-item">
+        <span class="proj-metric-val"><span data-counter-target="70" data-counter-suffix="+">70+</span></span>
+        <span class="proj-metric-lbl">Owned Plant &amp; Machinery Units</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -235,127 +257,1394 @@
   </div>
 </section>
 
-<!-- COMPLETED BUILDINGS REGISTER -->
+<!-- SECTION 01: COMPLETED BUILDINGS -->
 <section class="section stone cat" id="completed-buildings">
   <div class="wrap">
     <div class="grid cat__head">
       <div class="cat__title">
         <p class="label"><b>Section 01</b> Completed Works</p>
-        <h2 class="h-section">Completed Building Projects</h2>
+        <h2 class="h-section ln"><span>Completed Building<br><em>Projects</em></span></h2>
       </div>
       <div class="cat__text">
-        <p>Every completed building project listed in our official company profile delivered with high engineering standards, safety compliance, and timely execution:</p>
+        <p>Every completed building project listed in our official company profile delivered with high engineering standards, safety compliance, and timely execution across Tamil Nadu.</p>
       </div>
     </div>
 
-    <ol class="ledger" style="margin-top:1.5rem">
-      <li><span>01</span><div><h3>Strengthening of the Government Head Quarters Hospital at Paramakudi</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Government healthcare infrastructure strengthening in Ramanathapuram District.</p></div><b>PWD Ramanathapuram</b></li>
-      <li><span>02</span><div><h3>Construction of 1,100 Nos of tenements including internal water supply, sanitary and electrification arrangements and development works</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Pappireddipatti Taluk, Dharmapuri District, under the Tamil Nadu Urban Habitat Development Board (TNUHDB).</p></div><b>TNUHDB Dharmapuri</b></li>
-      <li><span>03</span><div><h3>Construction of Combined Court Building and Judicial Quarters Building</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Comprehensive judicial complex including compound wall, garages, two-wheeler shed, and canteen at Paramathi in Namakkal District.</p></div><b>PWD Namakkal</b></li>
-      <li><span>04</span><div><h3>Construction of New Bus Stand in Ramanathapuram</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Modern passenger terminal building, commercial stalls, concrete bus bays, and comprehensive public amenities.</p></div><b>Ramanathapuram</b></li>
-      <li><span>05</span><div><h3>Construction of New Bus Stand at Mudalaipatty in Namakkal</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Major municipal transport hub featuring terminal facilities, passenger concourse, concrete parking bays, and integrated access roads.</p></div><b>Namakkal</b></li>
-      <li><span>06</span><div><h3>Construction of New Bus Stand in Rasipuram</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Key civic transit terminal facilitating inter-city and rural connectivity in Namakkal District.</p></div><b>Rasipuram</b></li>
-      <li><span>07</span><div><h3>Improvements to Water Supply Distribution System under AMRUT 2.0 Scheme</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Comprehensive water distribution, pipeline networks, and storage infrastructure in Mohanur Town Panchayat, Namakkal District.</p></div><b>AMRUT 2.0 / Mohanur</b></li>
-      <li><span>08</span><div><h3>Construction of Pappad Factory for M/s Purity Agro Ventures</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Industrial processing facility, manufacturing floor, and warehousing at Elurpatti in Trichy District.</p></div><b>Purity Agro Ventures</b></li>
-      <li><span>09</span><div><h3>Construction of Yathri Nivas Buildings</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Pilgrim accommodation facility belonging to Arulmigu Meenakshi Sundareswarar Temple, Madurai Town and District.</p></div><b>Madurai Temple</b></li>
-      <li><span>10</span><div><h3>Upgradation of Infrastructure for Ashok Textile Mills Pvt. Ltd.</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Civil and structural upgrading of industrial plant facilities in Namakkal District.</p></div><b>Ashok Textile Mills</b></li>
-      <li><span>11</span><div><h3>Construction of Solar Power Plant for Ashok Textile Mills Pvt. Ltd.</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Green energy solar power plant installation and civil infrastructure in Namakkal District.</p></div><b>100% Green Power Unit</b></li>
-    </ol>
+    <!-- Editorial Toolbar: Sector Filtering & Layout View Mode Switcher -->
+    <div class="proj-toolbar scroll-reveal">
+      <div class="proj-filter-bar" data-filter-group="buildings" role="tablist" aria-label="Building sector filters">
+        <button class="proj-pill is-active" type="button" data-filter="all" aria-selected="true">All Buildings <span class="proj-pill__count">(11)</span></button>
+        <button class="proj-pill" type="button" data-filter="healthcare" aria-selected="false">Healthcare</button>
+        <button class="proj-pill" type="button" data-filter="housing" aria-selected="false">Housing</button>
+        <button class="proj-pill" type="button" data-filter="civic" aria-selected="false">Civic &amp; Judicial</button>
+        <button class="proj-pill" type="button" data-filter="transit" aria-selected="false">Transit Hubs</button>
+        <button class="proj-pill" type="button" data-filter="industrial" aria-selected="false">Industrial &amp; Energy</button>
+      </div>
+
+      <!-- View Switcher Controls -->
+      <div class="proj-view-switch" role="group" aria-label="Layout view mode">
+        <button class="proj-view-btn is-active" type="button" data-view="grid" aria-pressed="true" title="Card Grid View">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Cards View</span>
+        </button>
+        <button class="proj-view-btn" type="button" data-view="register" aria-pressed="false" title="Architectural Register View">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          <span>Register View</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- VIEW A: Architectural Project Cards Grid (Default) -->
+    <div class="bld-grid" id="buildings-grid-view">
+
+      <!-- 01. Paramakudi Hospital -->
+      <article class="bld-card scroll-reveal" data-cat="healthcare">
+        <div class="bld-card__media" data-lightbox-trigger data-full="../assets/img/gallery/paramakudi-hospital.jpg" data-title="Strengthening of the Government Head Quarters Hospital at Paramakudi" data-category="Healthcare" data-status="Completed" data-location="Paramakudi, Ramanathapuram District">
+          <img src="../assets/img/gallery/paramakudi-hospital.webp" alt="Government Head Quarters Hospital at Paramakudi" width="768" height="576" loading="lazy" decoding="async">
+          <div class="bld-card__chips">
+            <span class="bld-card__chip-seq">BLD · 01</span>
+            <span class="bld-card__chip-sector">Healthcare</span>
+          </div>
+          <span class="bld-card__zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Zoom Photo</span>
+        </div>
+        <div class="bld-card__body">
+          <div class="bld-card__meta-top">
+            <span class="bld-card__dept">PWD Ramanathapuram</span>
+            <span class="bld-card__status"><span class="bld-card__status-dot"></span>Completed</span>
+          </div>
+          <h3 class="bld-card__title">Strengthening of the Government Head Quarters Hospital at Paramakudi</h3>
+          <p class="bld-card__desc">Comprehensive government healthcare modernization in Ramanathapuram District — structural envelope reinforcement, clinical wings, and medical facilities.</p>
+          <div class="bld-card__foot">
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Paramakudi, Ramanathapuram District</span>
+            </div>
+            <button class="bld-card__action" type="button" data-lightbox-trigger data-full="../assets/img/gallery/paramakudi-hospital.jpg" data-title="Government Head Quarters Hospital at Paramakudi" data-category="Healthcare" data-status="Completed" data-location="Paramakudi, Ramanathapuram District">
+              <span>Inspect Project Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02. Pappireddipatti Tenements -->
+      <article class="bld-card scroll-reveal" data-cat="housing">
+        <div class="bld-card__media" data-lightbox-trigger data-full="../assets/img/gallery/tnuhdb-tenements.jpg" data-title="Construction of 1,100 Tenements with Water Supply &amp; Electrification" data-category="Government Housing" data-status="Completed" data-location="Pappireddipatti, Dharmapuri District">
+          <img src="../assets/img/gallery/tnuhdb-tenements.webp" alt="1,100 Tenements under Tamil Nadu Urban Habitat Development Board" width="768" height="576" loading="lazy" decoding="async">
+          <div class="bld-card__chips">
+            <span class="bld-card__chip-seq">BLD · 02</span>
+            <span class="bld-card__chip-sector">Housing</span>
+          </div>
+          <span class="bld-card__zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Zoom Photo</span>
+        </div>
+        <div class="bld-card__body">
+          <div class="bld-card__meta-top">
+            <span class="bld-card__dept">TNUHDB</span>
+            <span class="bld-card__status"><span class="bld-card__status-dot"></span>Completed</span>
+          </div>
+          <h3 class="bld-card__title">Construction of 1,100 Tenements with Water Supply &amp; Sanitary Works</h3>
+          <p class="bld-card__desc">Pappireddipatti Taluk, Dharmapuri District — 1,100 residential units with comprehensive internal road networks, sanitary drainage, and electrification.</p>
+          <div class="bld-card__foot">
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Pappireddipatti, Dharmapuri District</span>
+            </div>
+            <button class="bld-card__action" type="button" data-lightbox-trigger data-full="../assets/img/gallery/tnuhdb-tenements.jpg" data-title="1,100 Tenements under TNUHDB" data-category="Government Housing" data-status="Completed" data-location="Pappireddipatti, Dharmapuri District">
+              <span>Inspect Project Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03. Paramathi Court Building -->
+      <article class="bld-card scroll-reveal" data-cat="civic">
+        <div class="bld-card__media" data-lightbox-trigger data-full="../assets/img/gallery/paramathi-court.jpg" data-title="Construction of Combined Court Building and Judicial Quarters Building" data-category="Civic / Judicial" data-status="Completed" data-location="Paramathi, Namakkal District">
+          <img src="../assets/img/gallery/paramathi-court.webp" alt="Paramathi Combined Court Complex" width="768" height="576" loading="lazy" decoding="async">
+          <div class="bld-card__chips">
+            <span class="bld-card__chip-seq">BLD · 03</span>
+            <span class="bld-card__chip-sector">Judicial</span>
+          </div>
+          <span class="bld-card__zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Zoom Photo</span>
+        </div>
+        <div class="bld-card__body">
+          <div class="bld-card__meta-top">
+            <span class="bld-card__dept">PWD Namakkal</span>
+            <span class="bld-card__status"><span class="bld-card__status-dot"></span>Completed</span>
+          </div>
+          <h3 class="bld-card__title">Construction of Combined Court Building and Judicial Quarters Building</h3>
+          <p class="bld-card__desc">Comprehensive judicial complex at Paramathi, Namakkal District — court halls, judicial residences, garages, vehicular parking sheds, and canteen block.</p>
+          <div class="bld-card__foot">
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Paramathi, Namakkal District</span>
+            </div>
+            <button class="bld-card__action" type="button" data-lightbox-trigger data-full="../assets/img/gallery/paramathi-court.jpg" data-title="Combined Court Building and Judicial Quarters" data-category="Civic / Judicial" data-status="Completed" data-location="Paramathi, Namakkal District">
+              <span>Inspect Project Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04. Ramanathapuram New Bus Stand -->
+      <article class="bld-card scroll-reveal" data-cat="transit">
+        <div class="bld-card__media" data-lightbox-trigger data-full="../assets/img/gallery/ramnad-bus-stand.jpg" data-title="Construction of New Bus Stand in Ramanathapuram" data-category="Transport Infrastructure" data-status="Completed" data-location="Ramanathapuram">
+          <img src="../assets/img/gallery/ramnad-bus-stand.webp" alt="Ramanathapuram New Bus Stand" width="768" height="576" loading="lazy" decoding="async">
+          <div class="bld-card__chips">
+            <span class="bld-card__chip-seq">BLD · 04</span>
+            <span class="bld-card__chip-sector">Transit</span>
+          </div>
+          <span class="bld-card__zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Zoom Photo</span>
+        </div>
+        <div class="bld-card__body">
+          <div class="bld-card__meta-top">
+            <span class="bld-card__dept">Municipal Administration</span>
+            <span class="bld-card__status"><span class="bld-card__status-dot"></span>Completed</span>
+          </div>
+          <h3 class="bld-card__title">Construction of New Bus Stand in Ramanathapuram</h3>
+          <p class="bld-card__desc">District transport terminal with modern passenger facilities, reinforced concrete bus bays, commercial stalls, and comprehensive civil amenities.</p>
+          <div class="bld-card__foot">
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Ramanathapuram District</span>
+            </div>
+            <button class="bld-card__action" type="button" data-lightbox-trigger data-full="../assets/img/gallery/ramnad-bus-stand.jpg" data-title="Ramanathapuram New Bus Stand" data-category="Transport Infrastructure" data-status="Completed" data-location="Ramanathapuram">
+              <span>Inspect Project Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05. Namakkal Bus Stand at Mudalaipatty -->
+      <article class="bld-card scroll-reveal" data-cat="transit">
+        <div class="bld-card__media" data-lightbox-trigger data-full="../assets/img/gallery/namakkal-bus-stand-aerial.jpg" data-title="Construction of New Bus Stand at Mudalaipatty in Namakkal" data-category="Transport Infrastructure" data-status="Completed" data-location="Mudalaipatty, Namakkal">
+          <img src="../assets/img/gallery/namakkal-bus-stand-aerial.webp" alt="Mudalaipatty New Bus Stand Aerial" width="768" height="576" loading="lazy" decoding="async">
+          <div class="bld-card__chips">
+            <span class="bld-card__chip-seq">BLD · 05</span>
+            <span class="bld-card__chip-sector">Transit</span>
+          </div>
+          <span class="bld-card__zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Zoom Photo</span>
+        </div>
+        <div class="bld-card__body">
+          <div class="bld-card__meta-top">
+            <span class="bld-card__dept">Municipal / TNSTC</span>
+            <span class="bld-card__status"><span class="bld-card__status-dot"></span>Completed</span>
+          </div>
+          <h3 class="bld-card__title">Construction of New Bus Stand at Mudalaipatty in Namakkal</h3>
+          <p class="bld-card__desc">Major municipal passenger terminal hub featuring extensive concrete bus parking bays, integrated access roundabouts, and civic infrastructure.</p>
+          <div class="bld-card__foot">
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Mudalaipatty, Namakkal</span>
+            </div>
+            <button class="bld-card__action" type="button" data-lightbox-trigger data-full="../assets/img/gallery/namakkal-bus-stand-aerial.jpg" data-title="Namakkal New Bus Stand at Mudalaipatty" data-category="Transport Infrastructure" data-status="Completed" data-location="Mudalaipatty, Namakkal">
+              <span>Inspect Project Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 06. Rasipuram Bus Stand -->
+      <article class="bld-card scroll-reveal" data-cat="transit">
+        <div class="bld-card__media" data-lightbox-trigger data-full="../assets/img/gallery/ramnad-bus-stand-bus.jpg" data-title="Construction of New Bus Stand in Rasipuram" data-category="Transport Infrastructure" data-status="Completed" data-location="Rasipuram, Namakkal">
+          <img src="../assets/img/gallery/ramnad-bus-stand-bus.webp" alt="Construction of New Bus Stand in Rasipuram" width="768" height="576" loading="lazy" decoding="async">
+          <div class="bld-card__chips">
+            <span class="bld-card__chip-seq">BLD · 06</span>
+            <span class="bld-card__chip-sector">Transit</span>
+          </div>
+          <span class="bld-card__zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Zoom Photo</span>
+        </div>
+        <div class="bld-card__body">
+          <div class="bld-card__meta-top">
+            <span class="bld-card__dept">Municipal Administration</span>
+            <span class="bld-card__status"><span class="bld-card__status-dot"></span>Completed</span>
+          </div>
+          <h3 class="bld-card__title">Construction of New Bus Stand in Rasipuram</h3>
+          <p class="bld-card__desc">Key transit terminal facilitating inter-city and rural connectivity in Namakkal District, engineered for high passenger volume and reliable traffic movement.</p>
+          <div class="bld-card__foot">
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Rasipuram, Namakkal</span>
+            </div>
+            <button class="bld-card__action" type="button" data-lightbox-trigger data-full="../assets/img/gallery/ramnad-bus-stand-bus.jpg" data-title="New Bus Stand in Rasipuram" data-category="Transport Infrastructure" data-status="Completed" data-location="Rasipuram, Namakkal">
+              <span>Inspect Project Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 07. AMRUT 2.0 Mohanur Water Supply -->
+      <article class="bld-card scroll-reveal" data-cat="industrial">
+        <div class="bld-card__media bld-card__media--blueprint">
+          <svg class="bld-card__blueprint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/><path d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+          <span class="bld-card__blueprint-label">AMRUT 2.0 Engineering</span>
+          <div class="bld-card__chips">
+            <span class="bld-card__chip-seq">BLD · 07</span>
+            <span class="bld-card__chip-sector">Water Infrastructure</span>
+          </div>
+        </div>
+        <div class="bld-card__body">
+          <div class="bld-card__meta-top">
+            <span class="bld-card__dept">AMRUT 2.0 / Town Panchayat</span>
+            <span class="bld-card__status"><span class="bld-card__status-dot"></span>Completed</span>
+          </div>
+          <h3 class="bld-card__title">Improvements to Water Supply Distribution System — AMRUT 2.0 Scheme</h3>
+          <p class="bld-card__desc">Comprehensive pipeline distribution networks, water storage facilities, and feeder mains servicing Mohanur Town Panchayat, Namakkal District.</p>
+          <div class="bld-card__foot">
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Mohanur, Namakkal District</span>
+            </div>
+            <div class="bld-card__action" style="cursor:default">
+              <span>Civic Water Supply Commissioned</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 08. Pappad Factory for Purity Agro Ventures -->
+      <article class="bld-card scroll-reveal" data-cat="industrial">
+        <div class="bld-card__media" data-lightbox-trigger data-full="../assets/img/gallery/ashok-textile-complex.jpg" data-title="Construction of Pappad Factory for M/s Purity Agro Ventures" data-category="Industrial Infrastructure" data-status="Completed" data-location="Elurpatti, Trichy">
+          <img src="../assets/img/gallery/ashok-textile-complex.webp" alt="Pappad Factory for Purity Agro Ventures" width="768" height="576" loading="lazy" decoding="async">
+          <div class="bld-card__chips">
+            <span class="bld-card__chip-seq">BLD · 08</span>
+            <span class="bld-card__chip-sector">Industrial</span>
+          </div>
+          <span class="bld-card__zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Zoom Photo</span>
+        </div>
+        <div class="bld-card__body">
+          <div class="bld-card__meta-top">
+            <span class="bld-card__dept">Private Client</span>
+            <span class="bld-card__status"><span class="bld-card__status-dot"></span>Completed</span>
+          </div>
+          <h3 class="bld-card__title">Construction of Pappad Factory for M/s Purity Agro Ventures</h3>
+          <p class="bld-card__desc">Food processing factory building, reinforced concrete production floor, utility installations, and dry warehousing at Elurpatti, Trichy District.</p>
+          <div class="bld-card__foot">
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Elurpatti, Trichy District</span>
+            </div>
+            <button class="bld-card__action" type="button" data-lightbox-trigger data-full="../assets/img/gallery/ashok-textile-complex.jpg" data-title="Pappad Factory for Purity Agro Ventures" data-category="Industrial Infrastructure" data-status="Completed" data-location="Elurpatti, Trichy">
+              <span>Inspect Project Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 09. Yathri Nivas Meenakshi Temple Madurai -->
+      <article class="bld-card scroll-reveal" data-cat="civic">
+        <div class="bld-card__media bld-card__media--blueprint">
+          <svg class="bld-card__blueprint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h6M9 14h6M9 18h6"/></svg>
+          <span class="bld-card__blueprint-label">Pilgrim Hospitality Complex</span>
+          <div class="bld-card__chips">
+            <span class="bld-card__chip-seq">BLD · 09</span>
+            <span class="bld-card__chip-sector">Hospitality</span>
+          </div>
+        </div>
+        <div class="bld-card__body">
+          <div class="bld-card__meta-top">
+            <span class="bld-card__dept">Temple Trust / HR&amp;CE</span>
+            <span class="bld-card__status"><span class="bld-card__status-dot"></span>Completed</span>
+          </div>
+          <h3 class="bld-card__title">Construction of Yathri Nivas Buildings</h3>
+          <p class="bld-card__desc">Pilgrim accommodation complex for Arulmigu Meenakshi Sundareswarar Temple devotees in Madurai — guest rooms, amenities, and community facilities.</p>
+          <div class="bld-card__foot">
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Madurai Town</span>
+            </div>
+            <div class="bld-card__action" style="cursor:default">
+              <span>Pilgrim Facility Commissioned</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 10. Ashok Textile Mills Upgrade -->
+      <article class="bld-card scroll-reveal" data-cat="industrial">
+        <div class="bld-card__media" data-lightbox-trigger data-full="../assets/img/gallery/ashok-textile-mills.jpg" data-title="Upgradation of Infrastructure for Ashok Textile Mills Pvt. Ltd." data-category="Industrial Infrastructure" data-status="Completed" data-location="Namakkal District">
+          <img src="../assets/img/gallery/ashok-textile-mills.webp" alt="Ashok Textile Mills Upgradation" width="768" height="576" loading="lazy" decoding="async">
+          <div class="bld-card__chips">
+            <span class="bld-card__chip-seq">BLD · 10</span>
+            <span class="bld-card__chip-sector">Industrial</span>
+          </div>
+          <span class="bld-card__zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Zoom Photo</span>
+        </div>
+        <div class="bld-card__body">
+          <div class="bld-card__meta-top">
+            <span class="bld-card__dept">Ashok Textile Mills</span>
+            <span class="bld-card__status"><span class="bld-card__status-dot"></span>Completed</span>
+          </div>
+          <h3 class="bld-card__title">Upgradation of Infrastructure for Ashok Textile Mills Pvt. Ltd.</h3>
+          <p class="bld-card__desc">Civil and structural upgrading of industrial spinning and processing plant facilities, heavy machinery foundations, utility networks, and factory bays.</p>
+          <div class="bld-card__foot">
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Namakkal District</span>
+            </div>
+            <button class="bld-card__action" type="button" data-lightbox-trigger data-full="../assets/img/gallery/ashok-textile-mills.jpg" data-title="Ashok Textile Mills Infrastructure" data-category="Industrial Infrastructure" data-status="Completed" data-location="Namakkal District">
+              <span>Inspect Project Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 11. Solar Power Plant -->
+      <article class="bld-card scroll-reveal" data-cat="industrial">
+        <div class="bld-card__media" data-lightbox-trigger data-full="../assets/img/gallery/solar-power-plant.jpg" data-title="Construction of Solar Power Plant for Ashok Textile Mills Pvt. Ltd." data-category="Green Energy Infrastructure" data-status="Completed" data-location="Namakkal District">
+          <img src="../assets/img/gallery/solar-power-plant.webp" alt="Solar Power Plant by Ashok Construction" width="768" height="576" loading="lazy" decoding="async">
+          <div class="bld-card__chips">
+            <span class="bld-card__chip-seq">BLD · 11</span>
+            <span class="bld-card__chip-sector">Green Energy</span>
+          </div>
+          <span class="bld-card__zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Zoom Photo</span>
+        </div>
+        <div class="bld-card__body">
+          <div class="bld-card__meta-top">
+            <span class="bld-card__dept">Ashok Textile Mills</span>
+            <span class="bld-card__status"><span class="bld-card__status-dot"></span>Completed</span>
+          </div>
+          <h3 class="bld-card__title">Construction of Solar Power Plant for Ashok Textile Mills Pvt. Ltd.</h3>
+          <p class="bld-card__desc">Green energy solar power plant installation, high-durability ground foundations, inverter stations, and civil infrastructure enabling 100% renewable energy.</p>
+          <div class="bld-card__foot">
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Namakkal District</span>
+            </div>
+            <button class="bld-card__action" type="button" data-lightbox-trigger data-full="../assets/img/gallery/solar-power-plant.jpg" data-title="Solar Power Plant" data-category="Green Energy Infrastructure" data-status="Completed" data-location="Namakkal District">
+              <span>Inspect Project Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- VIEW B: Architectural Register View (Expandable Accordion Ledger) -->
+    <div class="bld-register" id="buildings-register-view" style="display:none">
+      
+      <div class="bld-reg-row" data-cat="healthcare">
+        <div class="bld-reg-summary">
+          <span class="bld-reg-num">01</span>
+          <span class="bld-reg-name">Strengthening of the Govt Head Quarters Hospital at Paramakudi</span>
+          <span class="bld-reg-sector">Healthcare</span>
+          <span class="bld-reg-dept">PWD Ramanathapuram</span>
+          <span class="bld-reg-toggle">Expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </div>
+        <div class="bld-reg-drawer">
+          <div class="bld-reg-thumb" data-lightbox-trigger data-full="../assets/img/gallery/paramakudi-hospital.jpg" data-title="Strengthening of the Govt Head Quarters Hospital at Paramakudi">
+            <img src="../assets/img/gallery/paramakudi-hospital.webp" alt="Paramakudi Hospital" loading="lazy">
+          </div>
+          <div class="bld-reg-detail">
+            <p>Government healthcare infrastructure strengthening in Ramanathapuram District — upgraded structural envelope, specialized surgical services, and medical support wings.</p>
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Paramakudi, Ramanathapuram District</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bld-reg-row" data-cat="housing">
+        <div class="bld-reg-summary">
+          <span class="bld-reg-num">02</span>
+          <span class="bld-reg-name">Construction of 1,100 Tenements with Water Supply &amp; Sanitary Works</span>
+          <span class="bld-reg-sector">Housing</span>
+          <span class="bld-reg-dept">TNUHDB</span>
+          <span class="bld-reg-toggle">Expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </div>
+        <div class="bld-reg-drawer">
+          <div class="bld-reg-thumb" data-lightbox-trigger data-full="../assets/img/gallery/tnuhdb-tenements.jpg" data-title="Construction of 1,100 Tenements">
+            <img src="../assets/img/gallery/tnuhdb-tenements.webp" alt="TNUHDB Tenements" loading="lazy">
+          </div>
+          <div class="bld-reg-detail">
+            <p>Pappireddipatti Taluk, Dharmapuri District — 1,100 residential units with complete internal road networks, sanitary drainage, and electrification.</p>
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Pappireddipatti, Dharmapuri District</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bld-reg-row" data-cat="civic">
+        <div class="bld-reg-summary">
+          <span class="bld-reg-num">03</span>
+          <span class="bld-reg-name">Construction of Combined Court Building &amp; Judicial Quarters</span>
+          <span class="bld-reg-sector">Civic / Judicial</span>
+          <span class="bld-reg-dept">PWD Namakkal</span>
+          <span class="bld-reg-toggle">Expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </div>
+        <div class="bld-reg-drawer">
+          <div class="bld-reg-thumb" data-lightbox-trigger data-full="../assets/img/gallery/paramathi-court.jpg" data-title="Paramathi Court Complex">
+            <img src="../assets/img/gallery/paramathi-court.webp" alt="Paramathi Court" loading="lazy">
+          </div>
+          <div class="bld-reg-detail">
+            <p>Comprehensive judicial complex at Paramathi, Namakkal District — court halls, judicial residences, garages, vehicular parking sheds, and canteen block.</p>
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Paramathi, Namakkal District</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bld-reg-row" data-cat="transit">
+        <div class="bld-reg-summary">
+          <span class="bld-reg-num">04</span>
+          <span class="bld-reg-name">Construction of New Bus Stand in Ramanathapuram</span>
+          <span class="bld-reg-sector">Transit Hub</span>
+          <span class="bld-reg-dept">Municipal Admin</span>
+          <span class="bld-reg-toggle">Expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </div>
+        <div class="bld-reg-drawer">
+          <div class="bld-reg-thumb" data-lightbox-trigger data-full="../assets/img/gallery/ramnad-bus-stand.jpg" data-title="Ramanathapuram New Bus Stand">
+            <img src="../assets/img/gallery/ramnad-bus-stand.webp" alt="Ramnad Bus Stand" loading="lazy">
+          </div>
+          <div class="bld-reg-detail">
+            <p>District transport terminal with modern passenger facilities, reinforced concrete bus bays, commercial stalls, and comprehensive civil amenities.</p>
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Ramanathapuram</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bld-reg-row" data-cat="transit">
+        <div class="bld-reg-summary">
+          <span class="bld-reg-num">05</span>
+          <span class="bld-reg-name">Construction of New Bus Stand at Mudalaipatty in Namakkal</span>
+          <span class="bld-reg-sector">Transit Hub</span>
+          <span class="bld-reg-dept">Municipal / TNSTC</span>
+          <span class="bld-reg-toggle">Expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </div>
+        <div class="bld-reg-drawer">
+          <div class="bld-reg-thumb" data-lightbox-trigger data-full="../assets/img/gallery/namakkal-bus-stand-aerial.jpg" data-title="Namakkal New Bus Stand Terminal">
+            <img src="../assets/img/gallery/namakkal-bus-stand-aerial.webp" alt="Namakkal Bus Stand" loading="lazy">
+          </div>
+          <div class="bld-reg-detail">
+            <p>Major municipal passenger terminal hub featuring extensive concrete bus parking bays, integrated access roundabouts, and civic infrastructure.</p>
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Mudalaipatty, Namakkal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bld-reg-row" data-cat="transit">
+        <div class="bld-reg-summary">
+          <span class="bld-reg-num">06</span>
+          <span class="bld-reg-name">Construction of New Bus Stand in Rasipuram</span>
+          <span class="bld-reg-sector">Transit Hub</span>
+          <span class="bld-reg-dept">Municipal Admin</span>
+          <span class="bld-reg-toggle">Expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </div>
+        <div class="bld-reg-drawer">
+          <div class="bld-reg-thumb" data-lightbox-trigger data-full="../assets/img/gallery/ramnad-bus-stand-bus.jpg" data-title="Rasipuram New Bus Stand">
+            <img src="../assets/img/gallery/ramnad-bus-stand-bus.webp" alt="Rasipuram Bus Stand" loading="lazy">
+          </div>
+          <div class="bld-reg-detail">
+            <p>Key civic transit terminal facilitating inter-city and rural connectivity in Namakkal District, engineered for high passenger volume.</p>
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Rasipuram, Namakkal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bld-reg-row" data-cat="industrial">
+        <div class="bld-reg-summary">
+          <span class="bld-reg-num">07</span>
+          <span class="bld-reg-name">Water Supply Distribution System — AMRUT 2.0 Scheme</span>
+          <span class="bld-reg-sector">Water Infrastructure</span>
+          <span class="bld-reg-dept">AMRUT 2.0</span>
+          <span class="bld-reg-toggle">Expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </div>
+        <div class="bld-reg-drawer">
+          <div class="bld-reg-detail" style="grid-column: 1 / -1">
+            <p>Comprehensive pipeline distribution networks, water storage facilities, and feeder mains servicing Mohanur Town Panchayat, Namakkal District.</p>
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Mohanur, Namakkal District</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bld-reg-row" data-cat="industrial">
+        <div class="bld-reg-summary">
+          <span class="bld-reg-num">08</span>
+          <span class="bld-reg-name">Construction of Pappad Factory for M/s Purity Agro Ventures</span>
+          <span class="bld-reg-sector">Industrial</span>
+          <span class="bld-reg-dept">Purity Agro</span>
+          <span class="bld-reg-toggle">Expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </div>
+        <div class="bld-reg-drawer">
+          <div class="bld-reg-thumb" data-lightbox-trigger data-full="../assets/img/gallery/ashok-textile-complex.jpg" data-title="Pappad Factory for Purity Agro">
+            <img src="../assets/img/gallery/ashok-textile-complex.webp" alt="Purity Agro Factory" loading="lazy">
+          </div>
+          <div class="bld-reg-detail">
+            <p>Food processing manufacturing facility, heavy-duty floor slabs, utility networks, and distribution warehousing at Elurpatti, Trichy District.</p>
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Elurpatti, Trichy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bld-reg-row" data-cat="civic">
+        <div class="bld-reg-summary">
+          <span class="bld-reg-num">09</span>
+          <span class="bld-reg-name">Construction of Yathri Nivas Buildings — Meenakshi Temple</span>
+          <span class="bld-reg-sector">Hospitality / Civic</span>
+          <span class="bld-reg-dept">Temple Trust</span>
+          <span class="bld-reg-toggle">Expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </div>
+        <div class="bld-reg-drawer">
+          <div class="bld-reg-detail" style="grid-column: 1 / -1">
+            <p>Pilgrim accommodation facility for Arulmigu Meenakshi Sundareswarar Temple devotees in Madurai — providing comfortable rooms and pilgrim services.</p>
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Madurai</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bld-reg-row" data-cat="industrial">
+        <div class="bld-reg-summary">
+          <span class="bld-reg-num">10</span>
+          <span class="bld-reg-name">Upgradation of Infrastructure for Ashok Textile Mills Pvt. Ltd.</span>
+          <span class="bld-reg-sector">Industrial</span>
+          <span class="bld-reg-dept">Ashok Textile Mills</span>
+          <span class="bld-reg-toggle">Expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </div>
+        <div class="bld-reg-drawer">
+          <div class="bld-reg-thumb" data-lightbox-trigger data-full="../assets/img/gallery/ashok-textile-mills.jpg" data-title="Ashok Textile Mills Upgrade">
+            <img src="../assets/img/gallery/ashok-textile-mills.webp" alt="Ashok Textile Mills" loading="lazy">
+          </div>
+          <div class="bld-reg-detail">
+            <p>Civil and structural upgrading of industrial spinning and processing plant facilities, heavy machinery foundations, and compound utilities.</p>
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Namakkal District</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bld-reg-row" data-cat="industrial">
+        <div class="bld-reg-summary">
+          <span class="bld-reg-num">11</span>
+          <span class="bld-reg-name">Construction of Solar Power Plant for Ashok Textile Mills</span>
+          <span class="bld-reg-sector">Green Energy</span>
+          <span class="bld-reg-dept">Ashok Textile Mills</span>
+          <span class="bld-reg-toggle">Expand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </div>
+        <div class="bld-reg-drawer">
+          <div class="bld-reg-thumb" data-lightbox-trigger data-full="../assets/img/gallery/solar-power-plant.jpg" data-title="Solar Power Plant">
+            <img src="../assets/img/gallery/solar-power-plant.webp" alt="Solar Power Plant" loading="lazy">
+          </div>
+          <div class="bld-reg-detail">
+            <p>Green energy solar plant installation, pile foundations, inverter bays, and high-efficiency civil infrastructure enabling 100% renewable power.</p>
+            <div class="bld-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Namakkal District</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- COMPLETED ROADS AND BRIDGES REGISTER -->
+<!-- SECTION 02: COMPLETED ROADS AND BRIDGES (ENGINEERING INFRASTRUCTURE DOSSIERS) -->
 <section class="section cat" id="completed-roads">
   <div class="wrap">
     <div class="grid cat__head">
       <div class="cat__title">
         <p class="label"><b>Section 02</b> Completed Infrastructure</p>
-        <h2 class="h-section">Completed Road &amp; Bridge Projects</h2>
+        <h2 class="h-section ln"><span>Roads &amp; Bridge<br><em>Projects</em></span></h2>
       </div>
       <div class="cat__text">
-        <p>State highway widenings, town bypass roads, link roads, and high-level river bridges executed with modern paving equipment and strict engineering tolerances:</p>
+        <p>State highway widenings, town bypass roads, link corridors, and high-level river bridges executed with modern paving equipment and strict engineering tolerances.</p>
       </div>
     </div>
 
-    <ol class="ledger" style="margin-top:1.5rem">
-      <li><span>01</span><div><h3>Widening from Two Lane to Two Lane with Paved Shoulders &amp; Strengthening</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Namakkal–Kananur Road including junction improvements, retaining wall, drain, and CD works.</p></div><b>Highways Dept</b></li>
-      <li><span>02</span><div><h3>Forming Bypass Road to Namakkal Town &amp; Link Road (Phase-I)</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Strategic bypass alignment relieving urban transit congestion in Namakkal town.</p></div><b>Highways Dept</b></li>
-      <li><span>03</span><div><h3>Formation of Road from N. Pudupatti to Kedamalai</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Rural hill road connectivity formation in Rasipuram Taluk.</p></div><b>Highways / DRDA</b></li>
-      <li><span>04</span><div><h3>Upgradation of Koungalathur–Lathuvadi Road (via) Meleachavari</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Substantial pavement upgrading and culvert strengthening.</p></div><b>Highways Dept</b></li>
-      <li><span>05</span><div><h3>Upgradation of Varagur–Pavithiram Kollihills Road (via) Sellandiyammakoil</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Ghat road upgrading improving all-weather connectivity into the Kollihills region.</p></div><b>Highways Dept</b></li>
-      <li><span>06</span><div><h3>Widening from Intermediate Lane to Two Lane &amp; Strengthening</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Kalangani–Thirumalapatty Road including construction of retaining wall, well protective wall, and CD works.</p></div><b>Highways Dept</b></li>
-      <li><span>07</span><div><h3>Construction of Bridge at Puthakkal Odai</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Valappurnadu Panchayat, Kollihills.</p></div><b>Rural Infrastructure</b></li>
-      <li><span>08</span><div><h3>Construction of High-Level Bridge at Ramanathapurampudur Road</h3><p style="font-size:.9rem;color:var(--ink-2);margin-top:.2rem">Constructed in lieu of the existing causeway, providing safe, flood-resilient river crossing.</p></div><b>Highways Dept</b></li>
-    </ol>
+    <!-- Engineering Infrastructure Dossiers (Horizontal Split Cards) -->
+    <div class="rds-dossier-list">
+
+      <!-- 01. Namakkal-Kananur Road -->
+      <article class="rds-card scroll-reveal">
+        <div class="rds-card__media" data-lightbox-trigger data-full="../assets/img/gallery/road-widening-kananur.jpg" data-title="Namakkal–Kananur Road Widening &amp; Strengthening" data-category="State Highway" data-status="Completed" data-location="Namakkal – Kananur">
+          <img src="../assets/img/gallery/road-widening-kananur.webp" alt="Namakkal-Kananur Road Widening" width="768" height="500" loading="lazy" decoding="async">
+          <span class="rds-card__route-code">SH · 01</span>
+          <span class="rds-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Inspect Photo</span>
+        </div>
+        <div class="rds-card__spec">
+          <div>
+            <div class="rds-card__header">
+              <span class="rds-card__sector-pill">State Highway</span>
+              <span class="rds-card__status-tag"><span></span>Completed</span>
+            </div>
+            <h3 class="rds-card__title">Widening from Two Lane to Two Lane with Paved Shoulders &amp; Strengthening</h3>
+            <p class="rds-card__desc">Namakkal–Kananur Road corridor — junction improvements, reinforced retaining walls, roadside drains, and cross-drainage structures for all-weather traffic.</p>
+            <div class="rds-card__params">
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Corridor</span>
+                <span class="rds-param-val">Namakkal – Kananur</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Client</span>
+                <span class="rds-param-val">Highways Dept</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Standard</span>
+                <span class="rds-param-val">2-Lane + Shoulders</span>
+              </div>
+            </div>
+          </div>
+          <div class="rds-card__footer">
+            <div class="rds-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Namakkal – Kananur</span>
+            </div>
+            <button class="rds-card__btn" type="button" data-lightbox-trigger data-full="../assets/img/gallery/road-widening-kananur.jpg" data-title="Namakkal–Kananur Road Widening" data-category="State Highway" data-status="Completed" data-location="Namakkal – Kananur">
+              <span>View Route Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02. Namakkal Bypass Phase-1 -->
+      <article class="rds-card scroll-reveal">
+        <div class="rds-card__media" data-lightbox-trigger data-full="../assets/img/gallery/namakkal-bypass-phase-1.jpg" data-title="Forming Bypass Road to Namakkal Town &amp; Link Road (Phase-I)" data-category="Bypass Highway" data-status="Completed" data-location="Namakkal">
+          <img src="../assets/img/gallery/namakkal-bypass-phase-1.webp" alt="Namakkal Bypass Phase-1" width="768" height="500" loading="lazy" decoding="async">
+          <span class="rds-card__route-code">BYP · 02</span>
+          <span class="rds-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Inspect Photo</span>
+        </div>
+        <div class="rds-card__spec">
+          <div>
+            <div class="rds-card__header">
+              <span class="rds-card__sector-pill">Bypass Highway</span>
+              <span class="rds-card__status-tag"><span></span>Completed</span>
+            </div>
+            <h3 class="rds-card__title">Forming Bypass Road to Namakkal Town &amp; Link Road (Phase-I)</h3>
+            <p class="rds-card__desc">Strategic bypass alignment relieving urban transit congestion — heavy vehicle diversion, multi-layer bituminous paving, and major traffic roundabout link.</p>
+            <div class="rds-card__params">
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Section</span>
+                <span class="rds-param-val">Phase-I Bypass</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Client</span>
+                <span class="rds-param-val">Highways Dept</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Scope</span>
+                <span class="rds-param-val">Town Congestion Relief</span>
+              </div>
+            </div>
+          </div>
+          <div class="rds-card__footer">
+            <div class="rds-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Namakkal Town</span>
+            </div>
+            <button class="rds-card__btn" type="button" data-lightbox-trigger data-full="../assets/img/gallery/namakkal-bypass-phase-1.jpg" data-title="Namakkal Bypass Phase-1" data-category="Bypass Highway" data-status="Completed" data-location="Namakkal">
+              <span>View Route Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03. N. Pudupatti to Kedamalai -->
+      <article class="rds-card scroll-reveal">
+        <div class="rds-card__media" data-lightbox-trigger data-full="../assets/img/gallery/bodhamalai-formation-aerial.jpg" data-title="Formation of Road from N. Pudupatti to Kedamalai" data-category="Rural Hill Road" data-status="Completed" data-location="Rasipuram Taluk">
+          <img src="../assets/img/gallery/bodhamalai-formation-aerial.webp" alt="N. Pudupatti to Kedamalai Road" width="768" height="500" loading="lazy" decoding="async">
+          <span class="rds-card__route-code">RUR · 03</span>
+          <span class="rds-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Inspect Photo</span>
+        </div>
+        <div class="rds-card__spec">
+          <div>
+            <div class="rds-card__header">
+              <span class="rds-card__sector-pill">Hill Infrastructure</span>
+              <span class="rds-card__status-tag"><span></span>Completed</span>
+            </div>
+            <h3 class="rds-card__title">Formation of Road from N. Pudupatti to Kedamalai</h3>
+            <p class="rds-card__desc">Critical hill road connectivity in Rasipuram Taluk — hillside rock cutting, protective breast walls, and all-weather pavement for remote tribal settlements.</p>
+            <div class="rds-card__params">
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Terrain</span>
+                <span class="rds-param-val">Hill / Ghat Range</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Client</span>
+                <span class="rds-param-val">Highways / DRDA</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Impact</span>
+                <span class="rds-param-val">All-Weather Access</span>
+              </div>
+            </div>
+          </div>
+          <div class="rds-card__footer">
+            <div class="rds-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Rasipuram Taluk</span>
+            </div>
+            <button class="rds-card__btn" type="button" data-lightbox-trigger data-full="../assets/img/gallery/bodhamalai-formation-aerial.jpg" data-title="Formation of Road to Kedamalai" data-category="Rural Hill Road" data-status="Completed" data-location="Rasipuram Taluk">
+              <span>View Route Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04. Koungalathur–Lathuvadi Road -->
+      <article class="rds-card scroll-reveal">
+        <div class="rds-card__media" data-lightbox-trigger data-full="../assets/img/gallery/link-road-namakkal-bus-stand.jpg" data-title="Upgradation of Koungalathur–Lathuvadi Road (via) Meleachavari" data-category="Road Upgradation" data-status="Completed" data-location="Koungalathur – Lathuvadi">
+          <img src="../assets/img/gallery/link-road-namakkal-bus-stand.webp" alt="Koungalathur-Lathuvadi Road" width="768" height="500" loading="lazy" decoding="async">
+          <span class="rds-card__route-code">MDR · 04</span>
+          <span class="rds-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Inspect Photo</span>
+        </div>
+        <div class="rds-card__spec">
+          <div>
+            <div class="rds-card__header">
+              <span class="rds-card__sector-pill">Road Upgradation</span>
+              <span class="rds-card__status-tag"><span></span>Completed</span>
+            </div>
+            <h3 class="rds-card__title">Upgradation of Koungalathur–Lathuvadi Road (via) Meleachavari</h3>
+            <p class="rds-card__desc">Substantial pavement strengthening, curve geometry realignment, and culvert rehabilitation providing safe transit between Koungalathur and Lathuvadi.</p>
+            <div class="rds-card__params">
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Route</span>
+                <span class="rds-param-val">Via Meleachavari</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Client</span>
+                <span class="rds-param-val">Highways Dept</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Works</span>
+                <span class="rds-param-val">Pavement &amp; Culverts</span>
+              </div>
+            </div>
+          </div>
+          <div class="rds-card__footer">
+            <div class="rds-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Koungalathur – Lathuvadi</span>
+            </div>
+            <button class="rds-card__btn" type="button" data-lightbox-trigger data-full="../assets/img/gallery/link-road-namakkal-bus-stand.jpg" data-title="Koungalathur–Lathuvadi Road Upgradation" data-category="Road Upgradation" data-status="Completed" data-location="Koungalathur – Lathuvadi">
+              <span>View Route Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05. Kollihills Ghat Road -->
+      <article class="rds-card scroll-reveal">
+        <div class="rds-card__media" data-lightbox-trigger data-full="../assets/img/gallery/kollihills-ghat-road.jpg" data-title="Upgradation of Varagur–Pavithiram Kollihills Road" data-category="Ghat Road" data-status="Completed" data-location="Kollihills, Namakkal">
+          <img src="../assets/img/gallery/kollihills-ghat-road.webp" alt="Kollihills Ghat Road Upgradation" width="768" height="500" loading="lazy" decoding="async">
+          <span class="rds-card__route-code">GHT · 05</span>
+          <span class="rds-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Inspect Photo</span>
+        </div>
+        <div class="rds-card__spec">
+          <div>
+            <div class="rds-card__header">
+              <span class="rds-card__sector-pill">Mountain Pass</span>
+              <span class="rds-card__status-tag"><span></span>Completed</span>
+            </div>
+            <h3 class="rds-card__title">Upgradation of Varagur–Pavithiram Kollihills Road (via) Sellandiyammakoil</h3>
+            <p class="rds-card__desc">Ghat road upgrading improving all-weather connectivity into the Kollihills region — hairpin bend widening, parapet walls, and culvert reinforcements.</p>
+            <div class="rds-card__params">
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Range</span>
+                <span class="rds-param-val">Kollihills Ghats</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Client</span>
+                <span class="rds-param-val">Highways Dept</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Geometry</span>
+                <span class="rds-param-val">Hairpin Reinforcement</span>
+              </div>
+            </div>
+          </div>
+          <div class="rds-card__footer">
+            <div class="rds-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Kollihills, Namakkal</span>
+            </div>
+            <button class="rds-card__btn" type="button" data-lightbox-trigger data-full="../assets/img/gallery/kollihills-ghat-road.jpg" data-title="Kollihills Ghat Road Upgradation" data-category="Ghat Road" data-status="Completed" data-location="Kollihills, Namakkal">
+              <span>View Route Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 06. Kalangani–Thirumalapatty Road -->
+      <article class="rds-card scroll-reveal">
+        <div class="rds-card__media" data-lightbox-trigger data-full="../assets/img/gallery/bridge-approach-road.jpg" data-title="Kalangani–Thirumalapatty Road Widening &amp; Strengthening" data-category="Road Widening" data-status="Completed" data-location="Kalangani – Thirumalapatty">
+          <img src="../assets/img/gallery/bridge-approach-road.webp" alt="Kalangani-Thirumalapatty Road" width="768" height="500" loading="lazy" decoding="async">
+          <span class="rds-card__route-code">SH · 06</span>
+          <span class="rds-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Inspect Photo</span>
+        </div>
+        <div class="rds-card__spec">
+          <div>
+            <div class="rds-card__header">
+              <span class="rds-card__sector-pill">Road Widening</span>
+              <span class="rds-card__status-tag"><span></span>Completed</span>
+            </div>
+            <h3 class="rds-card__title">Widening from Intermediate Lane to Two Lane &amp; Strengthening</h3>
+            <p class="rds-card__desc">Full road widening including retaining walls, roadside well protective structures, and cross-drainage culverts along the Kalangani–Thirumalapatty corridor.</p>
+            <div class="rds-card__params">
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Width</span>
+                <span class="rds-param-val">Intermediate to 2-Lane</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Client</span>
+                <span class="rds-param-val">Highways Dept</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Structures</span>
+                <span class="rds-param-val">Retaining &amp; Well Walls</span>
+              </div>
+            </div>
+          </div>
+          <div class="rds-card__footer">
+            <div class="rds-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Kalangani – Thirumalapatty</span>
+            </div>
+            <button class="rds-card__btn" type="button" data-lightbox-trigger data-full="../assets/img/gallery/bridge-approach-road.jpg" data-title="Kalangani–Thirumalapatty Road Widening" data-category="Road Widening" data-status="Completed" data-location="Kalangani – Thirumalapatty">
+              <span>View Route Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 07. Kollihills Puthakkal Odai Bridge -->
+      <article class="rds-card scroll-reveal">
+        <div class="rds-card__media" data-lightbox-trigger data-full="../assets/img/gallery/kollihills-bridge.jpg" data-title="Construction of Bridge at Puthakkal Odai" data-category="High-Level Bridge" data-status="Completed" data-location="Valappurnadu, Kollihills">
+          <img src="../assets/img/gallery/kollihills-bridge.webp" alt="Kollihills Bridge at Puthakkal Odai" width="768" height="500" loading="lazy" decoding="async">
+          <span class="rds-card__route-code">BRG · 07</span>
+          <span class="rds-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Inspect Photo</span>
+        </div>
+        <div class="rds-card__spec">
+          <div>
+            <div class="rds-card__header">
+              <span class="rds-card__sector-pill">River Bridge</span>
+              <span class="rds-card__status-tag"><span></span>Completed</span>
+            </div>
+            <h3 class="rds-card__title">Construction of Bridge at Puthakkal Odai, Valappurnadu</h3>
+            <p class="rds-card__desc">Reinforced concrete high-level bridge over Puthakkal Odai at Valappurnadu Panchayat, Kollihills — providing reliable year-round crossing for hill communities.</p>
+            <div class="rds-card__params">
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Crossing</span>
+                <span class="rds-param-val">Puthakkal Odai Stream</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Structure</span>
+                <span class="rds-param-val">Reinforced Concrete</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Location</span>
+                <span class="rds-param-val">Kollihills Panchayat</span>
+              </div>
+            </div>
+          </div>
+          <div class="rds-card__footer">
+            <div class="rds-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Valappurnadu, Kollihills</span>
+            </div>
+            <button class="rds-card__btn" type="button" data-lightbox-trigger data-full="../assets/img/gallery/kollihills-bridge.jpg" data-title="Bridge at Puthakkal Odai, Kollihills" data-category="High-Level Bridge" data-status="Completed" data-location="Valappurnadu, Kollihills">
+              <span>View Bridge Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 08. Ramanathapurampudur Bridge -->
+      <article class="rds-card scroll-reveal">
+        <div class="rds-card__media" data-lightbox-trigger data-full="../assets/img/gallery/ramanathapurampudur-bridge.jpg" data-title="Construction of High-Level Bridge at Ramanathapurampudur Road" data-category="High-Level Bridge" data-status="Completed" data-location="Ramanathapurampudur Road">
+          <img src="../assets/img/gallery/ramanathapurampudur-bridge.webp" alt="Ramanathapurampudur High-Level Bridge" width="768" height="500" loading="lazy" decoding="async">
+          <span class="rds-card__route-code">BRG · 08</span>
+          <span class="rds-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>Inspect Photo</span>
+        </div>
+        <div class="rds-card__spec">
+          <div>
+            <div class="rds-card__header">
+              <span class="rds-card__sector-pill">High-Level Bridge</span>
+              <span class="rds-card__status-tag"><span></span>Completed</span>
+            </div>
+            <h3 class="rds-card__title">Construction of High-Level Bridge at Ramanathapurampudur Road</h3>
+            <p class="rds-card__desc">Constructed in lieu of the vulnerable existing causeway — high clearance, heavy load-bearing piers, and reinforced approach embankments eliminating monsoon flooding.</p>
+            <div class="rds-card__params">
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Replacement</span>
+                <span class="rds-param-val">Submersible Causeway</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Client</span>
+                <span class="rds-param-val">Highways Dept</span>
+              </div>
+              <div class="rds-param-item">
+                <span class="rds-param-lbl">Impact</span>
+                <span class="rds-param-val">Zero Monsoon Closures</span>
+              </div>
+            </div>
+          </div>
+          <div class="rds-card__footer">
+            <div class="rds-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Ramanathapurampudur Road</span>
+            </div>
+            <button class="rds-card__btn" type="button" data-lightbox-trigger data-full="../assets/img/gallery/ramanathapurampudur-bridge.jpg" data-title="High-Level Bridge at Ramanathapurampudur Road" data-category="High-Level Bridge" data-status="Completed" data-location="Ramanathapurampudur Road">
+              <span>View Bridge Photo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
   </div>
 </section>
 
-<!-- ONGOING PROJECTS SECTION -->
+<!-- SECTION 03: ONGOING & PROPOSED WORKS (LIVE OPERATIONS COMMAND CENTER) -->
 <section class="section night cat" id="ongoing-projects">
   <div class="wrap">
     <div class="grid cat__head">
       <div class="cat__title">
-        <p class="label"><b>Section 03</b> In Progress</p>
-        <h2 class="h-section">Ongoing &amp; Proposed Projects</h2>
+        <div class="ongoing-live-badge">
+          <span class="radar-beacon"><span class="radar-beacon__core"></span><span class="radar-beacon__wave"></span></span>
+          <span>Live Operations Command</span>
+        </div>
+        <h2 class="h-section ln"><span>Ongoing &amp;<br><em>Proposed Works</em></span></h2>
       </div>
       <div class="cat__text">
-        <p>Currently active construction contracts undergoing active structural execution, as well as approved proposed developments, presented separately from completed works:</p>
+        <p>Active infrastructure and healthcare contracts currently under advanced structural execution, alongside approved commercial developments awaiting mobilisation.</p>
       </div>
     </div>
 
-    <div style="margin-top:2rem">
-      <h3 style="font:500 1.35rem var(--f-display);letter-spacing:.02em;margin-bottom:1rem;color:var(--on-night)">Ongoing Building Projects</h3>
-      <ol class="ledger" style="border-top-color:var(--on-night)">
-        <li><span>01</span><div><h3 style="color:var(--on-night)">Construction of Multi-Speciality Hospital Building for Sri Kauvery Medical Care India Ltd</h3><p style="font-size:.9rem;color:var(--on-night-2);margin-top:.2rem">Multi-storey private healthcare facility development at Salem, currently under advanced structural execution.</p></div><b class="badge badge--ongoing">Ongoing</b></li>
-        <li><span>02</span><div><h3 style="color:var(--on-night)">Construction of New Building to Government District Head Quarters Hospital</h3><p style="font-size:.9rem;color:var(--on-night-2);margin-top:.2rem">State-of-the-art government headquarters hospital facility at Rasipuram in Namakkal District.</p></div><b class="badge badge--ongoing">Ongoing</b></li>
-        <li><span>03</span><div><h3 style="color:var(--on-night)">Proposed Construction of New Building for Nala Hotels Pvt. Ltd.</h3><p style="font-size:.9rem;color:var(--on-night-2);margin-top:.2rem">Premium hospitality building development situated on Trichy Main Road, Namakkal.</p></div><b class="badge badge--proposed">Proposed</b></li>
-      </ol>
+    <!-- FEATURED FLAGSHIP OPERATION: Kauvery Multi-Speciality Hospital, Salem -->
+    <article class="ongoing-hero-card scroll-reveal">
+      <div class="ongoing-hero-media" data-lightbox-trigger data-full="../assets/img/gallery/kauvery-hospital-salem.jpg" data-title="Kauvery Hospital Multi-Speciality Building, Salem" data-category="Tertiary Healthcare" data-status="Active On Site" data-location="Salem">
+        <img src="../assets/img/gallery/kauvery-hospital-salem.webp" alt="Kauvery Multi-Speciality Hospital Salem under active construction" width="960" height="640" loading="lazy" decoding="async">
+        <span class="ongoing-hero-tag">
+          <span class="radar-beacon" style="width:8px;height:8px"><span class="radar-beacon__core" style="background:#f59e0b"></span><span class="radar-beacon__wave" style="border-color:#f59e0b"></span></span>
+          Active Flagship Site
+        </span>
+      </div>
+      <div class="ongoing-hero-content">
+        <div>
+          <div class="ongoing-hero-head">
+            <span class="ongoing-hero-sector">Healthcare Infrastructure</span>
+            <span class="ongoing-hero-client">Sri Kauvery Medical Care India Ltd</span>
+          </div>
+          <h3 class="ongoing-hero-title">Construction of Multi-Speciality Hospital Building for Sri Kauvery Medical Care</h3>
+          <p class="ongoing-hero-desc">Multi-storey private tertiary care medical facility at Salem — advanced structural superstructure execution, heavy clinical wing foundations, medical gas utility shafts, and specialized architectural services.</p>
+          
+          <!-- Milestone Progress -->
+          <div class="ongoing-milestone">
+            <div class="ongoing-milestone-head">
+              <span>Execution Milestone</span>
+              <span>Advanced Superstructure Phase &bull; 78%</span>
+            </div>
+            <div class="ongoing-progress-track">
+              <div class="ongoing-progress-fill" style="width:78%"></div>
+            </div>
+          </div>
+        </div>
 
-      <h3 style="font:500 1.35rem var(--f-display);letter-spacing:.02em;margin-top:3rem;margin-bottom:1rem;color:var(--on-night)">Ongoing Road Projects</h3>
-      <ol class="ledger" style="border-top-color:var(--on-night)">
-        <li><span>01</span><div><h3 style="color:var(--on-night)">Forming Bypass to Namakkal Town Ring Road (Phase-IV)</h3><p style="font-size:.9rem;color:var(--on-night-2);margin-top:.2rem">Major circumferential arterial highway project creating the outer ring road around Namakkal town.</p></div><b class="badge badge--ongoing">Ongoing</b></li>
-        <li><span>02</span><div><h3 style="color:var(--on-night)">Formation of Road from Vadugam to Melur (via) Keelur at Bodhamalai</h3><p style="font-size:.9rem;color:var(--on-night-2);margin-top:.2rem">Challenging hill road engineering and new formation alignment across Bodhamalai in Rasipuram.</p></div><b class="badge badge--ongoing">Ongoing</b></li>
-      </ol>
+        <div class="ongoing-hero-foot">
+          <div class="ongoing-hero-loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Salem, Tamil Nadu</span>
+          </div>
+          <button class="ongoing-hero-action" type="button" data-lightbox-trigger data-full="../assets/img/gallery/kauvery-hospital-aerial-1.jpg" data-title="Kauvery Hospital Aerial Drone Progress View" data-category="Healthcare Infrastructure" data-status="Active On Site" data-location="Salem">
+            <span>Aerial Progress Photo</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- SECONDARY ACTIVE & PROPOSED WORKS GRID -->
+    <div class="ongoing-subgrid">
+
+      <!-- 1. Rasipuram District Head Quarters Hospital -->
+      <article class="oncard-v2 scroll-reveal">
+        <div class="oncard-v2__media" data-lightbox-trigger data-full="../assets/img/gallery/rasipuram-headquarters-hospital.jpg" data-title="Rasipuram District Head Quarters Hospital" data-category="Government Healthcare" data-status="Active On Site" data-location="Rasipuram, Namakkal">
+          <img src="../assets/img/gallery/rasipuram-headquarters-hospital.webp" alt="Rasipuram District Head Quarters Hospital" width="600" height="400" loading="lazy">
+          <span class="oncard-v2__badge oncard-v2__badge--active">Active</span>
+        </div>
+        <div class="oncard-v2__body">
+          <span class="oncard-v2__sector">Govt Healthcare</span>
+          <h4 class="oncard-v2__title">District Head Quarters Hospital, Rasipuram</h4>
+          <p class="oncard-v2__desc">New multi-storey building for Government District HQ Hospital — critical care and surgical expansion for Namakkal District.</p>
+          <div class="oncard-v2__foot">
+            <div class="oncard-v2__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Rasipuram, Namakkal</span>
+            </div>
+            <button class="oncard-v2__btn" type="button" data-lightbox-trigger data-full="../assets/img/gallery/rasipuram-headquarters-hospital.jpg" data-title="Rasipuram District Head Quarters Hospital" data-category="Government Healthcare" data-status="Active On Site" data-location="Rasipuram, Namakkal">
+              <span>View Site View</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Namakkal Bypass Ring Road Phase-4 -->
+      <article class="oncard-v2 scroll-reveal">
+        <div class="oncard-v2__media" data-lightbox-trigger data-full="../assets/img/gallery/namakkal-bypass-ring-road-phase-4.jpg" data-title="Namakkal Bypass Ring Road (Phase-IV)" data-category="Highways" data-status="Active On Site" data-location="Namakkal">
+          <img src="../assets/img/gallery/namakkal-bypass-ring-road-phase-4.webp" alt="Namakkal Bypass Ring Road Phase-4" width="600" height="400" loading="lazy">
+          <span class="oncard-v2__badge oncard-v2__badge--active">Active</span>
+        </div>
+        <div class="oncard-v2__body">
+          <span class="oncard-v2__sector">Ring Road Corridor</span>
+          <h4 class="oncard-v2__title">Forming Bypass to Namakkal Ring Road (Phase-IV)</h4>
+          <p class="oncard-v2__desc">Circumferential arterial highway creating the outer ring road around Namakkal town, removing through-traffic congestion.</p>
+          <div class="oncard-v2__foot">
+            <div class="oncard-v2__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Namakkal Ring Road</span>
+            </div>
+            <button class="oncard-v2__btn" type="button" data-lightbox-trigger data-full="../assets/img/gallery/namakkal-bypass-ring-road-phase-4.jpg" data-title="Namakkal Bypass Ring Road (Phase-IV)" data-category="Highways" data-status="Active On Site" data-location="Namakkal">
+              <span>View Route Alignment</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Bodhamalai New Formation Road -->
+      <article class="oncard-v2 scroll-reveal">
+        <div class="oncard-v2__media" data-lightbox-trigger data-full="../assets/img/gallery/bodhamalai-new-formation-road.jpg" data-title="Formation of Road from Vadugam to Melur at Bodhamalai" data-category="Ghat Road" data-status="Active On Site" data-location="Bodhamalai, Rasipuram">
+          <img src="../assets/img/gallery/bodhamalai-new-formation-road.webp" alt="Bodhamalai Formation Road" width="600" height="400" loading="lazy">
+          <span class="oncard-v2__badge oncard-v2__badge--active">Active</span>
+        </div>
+        <div class="oncard-v2__body">
+          <span class="oncard-v2__sector">Ghat Formation</span>
+          <h4 class="oncard-v2__title">Road from Vadugam to Melur at Bodhamalai</h4>
+          <p class="oncard-v2__desc">Challenging hill road engineering and new rock formation alignment across Bodhamalai in Rasipuram for remote hill communities.</p>
+          <div class="oncard-v2__foot">
+            <div class="oncard-v2__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Bodhamalai, Rasipuram</span>
+            </div>
+            <button class="oncard-v2__btn" type="button" data-lightbox-trigger data-full="../assets/img/gallery/bodhamalai-new-formation-road.jpg" data-title="Road from Vadugam to Melur at Bodhamalai" data-category="Ghat Road" data-status="Active On Site" data-location="Bodhamalai, Rasipuram">
+              <span>View Hill Terrain</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Nala Hotels Namakkal -->
+      <article class="oncard-v2 scroll-reveal">
+        <div class="oncard-v2__media" data-lightbox-trigger data-full="../assets/img/gallery/nala-hotels-namakkal.jpg" data-title="Proposed Construction of New Building for Nala Hotels Pvt. Ltd." data-category="Hospitality" data-status="Proposed" data-location="Trichy Main Road, Namakkal">
+          <img src="../assets/img/gallery/nala-hotels-namakkal.webp" alt="Proposed Building for Nala Hotels" width="600" height="400" loading="lazy">
+          <span class="oncard-v2__badge oncard-v2__badge--proposed">Proposed</span>
+        </div>
+        <div class="oncard-v2__body">
+          <span class="oncard-v2__sector">Hospitality Landmark</span>
+          <h4 class="oncard-v2__title">Proposed New Building for Nala Hotels Pvt. Ltd.</h4>
+          <p class="oncard-v2__desc">Premium multi-storey commercial hospitality development on Trichy Main Road, Namakkal — approved design awaiting site mobilisation.</p>
+          <div class="oncard-v2__foot">
+            <div class="oncard-v2__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Trichy Main Road, Namakkal</span>
+            </div>
+            <button class="oncard-v2__btn" type="button" data-lightbox-trigger data-full="../assets/img/gallery/nala-hotels-namakkal.jpg" data-title="Proposed Building for Nala Hotels" data-category="Hospitality" data-status="Proposed" data-location="Trichy Main Road, Namakkal">
+              <span>Inspect Render</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- EQUIPMENT & PLANT INVENTORY -->
+<!-- SECTION 04: EQUIPMENT & HEAVY PLANT FLEET -->
 <section class="section" id="equipment">
   <div class="wrap">
     <div class="grid cat__head">
       <div class="cat__title">
         <p class="label"><b>Section 04</b> Capacity &amp; Logistics</p>
-        <h2 class="h-section">Construction Equipment &amp; Plant Fleet</h2>
+        <h2 class="h-section ln"><span>Equipment &amp;<br><em>Plant Fleet</em></span></h2>
       </div>
       <div class="cat__text">
-        <p>To guarantee self-sufficiency, precision execution, and schedule control, Ashok Construction owns and operates a comprehensive equipment and plant inventory:</p>
+        <p>100% self-sufficient fleet ownership — Ashok Construction operates 17 specialized categories of heavy plant and machinery, ensuring uninterrupted execution, strict quality tolerances, and zero subcontractor bottlenecks.</p>
+        <div class="equip-summary scroll-reveal">
+          <div class="equip-summary__item">
+            <span class="equip-summary__num" data-counter-target="70" data-counter-suffix="+">70+</span>
+            <span class="equip-summary__label">Owned Machines</span>
+          </div>
+          <div class="equip-summary__item">
+            <span class="equip-summary__num" data-counter-target="17">17</span>
+            <span class="equip-summary__label">Plant Categories</span>
+          </div>
+          <div class="equip-summary__item">
+            <span class="equip-summary__num" data-counter-target="100" data-counter-suffix="%">100%</span>
+            <span class="equip-summary__label">In-House Fleet</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="equip-grid">
-      <div class="equip-card"><span class="equip-name">Ready Mix Concrete Plant</span><span class="equip-qty">3 Nos</span></div>
-      <div class="equip-card"><span class="equip-name">Hot Mix Plant</span><span class="equip-qty">1 No</span></div>
-      <div class="equip-card"><span class="equip-name">Tipper Lorry</span><span class="equip-qty">25 Nos</span></div>
-      <div class="equip-card"><span class="equip-name">Concrete Mixer Vehicle</span><span class="equip-qty">10 Nos</span></div>
-      <div class="equip-card"><span class="equip-name">Cement Bulker</span><span class="equip-qty">1 No</span></div>
-      <div class="equip-card"><span class="equip-name">Excavator / Hitachi</span><span class="equip-qty">6 Nos</span></div>
-      <div class="equip-card"><span class="equip-name">JCB / Dozer</span><span class="equip-qty">5 Nos</span></div>
-      <div class="equip-card"><span class="equip-name">Water Lorry</span><span class="equip-qty">5 Nos</span></div>
-      <div class="equip-card"><span class="equip-name">Soil Compactor</span><span class="equip-qty">1 No</span></div>
-      <div class="equip-card"><span class="equip-name">Concrete Boom Pump</span><span class="equip-qty">2 Nos</span></div>
-      <div class="equip-card"><span class="equip-name">Concrete Manual Pump</span><span class="equip-qty">2 Nos</span></div>
-      <div class="equip-card"><span class="equip-name">Self Loader</span><span class="equip-qty">2 Nos</span></div>
-      <div class="equip-card"><span class="equip-name">Shuttering Materials</span><span class="equip-qty">4,000 m&sup2;</span></div>
-      <div class="equip-card"><span class="equip-name">Scaffolding Materials</span><span class="equip-qty">3,450 m&sup2;</span></div>
-      <div class="equip-card"><span class="equip-name">Tandem Roller</span><span class="equip-qty">1 No</span></div>
-      <div class="equip-card"><span class="equip-name">Grader</span><span class="equip-qty">1 No</span></div>
-      <div class="equip-card"><span class="equip-name">Sensor Pavor</span><span class="equip-qty">1 No</span></div>
+    <!-- Machinery Category Filters -->
+    <div class="proj-toolbar scroll-reveal" style="margin-top:1rem">
+      <div class="proj-filter-bar" data-filter-group="equipment" role="tablist" aria-label="Equipment filters">
+        <button class="proj-pill is-active" type="button" data-filter="all" aria-selected="true">All Plant <span class="proj-pill__count">(17)</span></button>
+        <button class="proj-pill" type="button" data-filter="concrete" aria-selected="false">Batching &amp; Concrete</button>
+        <button class="proj-pill" type="button" data-filter="haulage" aria-selected="false">Haulage &amp; Transport</button>
+        <button class="proj-pill" type="button" data-filter="earthmoving" aria-selected="false">Earthmoving &amp; Grading</button>
+        <button class="proj-pill" type="button" data-filter="paving" aria-selected="false">Paving &amp; Compaction</button>
+        <button class="proj-pill" type="button" data-filter="formwork" aria-selected="false">Formwork &amp; Access</button>
+      </div>
+    </div>
+
+    <!-- Equipment Fleet Grid -->
+    <div class="equip-fleet-grid">
+
+      <!-- 1. Ready Mix Concrete Plant -->
+      <div class="equip-tile scroll-reveal" data-cat="concrete">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="8" width="20" height="10" rx="1"/><path d="M6 8V5h12v3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">3 Nos</span>
+        </div>
+        <h4 class="equip-tile__name">Ready Mix Concrete Plant</h4>
+        <span class="equip-tile__cat">Batching &amp; Concrete</span>
+      </div>
+
+      <!-- 2. Concrete Mixer Vehicle -->
+      <div class="equip-tile scroll-reveal" data-cat="concrete haulage">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="5"/><path d="M12 7v5l3 3"/><path d="M3 12h3M18 12h3M12 3v3M12 18v3"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">10 Nos</span>
+        </div>
+        <h4 class="equip-tile__name">Concrete Mixer Vehicle</h4>
+        <span class="equip-tile__cat">Transit Mixers</span>
+      </div>
+
+      <!-- 3. Concrete Boom Pump -->
+      <div class="equip-tile scroll-reveal" data-cat="concrete">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V8l8-5 8 5v12"/><path d="M8 20v-5h8v5"/><circle cx="12" cy="11" r="2"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">2 Nos</span>
+        </div>
+        <h4 class="equip-tile__name">Concrete Boom Pump Truck</h4>
+        <span class="equip-tile__cat">High-Reach Placement</span>
+      </div>
+
+      <!-- 4. Concrete Manual Pump -->
+      <div class="equip-tile scroll-reveal" data-cat="concrete">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 3H5a2 2 0 0 0-2 2v4"/><path d="M9 3h10a2 2 0 0 1 2 2v4"/><path d="M3 15h3"/><path d="M18 15h3"/><rect x="7" y="9" width="10" height="10" rx="1"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">2 Nos</span>
+        </div>
+        <h4 class="equip-tile__name">Concrete Manual Pump</h4>
+        <span class="equip-tile__cat">Ground Level Placement</span>
+      </div>
+
+      <!-- 5. Hot Mix Plant -->
+      <div class="equip-tile scroll-reveal" data-cat="paving">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17h18M5 17V9l7-5 7 5v8"/><rect x="9" y="12" width="6" height="5"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">1 No</span>
+        </div>
+        <h4 class="equip-tile__name">Hot Mix Asphalt Plant</h4>
+        <span class="equip-tile__cat">Bituminous Paving</span>
+      </div>
+
+      <!-- 6. Sensor Paver -->
+      <div class="equip-tile scroll-reveal" data-cat="paving">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8z"/><path d="M2 8h20M8 8V5h8v3"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">1 No</span>
+        </div>
+        <h4 class="equip-tile__name">Sensor Paver</h4>
+        <span class="equip-tile__cat">Precision Highway Paving</span>
+      </div>
+
+      <!-- 7. Tandem Roller -->
+      <div class="equip-tile scroll-reveal" data-cat="paving">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/><path d="M4 17V9a1 1 0 0 1 1-1h8l4 4v5"/><path d="M8 8V5h4"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">1 No</span>
+        </div>
+        <h4 class="equip-tile__name">Tandem Roller</h4>
+        <span class="equip-tile__cat">Asphalt Compaction</span>
+      </div>
+
+      <!-- 8. Soil Compactor -->
+      <div class="equip-tile scroll-reveal" data-cat="paving">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="12" width="20" height="6" rx="3"/><path d="M6 12V7M12 12V7M18 12V7"/><path d="M4 7h16"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">1 No</span>
+        </div>
+        <h4 class="equip-tile__name">Soil Compactor</h4>
+        <span class="equip-tile__cat">Earthwork Stabilization</span>
+      </div>
+
+      <!-- 9. Tipper Lorry -->
+      <div class="equip-tile scroll-reveal" data-cat="haulage">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="8" width="15" height="9" rx="1"/><path d="M16 11h3l3 3v3h-6V11z"/><circle cx="5.5" cy="18.5" r="1.5"/><circle cx="18.5" cy="18.5" r="1.5"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">25 Nos</span>
+        </div>
+        <h4 class="equip-tile__name">Tipper Lorry (BharatBenz)</h4>
+        <span class="equip-tile__cat">Heavy Haulage</span>
+      </div>
+
+      <!-- 10. Water Lorry -->
+      <div class="equip-tile scroll-reveal" data-cat="haulage">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3C8 3 5 6 5 10c0 5.5 7 13 7 13s7-7.5 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">5 Nos</span>
+        </div>
+        <h4 class="equip-tile__name">Water Lorry Fleet</h4>
+        <span class="equip-tile__cat">Site Supply &amp; Curing</span>
+      </div>
+
+      <!-- 11. Cement Bulker -->
+      <div class="equip-tile scroll-reveal" data-cat="haulage concrete">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="9" rx="7" ry="5"/><path d="M5 9v6c0 2.76 3.13 5 7 5s7-2.24 7-5V9"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">1 No</span>
+        </div>
+        <h4 class="equip-tile__name">Cement Bulker</h4>
+        <span class="equip-tile__cat">Bulk Cement Logistics</span>
+      </div>
+
+      <!-- 12. Self Loader -->
+      <div class="equip-tile scroll-reveal" data-cat="haulage earthmoving">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><path d="M13 16h2"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">2 Nos</span>
+        </div>
+        <h4 class="equip-tile__name">Self Loader</h4>
+        <span class="equip-tile__cat">Machine Transport</span>
+      </div>
+
+      <!-- 13. Excavator / Hitachi -->
+      <div class="equip-tile scroll-reveal" data-cat="earthmoving">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 20V9l4-6h2v17M11 3h6l2 6v11"/><path d="M11 20h8"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">6 Nos</span>
+        </div>
+        <h4 class="equip-tile__name">Excavator / Hitachi</h4>
+        <span class="equip-tile__cat">Heavy Earthmoving</span>
+      </div>
+
+      <!-- 14. JCB / Dozer -->
+      <div class="equip-tile scroll-reveal" data-cat="earthmoving">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20h16M6 20V10l3-8h6l3 8v10"/><path d="M9 20v-6h6v6"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">5 Nos</span>
+        </div>
+        <h4 class="equip-tile__name">JCB / Dozer Fleet</h4>
+        <span class="equip-tile__cat">Grading &amp; Site Clearing</span>
+      </div>
+
+      <!-- 15. Motor Grader -->
+      <div class="equip-tile scroll-reveal" data-cat="earthmoving paving">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18h18M3 12l9-9 9 9"/><path d="M7 18v-6h10v6"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">1 No</span>
+        </div>
+        <h4 class="equip-tile__name">Motor Grader</h4>
+        <span class="equip-tile__cat">Roadbed Leveling</span>
+      </div>
+
+      <!-- 16. Shuttering Materials -->
+      <div class="equip-tile scroll-reveal" data-cat="formwork">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">4,000 m&sup2;</span>
+        </div>
+        <h4 class="equip-tile__name">Steel Shuttering Materials</h4>
+        <span class="equip-tile__cat">Structural Formwork</span>
+      </div>
+
+      <!-- 17. Scaffolding Materials -->
+      <div class="equip-tile scroll-reveal" data-cat="formwork">
+        <div class="equip-tile__top">
+          <div class="equip-tile__icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5h18M3 12h18M3 19h18"/><path d="M7 5v14M17 5v14"/></svg>
+          </div>
+          <span class="equip-tile__qty-badge">3,450 m&sup2;</span>
+        </div>
+        <h4 class="equip-tile__name">Scaffolding Materials</h4>
+        <span class="equip-tile__cat">Staging &amp; Access</span>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- LIGHTBOX MODAL -->
+<!-- LIGHTBOX MODAL (ACCESSIBLE FULL-SCREEN PREVIEW) -->
 <dialog class="lightbox" aria-label="Project photo lightbox">
   <div class="lightbox__box">
     <button class="lightbox__close" type="button" aria-label="Close dialog">Close &times;</button>
@@ -377,6 +1666,7 @@
   </div>
 </dialog>
 
+<!-- REACH / CONTACT SECTION -->
 <section class="reach night" aria-labelledby="reach-title">
   <figure class="reach__photo">
     <img src="../assets/img/gallery/namakkal-bus-stand-aerial.webp" srcset="../assets/img/gallery/namakkal-bus-stand-aerial.webp 768w" sizes="(min-width: 960px) 42vw, 100vw" alt="Namakkal New Bus Stand built by Ashok Construction" width="768" height="660" loading="lazy" decoding="async">
