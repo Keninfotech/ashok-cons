@@ -312,6 +312,45 @@
     });
   }
 
+  /* ---------------------------------------------------------------- home: key completed projects category filter */
+  const worksFilters = $$('.works__filter');
+  const pcards = $$('.pcard');
+  if (worksFilters.length && pcards.length) {
+    // Dynamically calculate and set project counts from the actual verified dataset
+    worksFilters.forEach((btn) => {
+      const filter = btn.dataset.filter;
+      const countEl = $('.works__filter-count', btn);
+      if (countEl) {
+        const count = filter === 'all'
+          ? pcards.length
+          : pcards.filter((c) => (c.dataset.cat || '').split(' ').includes(filter)).length;
+        countEl.textContent = count;
+      }
+    });
+
+    worksFilters.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        worksFilters.forEach((b) => {
+          const isActive = b === btn;
+          b.classList.toggle('is-active', isActive);
+          b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        pcards.forEach((card) => {
+          const cat = card.dataset.cat || '';
+          const match = filter === 'all' || cat.split(' ').includes(filter);
+          card.classList.toggle('is-hidden', !match);
+        });
+
+        // Recalculate layout and ScrollTrigger markers smoothly
+        if (window.ScrollTrigger) {
+          ScrollTrigger.refresh();
+        }
+      });
+    });
+  }
+
   /* ---------------------------------------------------------------- forms → email (static site) */
   $$('form[data-mailto]').forEach((form) => {
     form.addEventListener('submit', (e) => {

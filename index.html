@@ -203,26 +203,351 @@
   </div>
 </section>
 
-<section class="works" aria-labelledby="works-title">
-  <div class="wrap grid works__grid">
-    <div class="works__head">
-      <p class="label"><b>06</b> Public Works &amp; Infrastructure</p>
-      <h2 class="h-section" id="works-title">Key Completed Projects</h2>
-      <p>Delivered with stringent quality protocols and adherence to schedules for PWD, Highways, DRDA, TWAD, and Tamil Nadu Urban Habitat Development Board.</p>
-      <a class="link" href="projects/">View full project details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+<section class="works" id="works" aria-labelledby="works-title">
+  <div class="wrap">
+    <div class="works__intro">
+      <div class="works__intro-head">
+        <p class="works__eyebrow"><span class="works__eyebrow-num">06</span> <span class="works__eyebrow-sep">/</span> <span class="works__eyebrow-text">OUR WORK &bull; PUBLIC INFRASTRUCTURE</span></p>
+        <h2 class="h-section works__title" id="works-title">Key Completed Projects</h2>
+        <div class="works__rule" aria-hidden="true"></div>
+      </div>
+      <div class="works__intro-copy">
+        <p class="works__desc">Delivered with stringent quality protocols and adherence to schedules for PWD, Highways, DRDA, TWAD, and Tamil Nadu Urban Habitat Development Board.</p>
+        <div class="works__cta-bar">
+          <a class="works__cta" href="projects/">
+            <span>View full project details</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </a>
+          <span class="works__stat-tag">10 Verified Landmark Deliveries</span>
+        </div>
+      </div>
     </div>
-    <ol class="ledger">
-      <li><span>01</span><h3>Strengthening of the Government Head Quarters Hospital at Paramakudi, Ramanathapuram District</h3><b>PWD</b></li>
-      <li><span>02</span><h3>Construction of 1,100 tenements with water supply, sanitation, and development works at Pappireddipatti, Dharmapuri District</h3><b>TNUHDB</b></li>
-      <li><span>03</span><h3>Construction of Combined Court Building &amp; Judicial Quarters, Garages, Shed &amp; Canteen at Paramathi, Namakkal District</h3><b>PWD</b></li>
-      <li><span>04</span><h3>Construction of New Bus Stand in Ramanathapuram</h3><b>Municipal</b></li>
-      <li><span>05</span><h3>Construction of New Bus Stand at Mudalaipatty in Namakkal</h3><b>Corporation</b></li>
-      <li><span>06</span><h3>Construction of New Bus Stand in Rasipuram</h3><b>Municipal</b></li>
-      <li><span>07</span><h3>Water Supply Distribution System in Mohanur Town Panchayat under AMRUT 2.0 Scheme</h3><b>TWAD / DRDA</b></li>
-      <li><span>08</span><h3>Forming Bypass Road to Namakkal town and link road (Phase-I)</h3><b>Highways</b></li>
-      <li><span>09</span><h3>Widening &amp; Strengthening of Namakkal–Kananur Road with Paved Shoulders, Retaining Wall &amp; CD Works</h3><b>Highways</b></li>
-      <li><span>10</span><h3>High-level Bridge at Ramanathapurampudur Road in lieu of existing causeway &amp; Bridge at Puthakkal Odai</h3><b>Highways</b></li>
-    </ol>
+
+    <!-- Category Filter Controls -->
+    <div class="works__filter-wrap">
+      <div class="works__filters" role="tablist" aria-label="Filter completed projects by category">
+        <button type="button" class="works__filter is-active" data-filter="all" role="tab" aria-selected="true" aria-controls="works-grid">
+          <span>All Projects</span>
+          <span class="works__filter-count">10</span>
+        </button>
+        <button type="button" class="works__filter" data-filter="transportation" role="tab" aria-selected="false" aria-controls="works-grid">
+          <span>Transportation</span>
+          <span class="works__filter-count">3</span>
+        </button>
+        <button type="button" class="works__filter" data-filter="roads-highways" role="tab" aria-selected="false" aria-controls="works-grid">
+          <span>Roads &amp; Highways</span>
+          <span class="works__filter-count">3</span>
+        </button>
+        <button type="button" class="works__filter" data-filter="healthcare" role="tab" aria-selected="false" aria-controls="works-grid">
+          <span>Healthcare</span>
+          <span class="works__filter-count">1</span>
+        </button>
+        <button type="button" class="works__filter" data-filter="housing" role="tab" aria-selected="false" aria-controls="works-grid">
+          <span>Housing</span>
+          <span class="works__filter-count">1</span>
+        </button>
+        <button type="button" class="works__filter" data-filter="public-buildings" role="tab" aria-selected="false" aria-controls="works-grid">
+          <span>Public Buildings</span>
+          <span class="works__filter-count">1</span>
+        </button>
+        <button type="button" class="works__filter" data-filter="water-supply" role="tab" aria-selected="false" aria-controls="works-grid">
+          <span>Water Supply</span>
+          <span class="works__filter-count">1</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Responsive Project Card Grid -->
+    <div class="works__cards" id="works-grid" role="region" aria-live="polite">
+      <!-- 01. Paramakudi Hospital -->
+      <article class="pcard" data-cat="healthcare">
+        <div class="pcard__media">
+          <img src="./assets/img/gallery/paramakudi-hospital.webp" alt="Strengthening of the Government Head Quarters Hospital at Paramakudi, Ramanathapuram District" width="768" height="576" loading="lazy" decoding="async">
+          <div class="pcard__chips">
+            <span class="pcard__chip pcard__chip--seq">01</span>
+            <span class="pcard__chip pcard__chip--cat">Healthcare</span>
+          </div>
+        </div>
+        <div class="pcard__content">
+          <div class="pcard__dept-row">
+            <span class="pcard__dept">PWD &bull; Public Works Department</span>
+            <span class="pcard__status">Completed</span>
+          </div>
+          <h3 class="pcard__title">Strengthening of the Government Head Quarters Hospital at Paramakudi, Ramanathapuram District</h3>
+          <div class="pcard__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Paramakudi, Ramanathapuram District</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="projects/#completed-buildings" class="pcard__link">
+              <span>View project record</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02. Pappireddipatti Tenements -->
+      <article class="pcard" data-cat="housing">
+        <div class="pcard__media">
+          <img src="./assets/img/gallery/tnuhdb-tenements.webp" alt="Construction of 1,100 tenements with water supply, sanitation, and development works at Pappireddipatti" width="768" height="576" loading="lazy" decoding="async">
+          <div class="pcard__chips">
+            <span class="pcard__chip pcard__chip--seq">02</span>
+            <span class="pcard__chip pcard__chip--cat">Housing</span>
+          </div>
+        </div>
+        <div class="pcard__content">
+          <div class="pcard__dept-row">
+            <span class="pcard__dept">TNUHDB</span>
+            <span class="pcard__status">Completed</span>
+          </div>
+          <h3 class="pcard__title">Construction of 1,100 tenements with water supply, sanitation, and development works at Pappireddipatti, Dharmapuri District</h3>
+          <div class="pcard__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Pappireddipatti, Dharmapuri District</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="projects/#completed-buildings" class="pcard__link">
+              <span>View project record</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03. Paramathi Court Building -->
+      <article class="pcard" data-cat="public-buildings">
+        <div class="pcard__media">
+          <img src="./assets/img/gallery/paramathi-court.webp" alt="Combined Court Building and Judicial Quarters, Garages, Shed and Canteen at Paramathi, Namakkal District" width="768" height="576" loading="lazy" decoding="async">
+          <div class="pcard__chips">
+            <span class="pcard__chip pcard__chip--seq">03</span>
+            <span class="pcard__chip pcard__chip--cat">Public Buildings</span>
+          </div>
+        </div>
+        <div class="pcard__content">
+          <div class="pcard__dept-row">
+            <span class="pcard__dept">PWD &bull; Public Works Department</span>
+            <span class="pcard__status">Completed</span>
+          </div>
+          <h3 class="pcard__title">Construction of Combined Court Building &amp; Judicial Quarters, Garages, Shed &amp; Canteen at Paramathi, Namakkal District</h3>
+          <div class="pcard__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Paramathi, Namakkal District</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="projects/#completed-buildings" class="pcard__link">
+              <span>View project record</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04. Ramanathapuram New Bus Stand -->
+      <article class="pcard" data-cat="transportation">
+        <div class="pcard__media">
+          <img src="./assets/img/gallery/ramnad-bus-stand.webp" alt="Construction of New Bus Stand in Ramanathapuram" width="768" height="576" loading="lazy" decoding="async">
+          <div class="pcard__chips">
+            <span class="pcard__chip pcard__chip--seq">04</span>
+            <span class="pcard__chip pcard__chip--cat">Transportation</span>
+          </div>
+        </div>
+        <div class="pcard__content">
+          <div class="pcard__dept-row">
+            <span class="pcard__dept">Municipal Administration</span>
+            <span class="pcard__status">Completed</span>
+          </div>
+          <h3 class="pcard__title">Construction of New Bus Stand in Ramanathapuram</h3>
+          <div class="pcard__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Ramanathapuram</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="projects/#completed-buildings" class="pcard__link">
+              <span>View project record</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05. Namakkal New Bus Stand Mudalaipatty -->
+      <article class="pcard" data-cat="transportation">
+        <div class="pcard__media">
+          <img src="./assets/img/gallery/namakkal-bus-stand-arch.webp" alt="Construction of New Bus Stand at Mudalaipatty in Namakkal" width="768" height="576" loading="lazy" decoding="async">
+          <div class="pcard__chips">
+            <span class="pcard__chip pcard__chip--seq">05</span>
+            <span class="pcard__chip pcard__chip--cat">Transportation</span>
+          </div>
+        </div>
+        <div class="pcard__content">
+          <div class="pcard__dept-row">
+            <span class="pcard__dept">Namakkal Corporation</span>
+            <span class="pcard__status">Completed</span>
+          </div>
+          <h3 class="pcard__title">Construction of New Bus Stand at Mudalaipatty in Namakkal</h3>
+          <div class="pcard__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Mudalaipatty, Namakkal</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="projects/#completed-buildings" class="pcard__link">
+              <span>View project record</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 06. Rasipuram New Bus Stand -->
+      <article class="pcard" data-cat="transportation">
+        <div class="pcard__media pcard__media--blueprint">
+          <img src="./assets/img/blueprint-800.webp" alt="Civic passenger transit terminal project record for Rasipuram New Bus Stand" width="800" height="600" loading="lazy" decoding="async">
+          <div class="pcard__placeholder-overlay">
+            <svg viewBox="0 0 100 100" class="pcard__placeholder-icon" aria-hidden="true">
+              <path d="M29 4 36 16H22z" fill="#8a94a6"/><path d="M71 4 78 16H64z" fill="#e0493a"/>
+              <path d="M50 20 29 56h21z" fill="#6c9cf0"/><path d="M50 20 71 56H50z" fill="#3f6fe0"/>
+              <path d="M29 56 8 92h30z" fill="#2447c9"/><path d="M29 56h21v16L38 92z" fill="#4f7de6"/>
+              <path d="M50 56h21L62 92 50 72z" fill="#1d3aa8"/><path d="M71 56 92 92H62z" fill="#162f8c"/>
+            </svg>
+            <span class="pcard__placeholder-tag">Documented Civic Project Record</span>
+          </div>
+          <div class="pcard__chips">
+            <span class="pcard__chip pcard__chip--seq">06</span>
+            <span class="pcard__chip pcard__chip--cat">Transportation</span>
+          </div>
+        </div>
+        <div class="pcard__content">
+          <div class="pcard__dept-row">
+            <span class="pcard__dept">Municipal Administration</span>
+            <span class="pcard__status">Completed</span>
+          </div>
+          <h3 class="pcard__title">Construction of New Bus Stand in Rasipuram</h3>
+          <div class="pcard__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Rasipuram, Namakkal District</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="projects/#completed-buildings" class="pcard__link">
+              <span>View project record</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 07. Mohanur Water Supply AMRUT 2.0 -->
+      <article class="pcard" data-cat="water-supply">
+        <div class="pcard__media">
+          <img src="./assets/img/project-7-768.webp" alt="Panchayat Union Office Mohanur - Water Supply Distribution System under AMRUT 2.0 Scheme" width="768" height="576" loading="lazy" decoding="async">
+          <div class="pcard__chips">
+            <span class="pcard__chip pcard__chip--seq">07</span>
+            <span class="pcard__chip pcard__chip--cat">Water Supply</span>
+          </div>
+        </div>
+        <div class="pcard__content">
+          <div class="pcard__dept-row">
+            <span class="pcard__dept">TWAD / DRDA &bull; AMRUT 2.0</span>
+            <span class="pcard__status">Completed</span>
+          </div>
+          <h3 class="pcard__title">Water Supply Distribution System in Mohanur Town Panchayat under AMRUT 2.0 Scheme</h3>
+          <div class="pcard__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Mohanur Town Panchayat, Namakkal District</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="projects/#completed-buildings" class="pcard__link">
+              <span>View project record</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 08. Namakkal Bypass Phase-1 -->
+      <article class="pcard" data-cat="roads-highways">
+        <div class="pcard__media">
+          <img src="./assets/img/gallery/namakkal-bypass-phase-1.webp" alt="Forming Bypass Road to Namakkal town and link road (Phase-I)" width="768" height="576" loading="lazy" decoding="async">
+          <div class="pcard__chips">
+            <span class="pcard__chip pcard__chip--seq">08</span>
+            <span class="pcard__chip pcard__chip--cat">Roads &amp; Highways</span>
+          </div>
+        </div>
+        <div class="pcard__content">
+          <div class="pcard__dept-row">
+            <span class="pcard__dept">Highways Department</span>
+            <span class="pcard__status">Completed</span>
+          </div>
+          <h3 class="pcard__title">Forming Bypass Road to Namakkal town and link road (Phase-I)</h3>
+          <div class="pcard__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Namakkal</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="projects/#completed-roads" class="pcard__link">
+              <span>View project record</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 09. Namakkal-Kananur Road Widening -->
+      <article class="pcard" data-cat="roads-highways">
+        <div class="pcard__media">
+          <img src="./assets/img/gallery/road-widening-kananur.webp" alt="Widening &amp; Strengthening of Namakkal-Kananur Road with Paved Shoulders, Retaining Wall &amp; CD Works" width="768" height="576" loading="lazy" decoding="async">
+          <div class="pcard__chips">
+            <span class="pcard__chip pcard__chip--seq">09</span>
+            <span class="pcard__chip pcard__chip--cat">Roads &amp; Highways</span>
+          </div>
+        </div>
+        <div class="pcard__content">
+          <div class="pcard__dept-row">
+            <span class="pcard__dept">Highways Department</span>
+            <span class="pcard__status">Completed</span>
+          </div>
+          <h3 class="pcard__title">Widening &amp; Strengthening of Namakkal–Kananur Road with Paved Shoulders, Retaining Wall &amp; CD Works</h3>
+          <div class="pcard__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Namakkal – Kananur</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="projects/#completed-roads" class="pcard__link">
+              <span>View project record</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 10. High-level Bridge Ramanathapurampudur -->
+      <article class="pcard" data-cat="roads-highways">
+        <div class="pcard__media">
+          <img src="./assets/img/gallery/ramanathapurampudur-bridge.webp" alt="High-level Bridge at Ramanathapurampudur Road in lieu of existing causeway &amp; Bridge at Puthakkal Odai" width="768" height="576" loading="lazy" decoding="async">
+          <div class="pcard__chips">
+            <span class="pcard__chip pcard__chip--seq">10</span>
+            <span class="pcard__chip pcard__chip--cat">Roads &amp; Highways</span>
+          </div>
+        </div>
+        <div class="pcard__content">
+          <div class="pcard__dept-row">
+            <span class="pcard__dept">Highways Department</span>
+            <span class="pcard__status">Completed</span>
+          </div>
+          <h3 class="pcard__title">High-level Bridge at Ramanathapurampudur Road in lieu of existing causeway &amp; Bridge at Puthakkal Odai</h3>
+          <div class="pcard__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Ramanathapurampudur &amp; Kollihills</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="projects/#completed-roads" class="pcard__link">
+              <span>View project record</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
