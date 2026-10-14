@@ -426,16 +426,68 @@
     }
   }
 
+  /* ---------------------------------------------------------------- careers resume file upload handling */
+  const resumeInput = $('#c-resume');
+  const uploadZone = $('#careersUploadZone');
+  const uploadTitle = $('#uploadTitle');
+  const uploadHint = $('#uploadHint');
+
+  if (resumeInput && uploadZone) {
+    const handleFile = (file) => {
+      if (!file) return;
+      if (uploadTitle) uploadTitle.textContent = `Selected: ${file.name}`;
+      if (uploadHint) uploadHint.textContent = `${(file.size / (1024 * 1024)).toFixed(2)} MB — Ready to attach to your email`;
+      uploadZone.style.borderColor = 'var(--blue)';
+      uploadZone.style.background = 'rgba(36, 71, 201, 0.05)';
+    };
+
+    resumeInput.addEventListener('change', (e) => {
+      if (e.target.files && e.target.files[0]) {
+        handleFile(e.target.files[0]);
+      }
+    });
+
+    ['dragenter', 'dragover'].forEach((evt) => {
+      uploadZone.addEventListener(evt, (e) => {
+        e.preventDefault();
+        uploadZone.classList.add('is-dragover');
+      });
+    });
+    ['dragleave', 'drop'].forEach((evt) => {
+      uploadZone.addEventListener(evt, (e) => {
+        e.preventDefault();
+        uploadZone.classList.remove('is-dragover');
+      });
+    });
+    uploadZone.addEventListener('drop', (e) => {
+      if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]) {
+        resumeInput.files = e.dataTransfer.files;
+        handleFile(e.dataTransfer.files[0]);
+      }
+    });
+  }
+
   /* ---------------------------------------------------------------- forms → email (static site) */
   $$('form[data-mailto]').forEach((form) => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       if (!form.reportValidity()) return;
       const f = new FormData(form);
-      const body = [`Name: ${f.get('name')}`, `Email: ${f.get('email')}`, `Phone: ${f.get('phone') || '-'}`, '', f.get('message') || ''].join('\n');
+      const resumeFile = f.get('resume');
+      const lines = [
+        `Name: ${f.get('name')}`,
+        `Email: ${f.get('email')}`,
+        `Phone: ${f.get('phone') || '-'}`
+      ];
+      if (resumeFile && resumeFile.name) {
+        lines.push(`Selected Resume: ${resumeFile.name} (Please ensure file is attached to this email)`);
+      }
+      lines.push('', '--- Position & Experience Summary ---', f.get('message') || '');
+      const body = lines.join('\n');
       const subject = `${form.dataset.subject} — ${f.get('name')}`;
       location.href = `mailto:${form.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      $('.form__status', form).textContent = form.dataset.done;
+      const statusEl = $('.form__status', form);
+      if (statusEl) statusEl.textContent = form.dataset.done;
     });
   });
 
