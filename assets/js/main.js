@@ -134,10 +134,22 @@
       const track = $('.reel__track', reel);
       mm.add('(min-width: 900px)', () => {
         reel.classList.add('is-pinned');
-        const dist = () => track.scrollWidth - innerWidth;
-        gsap.to(track, {
+        const dist = () => Math.max(0, track.scrollWidth - innerWidth);
+        const st = gsap.to(track, {
           x: () => -dist(), ease: 'none',
-          scrollTrigger: { trigger: reel, start: 'top top', end: () => '+=' + dist(), pin: true, scrub: 0.7, invalidateOnRefresh: true, onUpdate: (s) => countReel(reel, s.progress) },
+          scrollTrigger: {
+            trigger: reel,
+            start: 'top top',
+            end: () => '+=' + dist(),
+            pin: true,
+            scrub: 0.7,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+            onUpdate: (s) => countReel(reel, s.progress)
+          },
+        });
+        $$('img', track).forEach((img) => {
+          if (!img.complete) img.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
         });
         return () => reel.classList.remove('is-pinned');
       });
