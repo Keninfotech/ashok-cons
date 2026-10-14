@@ -1857,7 +1857,324 @@ main:has(> .reach:last-child) + .foot { border-top: 1px solid var(--rule-night);
 }
 .night .reg-card .reg-badge { color: #8ea4ff; background: rgba(142, 164, 255, .15); }
 
-/* equipment inventory grid */
+/* ==========================================================================
+   Plant & Machinery / Construction Equipment & Plant (Matching Editorial Spec)
+   ========================================================================== */
+.fleet-section {
+  padding-block: clamp(3rem, 5vw, 5rem);
+  background: var(--paper);
+  position: relative;
+}
+
+.fleet-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.fleet-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--f-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.fleet-eyebrow .fleet-num {
+  color: var(--blue);
+  font-weight: 600;
+}
+.night .fleet-eyebrow .fleet-num {
+  color: #8ea4ff;
+}
+
+.fleet-eyebrow .fleet-sep {
+  color: var(--ink-3);
+}
+
+.fleet-eyebrow .fleet-label {
+  color: var(--ink);
+  font-weight: 500;
+}
+.night .fleet-eyebrow .fleet-label {
+  color: var(--on-night);
+}
+
+.fleet-rule-line {
+  height: 1px;
+  background: rgba(20, 21, 24, 0.18);
+  width: clamp(80px, 18vw, 240px);
+}
+.night .fleet-rule-line {
+  background: var(--rule-night);
+}
+
+.fleet-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) auto minmax(0, 1.5fr);
+  gap: clamp(1.2rem, 2.5vw, 2.5rem);
+  align-items: center;
+  margin-bottom: 2.8rem;
+}
+
+@media (max-width: 1080px) {
+  .fleet-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.fleet-text-col .fleet-title {
+  font-family: var(--f-display);
+  font-size: clamp(2.3rem, 3.8vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  font-stretch: 88%;
+  margin-bottom: 1.25rem;
+}
+.night .fleet-text-col .fleet-title {
+  color: var(--on-night);
+}
+
+.fleet-text-col .fleet-title .accent-blue {
+  color: var(--blue);
+}
+.night .fleet-text-col .fleet-title .accent-blue {
+  color: #8ea4ff;
+}
+
+.fleet-lede {
+  font-family: var(--f-text);
+  font-size: clamp(1.08rem, 1.25vw, 1.22rem);
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--ink);
+  margin-bottom: 0.9rem;
+  max-width: 58ch;
+}
+.night .fleet-lede {
+  color: var(--on-night);
+}
+
+.fleet-body {
+  font-family: var(--f-text);
+  font-size: clamp(0.88rem, 0.95vw, 0.98rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--ink-2);
+  max-width: 60ch;
+}
+.night .fleet-body {
+  color: var(--on-night-2);
+}
+
+.fleet-kpi-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fleet-kpi-card {
+  padding: 1.4rem 1.6rem;
+  border: 1px solid rgba(20, 21, 24, 0.14);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.25);
+}
+.night .fleet-kpi-card {
+  border-color: var(--rule-night);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.fleet-kpi-header {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.fleet-kpi-number {
+  font-family: var(--f-display);
+  font-size: clamp(3.2rem, 4.4vw, 4.5rem);
+  font-weight: 700;
+  line-height: 0.92;
+  color: var(--blue);
+  font-stretch: 85%;
+  margin-bottom: 0.35rem;
+}
+.night .fleet-kpi-number {
+  color: #8ea4ff;
+}
+
+.fleet-kpi-footer {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+}
+
+.fleet-artwork-col {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.fleet-artwork-box {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fleet-excavator-img {
+  width: 100%;
+  height: auto;
+  max-height: 270px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: contrast(1.02);
+}
+.night .fleet-excavator-img {
+  mix-blend-mode: normal;
+  border-radius: 4px;
+}
+
+/* 17 Equipment Fleet Cards Grid (6 columns desktop) */
+.fleet-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 1320px) {
+  .fleet-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .fleet-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .fleet-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fleet-card {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 0.75rem;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(20, 21, 24, 0.1);
+  border-radius: 8px;
+  min-height: 74px;
+  transition: transform 0.22s var(--ease), border-color 0.22s var(--ease), box-shadow 0.22s var(--ease), background-color 0.22s var(--ease);
+  box-shadow: 0 1px 2px rgba(20, 21, 24, 0.02);
+}
+.night .fleet-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--rule-night);
+}
+
+.fleet-card:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+  border-color: rgba(36, 71, 201, 0.35);
+  box-shadow: 0 6px 16px rgba(36, 71, 201, 0.08);
+}
+.night .fleet-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(142, 164, 255, 0.4);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.fleet-card-media {
+  width: 58px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fleet-card-media img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: contrast(1.03);
+  transition: transform 0.25s var(--ease);
+}
+.night .fleet-card-media img {
+  mix-blend-mode: normal;
+  filter: contrast(1.05) brightness(0.95);
+}
+.fleet-card:hover .fleet-card-media img {
+  transform: scale(1.06);
+}
+
+.fleet-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  flex: 1;
+}
+
+.fleet-card-title {
+  font-family: var(--f-display);
+  font-stretch: 88%;
+  font-size: 0.74rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+.night .fleet-card-title {
+  color: var(--on-night);
+}
+
+.fleet-card-count {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1;
+  color: var(--blue);
+  font-stretch: 85%;
+}
+.night .fleet-card-count {
+  color: #8ea4ff;
+}
+
+.fleet-num-unit {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-left: 2px;
+}
+
+/* legacy equip grid backwards compatibility */
 .equip-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 2rem; }
 .equip-card {
   display: flex; justify-content: space-between; align-items: baseline; padding: .9rem 1.1rem;
