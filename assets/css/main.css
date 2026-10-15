@@ -61,6 +61,66 @@ ul, ol { padding: 0; list-style: none; }
 .night { background: var(--night); color: var(--on-night); }
 .stone { background: var(--paper-2); }
 
+/* ---------- Icy Blue Theme for all night content sections ---------- */
+.night:not(.hero):not(.foot),
+.reel.night,
+.creed.night,
+.section.night {
+  --night: #e8f1fc;
+  --on-night: #141518;
+  --on-night-2: #45474c;
+  --rule-night: rgba(20, 21, 24, 0.14);
+  background: #e8f1fc !important;
+  color: var(--ink) !important;
+}
+.night:not(.hero):not(.foot) .label,
+.reel.night .label,
+.creed.night .label,
+.section.night .label {
+  color: var(--blue) !important;
+}
+.night:not(.hero):not(.foot) .label b,
+.reel.night .label b,
+.creed.night .label b,
+.section.night .label b {
+  color: #173873 !important;
+}
+.night:not(.hero):not(.foot) p,
+.reel.night p,
+.creed.night p,
+.section.night p {
+  color: var(--ink-2) !important;
+}
+.night:not(.hero):not(.foot) .statement,
+.reel.night .statement,
+.creed.night .statement,
+.section.night .statement {
+  color: var(--ink) !important;
+}
+.night:not(.hero):not(.foot) em,
+.reel.night em,
+.creed.night em,
+.section.night em {
+  color: #173873 !important;
+}
+.night:not(.hero):not(.foot) .h-display,
+.night:not(.hero):not(.foot) .h-section,
+.night:not(.hero):not(.foot) h1,
+.night:not(.hero):not(.foot) h2,
+.night:not(.hero):not(.foot) h3,
+.night:not(.hero):not(.foot) h4 {
+  color: var(--ink) !important;
+}
+.night:not(.hero):not(.foot) .lede {
+  color: var(--ink) !important;
+}
+.night:not(.hero):not(.foot) .person {
+  border-top-color: rgba(20, 21, 24, 0.14) !important;
+}
+.night:not(.hero):not(.foot) .person:last-child {
+  border-bottom-color: rgba(20, 21, 24, 0.14) !important;
+}
+
 /* ---------- type ---------- */
 .label {
   font: 500 .72rem/1.4 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2);
@@ -290,8 +350,10 @@ p + p { margin-top: 1em; }
 }
 .shot__img {
   overflow: hidden;
-  border-radius: 2px;
-  background: rgba(255, 255, 255, 0.04);
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid rgba(20, 21, 24, 0.08);
+  box-shadow: 0 4px 18px -2px rgba(20, 21, 24, 0.08);
 }
 .shot img {
   width: 100%;
@@ -304,7 +366,7 @@ p + p { margin-top: 1em; }
   transform: scale(1.03);
 }
 .shot .cap {
-  color: var(--on-night-2);
+  color: var(--ink-2);
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -312,7 +374,8 @@ p + p { margin-top: 1em; }
   font: 400 .72rem/1.4 var(--f-mono);
 }
 .shot .cap span:first-child {
-  color: var(--on-night);
+  color: var(--ink);
+  font-weight: 500;
 }
 .reel__end {
   flex: none;
@@ -323,17 +386,19 @@ p + p { margin-top: 1em; }
 .reel__end a {
   display: inline-block;
   font-size: clamp(3rem, 6vw, 6rem);
-  border-bottom: 2px solid var(--on-night);
+  color: var(--ink);
+  border-bottom: 2px solid var(--blue);
   transition: color .3s, border-color .3s;
 }
 .reel__end a:hover {
-  color: #8ea4ff;
-  border-color: #8ea4ff;
+  color: var(--blue);
+  border-color: var(--blue);
 }
 .reel__end p {
   margin-top: 1.2rem;
   font-size: 1rem;
   max-width: 26ch;
+  color: var(--ink-2);
 }
 
 /* Pinned Desktop Layout: Ensures complete viewport containment with ZERO bottom cutoff */
