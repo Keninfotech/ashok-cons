@@ -482,7 +482,8 @@
       if (resumeFile && resumeFile.name) {
         lines.push(`Selected Resume: ${resumeFile.name} (Please ensure file is attached to this email)`);
       }
-      lines.push('', '--- Position & Experience Summary ---', f.get('message') || '');
+      const sectionHeader = (resumeFile && resumeFile.name) ? '--- Position & Experience Summary ---' : '--- Project Inquiry / Message ---';
+      lines.push('', sectionHeader, f.get('message') || '');
       const body = lines.join('\n');
       const subject = `${form.dataset.subject} — ${f.get('name')}`;
       location.href = `mailto:${form.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
