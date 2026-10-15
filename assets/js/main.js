@@ -79,7 +79,7 @@
   });
 
   /* video background */
-  const heroVideos = $$('#aboutHeroVideo, #servicesHeroVideo, #projectsHeroVideo, #careersHeroVideo');
+  const heroVideos = $$('#aboutHeroVideo, #servicesHeroVideo, #projectsHeroVideo, #careersHeroVideo, #contactHeroVideo');
   if (heroVideos.length && reduce) {
     heroVideos.forEach((v) => v.pause());
   }
