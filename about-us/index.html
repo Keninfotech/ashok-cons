@@ -31,12 +31,10 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="hdr">
   <div class="hdr__in">
-    <a class="brand" href="../" aria-label="Ashok Construction home"><svg viewBox="0 0 100 100" aria-hidden="true">
-  <path d="M29 4 36 16H22z" fill="#8a94a6"/><path d="M71 4 78 16H64z" fill="#e0493a"/>
-  <path d="M50 20 29 56h21z" fill="#6c9cf0"/><path d="M50 20 71 56H50z" fill="#3f6fe0"/>
-  <path d="M29 56 8 92h30z" fill="#2447c9"/><path d="M29 56h21v16L38 92z" fill="#4f7de6"/>
-  <path d="M50 56h21L62 92 50 72z" fill="#1d3aa8"/><path d="M71 56 92 92H62z" fill="#162f8c"/>
-</svg><span>Ashok <i>Construction</i></span></a>
+    <a class="brand" href="../" aria-label="Ashok Construction home">
+      <img class="brand__logo brand__logo--dark" src="../assets/img/logonew.png" alt="Ashok Construction" width="1376" height="1143">
+      <img class="brand__logo brand__logo--light" src="../assets/img/logonew-white.png" alt="Ashok Construction" width="1376" height="1143">
+    </a>
     <nav class="menu" aria-label="Primary"><ul><li><a href="../">Home</a></li><li><a href="../about-us/" class="is-current">About Us</a><ul class="menu__sub"><li><a href="../about-us/" aria-current="page">Overview</a></li><li><a href="../about-us/management/">Management</a></li><li><a href="../about-us/vision-mission/">Vision &amp; Mission</a></li></ul></li><li><a href="../our-services/">Our services</a></li><li><a href="../projects/">Projects</a></li><li><a href="../careers/">Careers</a></li><li><a href="../contact/">Contact</a></li></ul></nav>
     <button class="hdr__toggle" type="button" aria-expanded="false" aria-controls="drawer">Menu</button>
   </div>
@@ -108,50 +106,149 @@
   </div>
 </section>
 
-<section class="section stone">
-  <div class="wrap">
-    <div class="grid cat__head">
-      <div class="cat__title">
-        <p class="label">Our Roots</p>
-        <h2 class="h-section">Our Journey of Diversification</h2>
+<section class="section stone div-section" id="diversification">
+  <div class="div-bg-watermark" aria-hidden="true"></div>
+  <div class="wrap" style="position:relative; z-index:1;">
+    <div class="div-header">
+      <div class="div-header__title-col">
+        <p class="div-eyebrow">Our Roots</p>
+        <h2 class="div-title">Our Journey <br>of <em>Diversification</em></h2>
       </div>
-      <div class="cat__text">
-        <p>From its beginnings in textile manufacturing in 1999, the Management has progressively diversified into infrastructure and construction, ready-mix concrete, agriculture, energy retail, education, and community development.</p>
+      <div class="div-header__desc-col">
+        <p class="div-header__lede">From its beginnings in textile manufacturing in 1999, the Management has progressively diversified into infrastructure and construction, ready-mix concrete, agriculture, energy retail, education, and community development.</p>
       </div>
     </div>
     
-    <div class="group-grid">
-      <div class="group-card">
-        <p class="label">1999 &bull; Manufacturing</p>
-        <h3>Textile Mills &amp; Green Energy</h3>
-        <p>The Management traces its journey back to 1999 with the establishment of Ashok Textile Mills – Spinning Unit, expanding steadily into sizing and weaving. In 2017, the Made-ups Division was established for export-grade textile products, powered by a 100% Green Power Unit (Solar Plant &amp; Windmill).</p>
-      </div>
-      <div class="group-card">
-        <p class="label">2017 &bull; Infrastructure</p>
-        <h3>Ashok Construction</h3>
-        <p>Established as a dedicated division focused on public works, highways, and rural development projects, including projects undertaken for the National Highways Authority of India (NHAI) as well as private civil and industrial construction works.</p>
-      </div>
-      <div class="group-card">
-        <p class="label">Concrete Manufacturing</p>
-        <h3>Ashok Ready Mix Concrete (RMC)</h3>
-        <p>Manufactures and supplies high-quality ready-mix concrete to contractors, builders, and engineering professionals across Namakkal, Salem, and Trichy, supported by dedicated RMC infrastructure and logistics fleet.</p>
-      </div>
-      <div class="group-card">
-        <p class="label">Sustainable Agriculture</p>
-        <h3>Ashok Natural Farms</h3>
-        <p>Engaged in egg production for domestic and international markets, operating a dedicated native cattle conservation programme with over 200 native (desi) cows for milk and marketing natural products.</p>
-      </div>
-      <div class="group-card">
-        <p class="label">Energy Retail</p>
-        <h3>Lakshmi Agencies</h3>
-        <p>Operates as an authorised dealer of Indian Oil Corporation (IOC), serving commercial and consumer energy customers in the foothill region of Kollihills.</p>
-      </div>
-      <div class="group-card">
-        <p class="label">Education &amp; CSR</p>
-        <h3>Education &amp; Institutional Development</h3>
-        <p>Partner of the management of Kongunadu Educational Institutions, Thottiyam, Tiruchirappalli, serving ~6,000 students across Engineering, Polytechnic, and Education colleges, alongside extensive community CSR initiatives.</p>
-        <p style="margin-top:.8rem"><a href="#education-development" style="font:500 .82rem var(--f-mono);letter-spacing:.03em;color:var(--blue);display:inline-flex;align-items:center;gap:.35rem">Read details <span aria-hidden="true">&darr;</span></a></p>
-      </div>
+    <div class="div-grid">
+      <!-- Card 1: Textile Mills & Green Energy -->
+      <article class="div-card">
+        <div class="div-card__media">
+          <img src="../assets/img/gallery/ashok-textile-complex.webp" alt="Ashok Textile Mills and Green Energy Unit" width="600" height="412" loading="lazy" decoding="async">
+        </div>
+        <div class="div-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <rect x="5" y="4" width="14" height="16" rx="2"/>
+            <line x1="5" y1="8" x2="19" y2="8"/>
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <line x1="5" y1="16" x2="19" y2="16"/>
+            <line x1="8" y1="2" x2="16" y2="2"/>
+            <line x1="8" y1="22" x2="16" y2="22"/>
+          </svg>
+        </div>
+        <div class="div-card__body">
+          <p class="div-card__tag">1999 &bull; Manufacturing</p>
+          <h3 class="div-card__title">Textile Mills &amp; Green Energy</h3>
+          <p class="div-card__desc">The Management traces its journey back to 1999 with the establishment of Ashok Textile Mills – Spinning Unit, expanding steadily into sizing and weaving. In 2017, the Made-ups Division was established for export-grade textile products, powered by a 100% Green Power Unit (Solar Plant &amp; Windmill).</p>
+          <div class="div-card__footer">
+            <a href="../projects/index.html?filter=completed-buildings" class="div-card__arrow" aria-label="View Textile Mills details">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Ashok Construction -->
+      <article class="div-card">
+        <div class="div-card__media">
+          <img src="../assets/img/gallery/bridge-approach-road.webp" alt="Ashok Construction Infrastructure Projects" width="600" height="412" loading="lazy" decoding="async">
+        </div>
+        <div class="div-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 19h18"/>
+            <path d="M5 19V9l7-5 7 5v10"/>
+            <path d="M9 19v-6h6v6"/>
+            <line x1="9" y1="9" x2="9" y2="11"/>
+            <line x1="15" y1="9" x2="15" y2="11"/>
+          </svg>
+        </div>
+        <div class="div-card__body">
+          <p class="div-card__tag">2017 &bull; Infrastructure</p>
+          <h3 class="div-card__title">Ashok Construction</h3>
+          <p class="div-card__desc">Established as a dedicated division focused on public works, highways, and rural development projects, including projects undertaken for the National Highways Authority of India (NHAI) as well as private civil and industrial construction works.</p>
+          <div class="div-card__footer">
+            <a href="../projects/index.html" class="div-card__arrow" aria-label="View Ashok Construction Projects">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: Ashok Ready Mix Concrete (RMC) -->
+      <article class="div-card">
+        <div class="div-card__media">
+          <img src="../assets/img/gallery/concrete-mixer-vehicle.webp" alt="Ashok Ready Mix Concrete RMC Transit Mixer Fleet" width="600" height="412" loading="lazy" decoding="async">
+        </div>
+        <div class="div-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M14 17h1"/>
+            <path d="M2 17h1"/>
+            <circle cx="6" cy="17" r="2"/>
+            <circle cx="17" cy="17" r="2"/>
+            <path d="M8 17h7"/>
+            <path d="M19 17h3v-5l-2-3h-4v8"/>
+            <path d="M3 14l6-7 4 3-6 7H3v-3z"/>
+          </svg>
+        </div>
+        <div class="div-card__body">
+          <p class="div-card__tag">Concrete Manufacturing</p>
+          <h3 class="div-card__title">Ashok Ready Mix Concrete (RMC)</h3>
+          <p class="div-card__desc">Manufactures and supplies high-quality ready-mix concrete to contractors, builders, and engineering professionals across Namakkal, Salem, and Trichy, supported by dedicated RMC infrastructure and logistics fleet.</p>
+          <div class="div-card__footer">
+            <a href="../our-services/index.html" class="div-card__arrow" aria-label="View Ashok RMC services">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4: Ashok Natural Farms -->
+      <article class="div-card">
+        <div class="div-card__media">
+          <img src="../assets/img/gallery/ashok-natural-farms.webp" alt="Ashok Natural Farms Sustainable Agriculture" width="600" height="412" loading="lazy" decoding="async">
+        </div>
+        <div class="div-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 22v-8"/>
+            <path d="M12 14c-3.5 0-6-2.5-6-6 4 0 6 2.5 6 6z"/>
+            <path d="M12 11c3-2 5-1 6 2-2 1-4 0-6-2z"/>
+          </svg>
+        </div>
+        <div class="div-card__body">
+          <p class="div-card__tag">Sustainable Agriculture</p>
+          <h3 class="div-card__title">Ashok Natural Farms</h3>
+          <p class="div-card__desc">Engaged in egg production for domestic and international markets, operating a dedicated native cattle conservation programme with over 200 native (desi) cows for milk and marketing natural products.</p>
+          <div class="div-card__footer">
+            <span class="div-card__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5: Lakshmi Agencies -->
+      <article class="div-card">
+        <div class="div-card__media">
+          <img src="../assets/img/gallery/lakshmi-agencies-indianoil.webp" alt="Lakshmi Agencies - Authorised Dealer of Indian Oil Corporation" width="600" height="412" loading="lazy" decoding="async">
+        </div>
+        <div class="div-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="4" width="10" height="17" rx="2"/>
+            <line x1="3" y1="10" x2="13" y2="10"/>
+            <path d="M13 7h2a2 2 0 0 1 2 2v7a2 2 0 0 0 2 2 2 2 0 0 0 2-2V9l-2-2"/>
+            <circle cx="8" cy="7" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="div-card__body">
+          <p class="div-card__tag">Energy Retail</p>
+          <h3 class="div-card__title">Lakshmi Agencies</h3>
+          <p class="div-card__desc">Operates as an authorised dealer of Indian Oil Corporation (IOC), serving commercial and consumer energy customers in the foothill region of Kollihills.</p>
+          <div class="div-card__footer">
+            <span class="div-card__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -356,12 +453,10 @@
 <footer class="foot night">
   <div class="wrap grid foot__grid">
     <div class="foot__brand">
-      <a class="brand" href="../" aria-label="Ashok Construction home"><svg viewBox="0 0 100 100" aria-hidden="true">
-  <path d="M29 4 36 16H22z" fill="#8a94a6"/><path d="M71 4 78 16H64z" fill="#e0493a"/>
-  <path d="M50 20 29 56h21z" fill="#6c9cf0"/><path d="M50 20 71 56H50z" fill="#3f6fe0"/>
-  <path d="M29 56 8 92h30z" fill="#2447c9"/><path d="M29 56h21v16L38 92z" fill="#4f7de6"/>
-  <path d="M50 56h21L62 92 50 72z" fill="#1d3aa8"/><path d="M71 56 92 92H62z" fill="#162f8c"/>
-</svg><span>Ashok <i>Construction</i></span></a>
+      <a class="brand" href="../" aria-label="Ashok Construction home">
+        <img class="brand__logo brand__logo--dark" src="../assets/img/logonew.png" alt="Ashok Construction" width="1376" height="1143">
+        <img class="brand__logo brand__logo--light" src="../assets/img/logonew-white.png" alt="Ashok Construction" width="1376" height="1143">
+      </a>
       <p style="margin-top:1.2rem;max-width:34ch">Commercial, education, healthcare, hospitality, industrial, government, highways and bridges. Namakkal, since 2017.</p>
     </div>
     <nav class="foot__col" aria-label="Explore"><h2 class="label">Explore</h2><ul>

@@ -182,10 +182,32 @@ p + p { margin-top: 1em; }
 .hdr.is-solid { background: var(--paper); color: var(--ink); }
 .hdr.is-solid .hdr__in { border-color: var(--rule); }
 .hdr.is-hidden { transform: translateY(-100%); }
-.brand { display: inline-flex; align-items: center; gap: .85rem; margin-right: auto; }
+.brand { display: inline-flex; align-items: center; margin-right: auto; text-decoration: none; }
 .brand svg { width: clamp(40px, 4.4vw, 52px); height: clamp(40px, 4.4vw, 52px); flex-shrink: 0; }
 .brand span { font: 600 clamp(1.2rem, 1.55vw, 1.45rem)/1.05 var(--f-display); font-stretch: 85%; letter-spacing: .01em; }
 .brand span i { font-style: normal; font-weight: 400; }
+.brand__logo {
+  height: clamp(52px, 6vw, 68px);
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  display: block;
+  transition: transform .25s var(--ease);
+}
+.brand:hover .brand__logo { transform: scale(1.03); }
+.brand__logo--light { display: none; }
+.brand__logo--dark { display: block; }
+
+/* Over dark hero on home page before scrolling */
+.hdr--over:not(.is-solid) .brand__logo--dark { display: none; }
+.hdr--over:not(.is-solid) .brand__logo--light { display: block; }
+
+/* Over dark footer */
+.foot .brand__logo--dark { display: none; }
+.foot .brand__logo--light { display: block; }
+
+/* Footer brand logo sizing */
+.foot__brand .brand__logo { height: clamp(56px, 6.5vw, 76px); max-width: 180px; }
 
 .menu { display: none; }
 .menu > ul { display: flex; gap: clamp(1rem, 2vw, 2rem); }
@@ -2859,13 +2881,408 @@ main:has(> .reach:last-child) + .foot { border-top: 1px solid rgba(255, 255, 255
 .equip-card .equip-qty { font-weight: 600; font-size: .95rem; color: var(--blue); white-space: nowrap; margin-left: .6rem; }
 .night .equip-card .equip-qty { color: #8ea4ff; }
 
-/* group businesses cards */
+/* group businesses cards - legacy fallback */
 .group-grid { display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 2rem; }
 .group-card { padding: 1.8rem; border: 1px solid var(--rule); background: var(--paper); }
 .night .group-card { background: rgba(255, 255, 255, .03); border-color: var(--rule-night); }
 .group-card .label { margin-bottom: .8rem; }
 .group-card h3 { font: 500 1.25rem/1.2 var(--f-display); font-stretch: 85%; margin-bottom: .8rem; }
 .group-card p { font-size: 1rem; line-height: 1.5; }
+
+/* ==========================================================================
+   Our Journey of Diversification Section (Editorial Design)
+   ========================================================================== */
+.div-section {
+  position: relative;
+  background-color: #F7F5EE;
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+  overflow: hidden;
+}
+
+.div-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: clamp(2.5rem, 4.5vw, 3.5rem);
+}
+
+@media (min-width: 900px) {
+  .div-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3.5rem;
+  }
+}
+
+.div-header__title-col {
+  flex: 1 1 52%;
+  max-width: 600px;
+}
+
+.div-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #7B1824;
+  margin: 0 0 0.9rem;
+}
+
+.div-eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 48px;
+  height: 1.5px;
+  background-color: #BE8E95;
+}
+
+.div-title {
+  font-family: var(--f-serif, 'Newsreader', Georgia, serif);
+  font-size: clamp(2.4rem, 4.2vw, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: #1A1D20;
+  margin: 0;
+}
+
+.div-title em {
+  font-family: var(--f-serif, 'Newsreader', Georgia, serif);
+  font-style: italic;
+  font-weight: 600;
+  color: #651B24;
+}
+
+.div-header__desc-col {
+  flex: 1 1 45%;
+  max-width: 520px;
+  padding-top: 0.6rem;
+}
+
+.div-header__lede {
+  font-family: var(--f-text);
+  font-size: 1.02rem;
+  line-height: 1.68;
+  color: #4C5057;
+  margin: 0;
+}
+
+/* Watermark architectural facade in top right */
+.div-bg-watermark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: clamp(240px, 30vw, 420px);
+  height: clamp(200px, 26vw, 360px);
+  background-image: url('../assets/img/gov-build-1-768.webp');
+  background-size: cover;
+  background-position: top right;
+  opacity: 0.14;
+  pointer-events: none;
+  mask-image: radial-gradient(circle at top right, black 25%, transparent 75%);
+  -webkit-mask-image: radial-gradient(circle at top right, black 25%, transparent 75%);
+  z-index: 0;
+}
+
+/* 5 Cards Row */
+.div-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.15rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .div-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .div-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .div-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+}
+
+/* Individual Vertical Card */
+.div-card {
+  background: #FFFFFF;
+  border-radius: 6px;
+  border: 1px solid rgba(22, 24, 28, 0.08);
+  box-shadow: 0 4px 14px rgba(22, 24, 28, 0.04);
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  position: relative;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.div-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(22, 24, 28, 0.09);
+  border-color: rgba(101, 27, 36, 0.25);
+}
+
+.div-card__media {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  background-color: #E6E2D9;
+}
+
+.div-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.div-card:hover .div-card__media img {
+  transform: scale(1.05);
+}
+
+/* Overlapping Maroon Icon Badge */
+.div-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  background-color: #651B24;
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -19px;
+  margin-left: 1.15rem;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 4px 10px rgba(101, 27, 36, 0.35);
+  flex-shrink: 0;
+}
+
+.div-badge svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+}
+
+/* Card Body */
+.div-card__body {
+  padding: 0.85rem 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.div-card__tag {
+  font-family: var(--f-mono);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #651B24;
+  margin: 0 0 0.45rem;
+}
+
+.div-card__title {
+  font-family: var(--f-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.26;
+  color: #17191C;
+  margin: 0 0 0.7rem;
+}
+
+.div-card__desc {
+  font-family: var(--f-text);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #555962;
+  margin: 0 0 1.25rem;
+  flex-grow: 1;
+}
+
+.div-card__footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.35rem;
+}
+
+.div-card__arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #FAF7F2;
+  border: 1px solid rgba(22, 24, 28, 0.15);
+  color: #651B24;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.22s ease;
+  text-decoration: none;
+}
+
+.div-card__arrow svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  transition: transform 0.22s ease;
+}
+
+.div-card:hover .div-card__arrow {
+  background-color: #651B24;
+  color: #FFFFFF;
+  border-color: #651B24;
+}
+
+.div-card:hover .div-card__arrow svg {
+  transform: translateX(2px);
+}
+
+/* Featured Education & CSR Horizontal Card */
+.div-edu-card {
+  margin-top: 1.6rem;
+  max-width: 680px;
+  background: #FFFFFF;
+  border-radius: 6px;
+  border: 1px solid rgba(22, 24, 28, 0.08);
+  box-shadow: 0 4px 14px rgba(22, 24, 28, 0.04);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.div-edu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(22, 24, 28, 0.09);
+  border-color: rgba(101, 27, 36, 0.25);
+}
+
+@media (max-width: 700px) {
+  .div-edu-card {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+}
+
+.div-edu-card__media {
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  overflow: hidden;
+  position: relative;
+  background-color: #E6E2D9;
+}
+
+.div-edu-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.div-edu-card:hover .div-edu-card__media img {
+  transform: scale(1.05);
+}
+
+.div-edu-card__content {
+  padding: 1.35rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.div-edu-card__badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.div-edu-card__badge-row .div-badge {
+  margin: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.div-edu-card__badge-row .div-badge svg {
+  width: 17px;
+  height: 17px;
+}
+
+.div-edu-card__tag {
+  font-family: var(--f-mono);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #651B24;
+  margin: 0;
+}
+
+.div-edu-card__title {
+  font-family: var(--f-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #17191C;
+  margin: 0 0 0.55rem;
+}
+
+.div-edu-card__desc {
+  font-family: var(--f-text);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #555962;
+  margin: 0 0 0.9rem;
+}
+
+.div-edu-card__link {
+  font-family: var(--f-display);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #651B24;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s, transform 0.2s;
+  width: fit-content;
+}
+
+.div-edu-card__link:hover {
+  color: #17191C;
+  transform: translateX(2px);
+}
 
 /* careers & contact */
 .contact-rows li { display: grid; row-gap: .4rem; padding: 1.6rem 0; border-top: 1px solid var(--rule); }
