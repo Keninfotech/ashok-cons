@@ -1559,11 +1559,114 @@ main:has(> .reach:last-child) + .foot { border-top: 1px solid rgba(255, 255, 255
 @media (min-width: 960px) { .cat__head .cat__title { grid-column: 1 / 6; } .cat__head .cat__text { grid-column: 7 / 13; } }
 .cat__title .label { margin-bottom: 1rem; }
 .gal { display: grid; gap: var(--gap); grid-template-columns: repeat(2, 1fr); }
-.gitem { position: relative; display: block; width: 100%; overflow: hidden; background: var(--paper-2); cursor: zoom-in; }
-.gitem img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 768 / 660; transition: transform 1s var(--ease); }
-.gitem:hover img { transform: scale(1.035); }
-.gitem .cap { position: absolute; left: .7rem; bottom: .6rem; margin: 0; color: #fff; opacity: 0; transition: opacity .3s; text-shadow: 0 1px 8px rgba(0, 0, 0, .5); }
-.gitem:hover .cap, .gitem:focus-visible .cap { opacity: 1; }
+.gitem {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  background: var(--paper-2);
+  cursor: zoom-in;
+  border-radius: 3px;
+}
+.gitem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 768 / 660;
+  transition: transform 0.8s var(--ease);
+  display: block;
+}
+.gitem:hover img,
+.gitem:focus-visible img {
+  transform: scale(1.05);
+}
+
+/* Dark Gradient Scrim to ensure 100% legibility on any image */
+.gitem::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 14, 24, 0.94) 0%,
+    rgba(10, 14, 24, 0.68) 32%,
+    rgba(10, 14, 24, 0.18) 65%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.gitem:hover::after,
+.gitem:focus-visible::after {
+  opacity: 1;
+}
+
+/* Full-width Elevated Caption */
+.gitem .cap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: clamp(1.8rem, 3vw, 2.5rem) 1rem 0.9rem;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.75rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.28s var(--ease), transform 0.28s var(--ease);
+  pointer-events: none;
+  z-index: 2;
+}
+.gitem:hover .cap,
+.gitem:focus-visible .cap {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gitem .cap > span:first-child {
+  color: #ffffff !important;
+  font-family: var(--f-mono);
+  font-size: clamp(0.78rem, 1vw, 0.9rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+  max-width: 76%;
+}
+
+.gitem .cap .badge {
+  flex-shrink: 0;
+  font: 700 0.68rem/1 var(--f-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.38rem 0.72rem;
+  border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+}
+
+.gitem .cap .badge--completed {
+  background: #2447c9 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+}
+
+.gitem .cap .badge--ongoing {
+  background: #d97706 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+}
+
+.gitem .cap .badge--proposed {
+  background: #7c3aed !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+}
 @media (min-width: 900px) {
   .gal--feature { grid-template-columns: repeat(4, 1fr); }
   .gal--feature > :first-child { grid-column: span 2; grid-row: span 2; }
