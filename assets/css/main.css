@@ -929,7 +929,7 @@ p+p {
   position: relative;
   z-index: 2;
   color: var(--ink);
-  font-size: clamp(4.6rem, 21vw, 22rem);
+  font-size: clamp(3.6rem, 15vw, 16.5rem);
   white-space: nowrap;
   pointer-events: none;
 }
