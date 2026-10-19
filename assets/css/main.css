@@ -1317,7 +1317,11 @@ p+p {
   justify-content: space-between;
   gap: 1rem;
   margin-top: .7rem;
-  font: 400 .82rem/1.4 var(--f-mono);
+  font-family: var(--f-text);
+  font-size: .84rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
   color: var(--ink-3);
 }
 
@@ -1556,12 +1560,16 @@ p+p {
   justify-content: space-between;
   gap: 1rem;
   margin-top: .65rem;
-  font: 400 .72rem/1.4 var(--f-mono);
+  font-family: var(--f-text);
+  font-size: .84rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
 }
 
 .shot .cap span:first-child {
   color: var(--ink);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .reel__end {
@@ -1694,8 +1702,8 @@ p+p {
 
   .shot .cap {
     margin-top: clamp(.45rem, 1vh, .75rem);
-    font-size: clamp(.68rem, .72vw, .75rem);
-    line-height: 1.35;
+    font-size: clamp(.8rem, .85vw, .9rem);
+    line-height: 1.4;
   }
 
   .reel__end {
@@ -3648,11 +3656,11 @@ main:has(> .reach:last-child)+.foot {
 
 .gitem .cap>span:first-child {
   color: #ffffff !important;
-  font-family: var(--f-mono);
-  font-size: clamp(0.78rem, 1vw, 0.9rem);
+  font-family: var(--f-text);
+  font-size: clamp(0.82rem, 1.05vw, 0.94rem);
   font-weight: 600;
   line-height: 1.35;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.01em;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
   max-width: 76%;
 }
