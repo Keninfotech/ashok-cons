@@ -2290,28 +2290,30 @@ p+p {
   position: relative;
   aspect-ratio: 4 / 5;
   overflow: hidden;
+  border-radius: clamp(.9rem, 1.8vw, 1.5rem);
   background: var(--paper-2);
 }
 
 .why__visual figure {
   position: absolute;
   inset: 0;
-  clip-path: inset(0 0 100% 0);
+  /* Each selected image blooms out from the centre of the previous image. */
+  clip-path: circle(0% at 50% 50%);
   opacity: 0;
   z-index: 0;
   pointer-events: none;
   will-change: clip-path, opacity;
-  transition: clip-path .9s var(--ease-io), opacity .2s linear;
+  transition: clip-path .9s var(--ease-io), opacity .16s linear;
 }
 
 .why__visual figure.is-active {
-  clip-path: inset(0);
+  clip-path: circle(150% at 50% 50%);
   opacity: 1;
   z-index: 2;
 }
 
 .why__visual figure.is-prev {
-  clip-path: inset(0);
+  clip-path: circle(150% at 50% 50%);
   opacity: 1;
   z-index: 1;
 }
