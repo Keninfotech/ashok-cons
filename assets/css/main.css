@@ -5189,6 +5189,39 @@ main:has(> .reach:last-child)+.foot {
 }
 
 /* registration classifications */
+.services-accreditations {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4.5rem, 8vw, 8rem) 0;
+  background: linear-gradient(135deg, #fff 0%, #f8fcff 55%, #e6f4ff 100%);
+}
+
+.services-accreditations__inner { position: relative; z-index: 1; }
+.services-accreditations__head { display: grid; gap: 2rem; align-items: center; }
+.services-accreditations__eyebrow {
+  display: grid; gap: .85rem; margin: 0 0 1.6rem;
+  color: #61a9e4; font: 600 .82rem/1 var(--f-mono); letter-spacing: .25em; text-transform: uppercase;
+}
+.services-accreditations__eyebrow::before { content: ''; width: 5.5rem; height: 4px; background: var(--brand-red); }
+.services-accreditations__head h2 { margin: 0; font: 500 clamp(3.4rem, 5.6vw, 6.5rem)/.86 var(--f-display); letter-spacing: -.05em; color: #06194d; }
+.services-accreditations__head h2 span { display: block; color: var(--blue); }
+.services-accreditations__head > p { max-width: 34rem; margin: 0; padding-left: 1.5rem; border-left: 3px solid #b9ddfa; color: #607694; font-size: clamp(1.1rem, 1.45vw, 1.45rem); line-height: 1.45; }
+.services-accreditations__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(1rem, 1.4vw, 1.45rem); margin-top: clamp(3rem, 5vw, 5rem); }
+.services-reg-card { position: relative; display: flex; flex-direction: column; min-height: 22rem; padding: clamp(1.6rem, 2vw, 2.2rem); overflow: hidden; border: 1px solid #d7ebfb; border-radius: .65rem; background: rgba(255, 255, 255, .8); box-shadow: 0 1.1rem 2.5rem rgba(34, 128, 198, .08); }
+.services-reg-card::after { content: ''; position: absolute; right: -2rem; bottom: -4rem; width: 10rem; height: 10rem; transform: rotate(45deg); background: linear-gradient(135deg, transparent 0 49%, rgba(167, 218, 253, .28) 50%); }
+.services-reg-card__icon { display: grid; place-items: center; width: 5rem; height: 5rem; border-radius: 50%; background: #e8f5ff; color: var(--blue); }
+.services-reg-card__icon svg { width: 2.65rem; height: 2.65rem; }
+.services-reg-card h3 { margin: 1.55rem 0 .8rem; color: #071744; font: 600 clamp(.84rem, 1vw, 1rem)/1.55 var(--f-mono); letter-spacing: .16em; text-transform: uppercase; }
+.services-reg-card > i { width: 2.75rem; height: 2px; background: var(--blue); }
+.services-reg-card > p { margin: 1rem 0 auto; color: #182750; font: 500 clamp(1.05rem, 1.3vw, 1.32rem)/1.3 var(--f-display); }
+.services-reg-card__badge { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: .8rem; margin-top: 1.7rem; padding: .8rem 1rem; border-radius: .55rem; background: #e7f4ff; color: #0877dd; font: 600 clamp(.75rem, .9vw, .95rem)/1.2 var(--f-text); }
+.services-reg-card__badge b { font-size: 1.7rem; font-weight: 400; line-height: .7; }
+.services-accreditations__building { position: absolute; top: -6rem; right: -4rem; width: 28rem; height: 28rem; opacity: .45; transform: perspective(40rem) rotateY(-20deg) rotateX(4deg); border: 1px solid #b8dcf8; background: repeating-linear-gradient(90deg, transparent 0 3.4rem, rgba(129, 190, 237, .3) 3.45rem 3.55rem), repeating-linear-gradient(0deg, transparent 0 3.4rem, rgba(129, 190, 237, .3) 3.45rem 3.55rem); }
+
+@media (min-width: 900px) { .services-accreditations__head { grid-template-columns: 1fr 1fr; gap: 5rem; } }
+@media (max-width: 1050px) { .services-accreditations__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 580px) { .services-accreditations__grid { grid-template-columns: 1fr; } .services-reg-card { min-height: 18rem; } }
+
 .reg-grid {
   display: grid;
   gap: var(--gap);
