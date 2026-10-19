@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap');
+
 /* ==========================================================================
    Ashok Constructions
    Art direction: architectural monograph. Concrete paper, ink, one cobalt accent.
@@ -1793,32 +1795,34 @@ p+p {
 }
 
 /* ---------- closing spread: photograph + invitation ----------
-   Deliberately still. Fits full viewport screen height exactly across all devices. */
+   Matches brand mockup: 2-column spread, photo with brand overlays,
+   white architectural panel with cards, corner blue/red geometric accents,
+   and red glowing enquire button. */
 .reach {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  height: 100vh;
-  height: 100dvh;
-  min-height: 100vh;
-  min-height: 100dvh;
-  max-height: 100dvh;
+  position: relative;
+  background: #ffffff;
+  color: #0b132b;
   overflow: hidden;
   box-sizing: border-box;
-  position: relative;
 }
 
 .reach,
 .reach.night {
-  background: #e8f1fc;
-  color: var(--ink);
+  background: #ffffff;
+  color: #0b132b;
 }
 
+/* Photo Side */
 .reach__photo {
   position: relative;
   margin: 0;
   width: 100%;
   height: 100%;
+  min-height: 280px;
   overflow: hidden;
+  background: #0c192c;
 }
 
 .reach__photo img {
@@ -1828,218 +1832,375 @@ p+p {
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  filter: saturate(.92);
+  display: block;
 }
 
-.reach__photo .cap {
+/* Top-Left Diagonal Stripes */
+.reach__stripes {
   position: absolute;
-  left: var(--pad);
-  right: var(--pad);
-  bottom: clamp(.6rem, 1.5vh, 1.2rem);
-  margin: 0;
-  color: rgba(255, 255, 255, .9);
-  text-shadow: 0 1px 10px rgba(0, 0, 0, .6);
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, 
+    rgba(8, 24, 64, 0.8) 0px, rgba(8, 24, 64, 0.8) 18px, 
+    transparent 18px, transparent 28px, 
+    rgba(14, 42, 108, 0.7) 28px, rgba(14, 42, 108, 0.7) 48px, 
+    transparent 48px);
+  pointer-events: none;
   z-index: 2;
-  font: 400 .72rem/1.4 var(--f-mono);
-  display: flex;
-  justify-content: space-between;
 }
 
+/* Top-Right Red Angled Polygon / Ribbon */
+.reach__slash {
+  position: absolute;
+  top: -10px;
+  right: 18px;
+  width: 36px;
+  height: 110px;
+  background: #dc2626;
+  transform: rotate(-30deg);
+  transform-origin: top right;
+  pointer-events: none;
+  z-index: 2;
+  box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Bottom-Left Script Calligraphy */
+.reach__script {
+  position: absolute;
+  left: clamp(1.2rem, 3.2vw, 2.4rem);
+  bottom: clamp(1.4rem, 3.5vw, 2.4rem);
+  z-index: 3;
+  font-family: 'Caveat', 'Dancing Script', cursive, sans-serif;
+  color: #ffffff;
+  transform: rotate(-7deg);
+  display: flex;
+  flex-direction: column;
+  line-height: 0.88;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9);
+  user-select: none;
+  pointer-events: none;
+}
+
+.reach__script-line1 {
+  font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.reach__script-line2 {
+  font-size: clamp(1.3rem, 2.2vw, 1.95rem);
+  font-weight: 600;
+  margin-left: 0.35em;
+  margin-top: -0.05em;
+  margin-bottom: -0.05em;
+}
+
+.reach__script-line3 {
+  font-size: clamp(2rem, 3.6vw, 3.1rem);
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.reach__script-stroke {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 105%;
+  height: 14px;
+}
+
+/* Panel Side (White Content Column) */
 .reach__panel {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: clamp(0.6rem, 1.8vh, 1.5rem);
-  padding: clamp(1.5rem, 4vh, 4rem) var(--pad);
+  padding: clamp(2rem, 4.5vh, 3.5rem) clamp(1.5rem, 4.5vw, 4rem);
   box-sizing: border-box;
-  overflow-y: auto;
-  scrollbar-width: none;
-  background: #e8f1fc;
-  color: var(--ink);
+  background: #ffffff;
+  color: #0b132b;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.reach__panel::-webkit-scrollbar {
-  display: none;
+/* Background Blueprint Wireframe */
+.reach__bg-blueprint {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: clamp(280px, 42vw, 480px);
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.14;
 }
 
-.reach .label,
-.reach.night .label {
-  color: var(--blue);
+/* Bottom-Right Corner Geometric Wedge */
+.reach__corner-accent {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: clamp(120px, 14vw, 190px);
+  height: clamp(120px, 14vw, 190px);
+  pointer-events: none;
+  z-index: 0;
 }
 
+/* Red Accent Bar */
+.reach__accent-bar {
+  width: 44px;
+  height: 3.5px;
+  background: #dc2626;
+  border-radius: 2px;
+  margin-bottom: 0.85rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Eyebrow */
+.reach__eyebrow {
+  margin: 0 0 0.5rem 0;
+  font-family: var(--f-display), sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  color: #1652f0;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+/* Heading */
 .reach__title {
-  font: inherit;
+  margin: 0 0 0.35rem 0;
+  font-family: var(--f-display), sans-serif;
+  font-size: clamp(2rem, 3.4vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: #0b132b;
+  position: relative;
+  z-index: 1;
 }
 
-.reach__title .h-display {
-  display: block;
-  font-size: clamp(2.2rem, min(6vw, 6.8vh), 5.4rem);
-  color: var(--ink);
-  line-height: .96;
+.reach__title-accent {
+  color: #0052cc;
 }
 
-.reach__title em {
-  display: block;
-  max-width: 26ch;
-  margin-top: clamp(0.3rem, 1vh, 0.75rem);
-  font-size: clamp(0.95rem, 1.8vh, 1.5rem);
-  line-height: 1.25;
-  color: #173873;
+/* Subheading */
+.reach__sub {
+  margin: 0 0 0.6rem 0;
+  font-family: var(--f-text), Georgia, serif;
+  font-style: italic;
+  font-size: clamp(0.96rem, 1.35vw, 1.15rem);
+  line-height: 1.35;
+  color: #475569;
+  position: relative;
+  z-index: 1;
 }
 
-.reach__note,
-.reach.night p.reach__note {
-  max-width: 44ch;
-  font-size: clamp(0.82rem, 1.4vh, 0.98rem);
-  line-height: 1.45;
-  margin: 0;
-  color: var(--ink-2);
+/* Paragraph Note */
+.reach__note {
+  margin: 0 0 clamp(1rem, 2vh, 1.5rem) 0;
+  font-family: var(--f-display), sans-serif;
+  font-size: clamp(0.84rem, 1.1vw, 0.92rem);
+  line-height: 1.5;
+  color: #4b5563;
+  max-width: 52ch;
+  position: relative;
+  z-index: 1;
 }
 
-.reach__list {
-  margin-top: clamp(0.2rem, 0.8vh, 0.5rem);
-  border-top: 1px solid rgba(20, 21, 24, 0.14);
+/* Cards Stack */
+.reach__cards {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 1.2vh, 0.8rem);
+  margin-bottom: clamp(1rem, 2.2vh, 1.6rem);
+  position: relative;
+  z-index: 1;
+  max-width: 580px;
 }
 
-.reach__list li {
-  border-bottom: 1px solid rgba(20, 21, 24, 0.14);
-}
-
-.reach__list a {
+/* Single Card */
+.reach__card {
   display: grid;
-  grid-template-columns: 4.2rem minmax(0, 1fr) 1.2rem;
-  align-items: baseline;
-  gap: clamp(0.6rem, 1vw, 1rem);
-  padding: clamp(0.45rem, 1.2vh, 0.9rem) 0;
+  grid-template-columns: 44px minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: 1rem;
+  padding: clamp(0.6rem, 1.2vh, 0.85rem) 1.15rem;
+  background: #f8fafc;
+  border: 1px solid #eef2f6;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease), background 0.25s;
 }
 
-.reach__list .label {
-  color: #55627a;
+.reach__card:hover {
+  background: #ffffff;
+  border-color: rgba(0, 82, 204, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(0, 82, 204, 0.12);
 }
 
-.reach__list strong {
-  font: 400 clamp(0.92rem, 1.6vh, 1.3rem)/1.3 var(--f-text);
-  color: var(--ink);
+/* Card Icon Badges */
+.reach__card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s;
+}
+
+.reach__card:hover .reach__card-icon {
+  transform: scale(1.06);
+}
+
+.reach__card-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.reach__card-icon--call {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.reach__card-icon--email {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.reach__card-icon--visit {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+/* Card Content */
+.reach__card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.reach__card-label {
+  font-family: var(--f-display), sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #1652f0;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.reach__card-val {
+  font-family: var(--f-display), sans-serif;
+  font-size: clamp(0.86rem, 1.15vw, 0.98rem);
+  font-weight: 700;
+  color: #0b132b;
+  line-height: 1.35;
   overflow-wrap: anywhere;
-  transition: color .3s;
 }
 
-.reach__list svg {
-  width: 1.1rem;
-  align-self: center;
-  color: var(--blue);
-  transition: transform .45s var(--ease), color .3s;
+/* Card Arrow */
+.reach__card-arrow {
+  width: 20px;
+  height: 20px;
+  color: #0052cc;
+  justify-self: end;
+  transition: transform 0.3s var(--ease), color 0.2s;
 }
 
-.reach__list a:hover strong,
-.reach__list a:hover svg {
-  color: var(--blue);
-}
-
-.reach__list a:hover svg {
+.reach__card:hover .reach__card-arrow {
   transform: translateX(4px);
+  color: #dc2626;
 }
 
-.reach__cta {
-  justify-self: start;
-  align-self: start;
+/* CTA Button */
+.reach__action {
+  position: relative;
+  z-index: 1;
+}
+
+.reach__btn {
   display: inline-flex;
   align-items: center;
-  gap: .8rem;
-  margin-top: clamp(0.2rem, 0.8vh, 0.5rem);
-  padding: clamp(0.65rem, 1.4vh, 1.05rem) clamp(1.1rem, 2vw, 1.5rem);
-  background: var(--blue);
+  gap: 0.75rem;
+  padding: 0.8rem 1.85rem;
+  background: #dc2626;
   color: #ffffff;
-  font: 500 clamp(0.85rem, 1.4vh, 0.95rem)/1 var(--f-display);
-  font-stretch: 90%;
-  transition: background .3s, color .3s, transform .2s, box-shadow .3s;
-  box-shadow: 0 4px 14px rgba(36, 71, 201, 0.25);
+  border-radius: 8px;
+  font-family: var(--f-display), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px -2px rgba(220, 38, 38, 0.45), 0 3px 8px -2px rgba(220, 38, 38, 0.3);
+  transition: transform 0.25s var(--ease), background 0.25s, box-shadow 0.25s var(--ease);
 }
 
-.reach__cta svg {
-  width: 1em;
-  transition: transform .45s var(--ease);
+.reach__btn svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  transition: transform 0.3s var(--ease);
 }
 
-.reach__cta:hover {
-  background: var(--ink);
+.reach__btn:hover {
+  background: #b91c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -2px rgba(220, 38, 38, 0.55), 0 4px 10px -2px rgba(220, 38, 38, 0.35);
   color: #ffffff;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(20, 21, 24, 0.2);
 }
 
-.reach__cta:hover svg {
+.reach__btn:hover svg {
   transform: translateX(4px);
 }
 
+/* Responsive Desktop: min-width 960px */
 @media (min-width: 960px) {
-
   .reach,
   .reach.night {
     display: grid;
-    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-    height: 100vh;
-    height: 100dvh;
-    max-height: 100dvh;
+    grid-template-columns: minmax(0, 4.8fr) minmax(0, 7.2fr);
+    min-height: 600px;
   }
 
   .reach__photo {
     height: 100%;
-    aspect-ratio: auto;
-  }
-
-  .reach__panel {
-    padding-inline: clamp(2.5rem, 6vw, 7rem) var(--pad);
+    min-height: 600px;
   }
 }
 
+/* Responsive Tablet & Mobile: max-width 959px */
 @media (max-width: 959px) {
-
   .reach,
   .reach.night {
-    height: 100vh;
-    height: 100dvh;
-    max-height: 100dvh;
     display: flex;
     flex-direction: column;
   }
 
   .reach__photo {
-    height: clamp(130px, 26vh, 220px);
+    height: clamp(220px, 34vh, 320px);
     flex-shrink: 0;
   }
 
   .reach__panel {
-    flex: 1;
-    min-height: 0;
-    padding: clamp(0.9rem, 2vh, 1.6rem) var(--pad);
-    gap: clamp(0.35rem, 1.1vh, 0.85rem);
+    padding: clamp(1.6rem, 3.5vh, 2.5rem) var(--pad);
   }
 
-  .reach__title .h-display {
-    font-size: clamp(1.75rem, 4.2vh, 2.6rem);
+  .reach__bg-blueprint {
+    width: 260px;
+    opacity: 0.1;
   }
 
-  .reach__title em {
-    font-size: clamp(0.82rem, 1.4vh, 1.05rem);
-    margin-top: .2rem;
-  }
-
-  .reach__note {
-    font-size: clamp(0.72rem, 1.2vh, 0.82rem);
-  }
-
-  .reach__list a {
-    padding: clamp(0.3rem, 0.8vh, 0.55rem) 0;
-  }
-
-  .reach__list strong {
-    font-size: clamp(0.8rem, 1.4vh, 0.95rem);
-  }
-
-  .reach__cta {
-    padding: clamp(0.5rem, 1.1vh, 0.8rem) 1.2rem;
-    font-size: .82rem;
+  .reach__corner-accent {
+    width: 100px;
+    height: 100px;
   }
 }
 
