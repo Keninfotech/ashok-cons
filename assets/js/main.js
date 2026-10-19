@@ -109,6 +109,130 @@
       gsap.to($('span', ln), { y: 0, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: ln, start: 'top 88%', once: true } });
     });
 
+    // About section: casino slot roll for stat numbers
+    const statGrid = $('.about-redesign__stats-grid');
+    if (statGrid) {
+      const statCards = $$('.about-stat-item', statGrid);
+      const cardRollers = [];
+
+      statCards.forEach((card, cardIdx) => {
+        const numEl = $('.about-stat-num', card);
+        if (!numEl) return;
+        const raw = (numEl.dataset.casinoRoll || numEl.textContent).trim();
+        numEl.setAttribute('aria-label', raw);
+
+        // Parse into static and digit tokens
+        const tokens = [];
+        let currStatic = '';
+        for (let i = 0; i < raw.length; i++) {
+          const ch = raw[i];
+          if (/\d/.test(ch)) {
+            if (currStatic) {
+              tokens.push({ type: 'static', text: currStatic });
+              currStatic = '';
+            }
+            tokens.push({ type: 'digit', val: parseInt(ch, 10) });
+          } else {
+            currStatic += ch;
+          }
+        }
+        if (currStatic) tokens.push({ type: 'static', text: currStatic });
+
+        numEl.innerHTML = '';
+        const reels = [];
+        let digitIdx = 0;
+
+        tokens.forEach((tok) => {
+          if (tok.type === 'static') {
+            const span = d.createElement('span');
+            span.className = 'casino-char';
+            span.setAttribute('aria-hidden', 'true');
+            span.textContent = tok.text;
+            numEl.appendChild(span);
+          } else {
+            const reel = d.createElement('span');
+            reel.className = 'casino-reel';
+            reel.setAttribute('aria-hidden', 'true');
+
+            const strip = d.createElement('span');
+            strip.className = 'casino-reel__strip';
+
+            // Generate sequence: 0, 1..9, 0, 1..9 ending on target val
+            const dIdx = digitIdx++;
+            const loops = 2 + dIdx;
+            const digits = [0];
+            for (let l = 0; l < loops; l++) {
+              for (let n = 1; n <= 9; n++) digits.push(n);
+              digits.push(0);
+            }
+            for (let n = 1; n <= tok.val; n++) {
+              digits.push(n);
+            }
+
+            const frag = d.createDocumentFragment();
+            digits.forEach((num) => {
+              const digitEl = d.createElement('span');
+              digitEl.className = 'casino-reel__digit';
+              digitEl.textContent = num;
+              frag.appendChild(digitEl);
+            });
+            strip.appendChild(frag);
+            reel.appendChild(strip);
+            numEl.appendChild(reel);
+
+            const total = digits.length;
+            const targetIndex = total - 1;
+            const targetY = -(targetIndex * 1.2) + 'em';
+            const duration = 1.35 + dIdx * 0.35 + (cardIdx % 2) * 0.08;
+            const delay = (cardIdx * 0.05) + (dIdx * 0.08);
+
+            // Initially position on target so it is fully formed
+            gsap.set(strip, { y: targetY, yPercent: 0 });
+
+            reels.push({ strip, targetY, duration, delay });
+          }
+        });
+
+        let isRolling = false;
+        const rollCard = () => {
+          if (isRolling) return;
+          isRolling = true;
+          let maxDur = 0;
+          reels.forEach((r) => {
+            const finish = r.duration + r.delay;
+            if (finish > maxDur) maxDur = finish;
+            gsap.fromTo(r.strip,
+              { y: '0em', yPercent: 0 },
+              { y: r.targetY, yPercent: 0, duration: r.duration, delay: r.delay, ease: 'power4.out', overwrite: 'auto' }
+            );
+          });
+          setTimeout(() => { isRolling = false; }, (maxDur + 0.1) * 1000);
+        };
+
+        card.addEventListener('mouseenter', rollCard);
+        card.addEventListener('click', rollCard);
+
+        cardRollers.push(rollCard);
+      });
+
+      // Trigger cascading casino roll when stats grid scrolls into view
+      const triggerRoll = () => {
+        cardRollers.forEach((roll) => roll());
+      };
+
+      ScrollTrigger.create({
+        trigger: statGrid,
+        start: 'top 85%',
+        once: true,
+        onEnter: triggerRoll
+      });
+
+      const rect = statGrid.getBoundingClientRect();
+      if (rect.top < innerHeight * 0.85 && rect.bottom > 0) {
+        triggerRoll();
+      }
+    }
+
     // About statement: words darken as the reader moves through the sentence.
     $$('[data-scrub]').forEach((el) => {
       const words = el.textContent.trim().split(/\s+/);

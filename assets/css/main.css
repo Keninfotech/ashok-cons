@@ -1638,6 +1638,13 @@ p+p {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-stat-item:hover {
+  transform: translateY(-2px);
 }
 
 .about-stat-icon {
@@ -1651,6 +1658,12 @@ p+p {
   justify-content: center;
   flex-shrink: 0;
   box-shadow: 0 4px 10px rgba(0, 111, 168, 0.25);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s;
+}
+
+.about-stat-item:hover .about-stat-icon {
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px rgba(0, 111, 168, 0.35);
 }
 
 .about-stat-symbol {
@@ -1674,8 +1687,45 @@ p+p {
   font-family: var(--f-text);
   font-size: 1.18rem;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.2;
   color: #0F2438;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* Casino Slot Roll Effect */
+.casino-reel {
+  display: inline-block;
+  height: 1.2em;
+  line-height: 1.2em;
+  min-width: 0.62em;
+  overflow: hidden;
+  position: relative;
+  vertical-align: -0.12em;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%);
+}
+
+.casino-reel__strip {
+  display: block;
+  will-change: transform;
+}
+
+.casino-reel__digit {
+  display: block;
+  height: 1.2em;
+  line-height: 1.2em;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+.casino-char {
+  display: inline-block;
+  height: 1.2em;
+  line-height: 1.2em;
+  white-space: pre;
 }
 
 .about-stat-lbl {
