@@ -221,73 +221,465 @@ ol {
   background: var(--paper-2);
 }
 
-/* ---------- Icy Blue Theme for all night content sections ---------- */
-.night:not(.hero):not(.foot),
-.reel.night,
-.creed.night,
-.section.night {
-  --night: var(--surface-muted);
-  --on-night: var(--ink);
-  --on-night-2: var(--ink-2);
-  --rule-night: var(--rule);
-  background: var(--surface-muted) !important;
+/* ==========================================================================
+   Alternating Brand Blue Sections (Requested: Darker shade like #008ACB)
+   ========================================================================== */
+.section-blue {
+  background-color: var(--brand-blue) !important;
+  color: #FFFFFF !important;
+  position: relative;
+}
+
+/* Headings inside blue section */
+.section-blue h1,
+.section-blue h2,
+.section-blue h3,
+.section-blue h4,
+.section-blue h5,
+.section-blue h6,
+.section-blue .h-display,
+.section-blue .h-section,
+.section-blue .div-title,
+.section-blue .works__title,
+.section-blue .hero__title,
+.section-blue .svc__head h2,
+.section-blue .why__intro h2,
+.section-blue .cat__title h2,
+.section-blue .cat__title .h-section,
+.section-blue .stat-callout__num,
+.section-blue .stat-callout__unit,
+.section-blue .careers-editorial-lead,
+.section-blue .careers-benefit-title,
+.section-blue .contact-hero-content h2,
+.section-blue .reach__title,
+.section-blue .chapter h2,
+.section-blue .cat-title,
+.section-blue .fleet-heading,
+.section-blue .val-heading,
+.section-blue .partner-content__title,
+.section-blue .contractor-reg__title,
+.section-blue .contact-hero__title,
+.section-blue .gal-title {
+  color: #FFFFFF !important;
+}
+
+.section-blue .contact-hero__title em {
+  color: #FFFFFF !important;
+}
+
+.section-blue .contact-hero__eyebrow {
+  color: #FFFFFF !important;
+}
+
+.section-blue .contact-hero__lede {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.section-blue .contact-hero__accent-rule {
+  background: rgba(255, 255, 255, 0.4) !important;
+}
+
+.section-blue .contact-crumbs a {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.section-blue .contact-crumbs a:hover {
+  color: #FFFFFF !important;
+}
+
+.section-blue .contact-crumbs .sep {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.section-blue .contact-crumbs [aria-current="page"] {
+  color: #FFFFFF !important;
+}
+
+/* Emphasized heading text inside blue section */
+.section-blue h1 em,
+.section-blue h2 em,
+.section-blue h3 em,
+.section-blue .h-display em,
+.section-blue .h-section em,
+.section-blue .div-title em,
+.section-blue .works__title em,
+.section-blue .svc__head h2 em,
+.section-blue .why__intro h2 em,
+.section-blue .reach__title em,
+.section-blue .chapter h2 em {
+  color: #FFFFFF !important;
+  font-style: italic;
+}
+
+/* Paragraphs & body copy inside blue section */
+.section-blue p,
+.section-blue .statement,
+.section-blue .lede,
+.section-blue .desc,
+.section-blue .works__desc,
+.section-blue .svc__text p,
+.section-blue .why__intro p,
+.section-blue .cat__text p,
+.section-blue .sec-lead,
+.section-blue .div-desc,
+.section-blue .careers-editorial-body,
+.section-blue .careers-benefit-desc,
+.section-blue .contact-lead-desc,
+.section-blue .reach__sub,
+.section-blue .reach__note,
+.section-blue .chapter p,
+.section-blue .chapter .lede,
+.section-blue .partner-feature__quote p,
+.section-blue .partner-content__quote p,
+.section-blue .values p,
+.section-blue .contractor-reg__desc {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+/* Eyebrows, Labels & Chips inside blue section */
+.section-blue .label,
+.section-blue .works__eyebrow,
+.section-blue .div-eyebrow,
+.section-blue .sec-tag,
+.section-blue .eyebrow,
+.section-blue .cat__title .label,
+.section-blue .careers-pill,
+.section-blue .contact-tag,
+.section-blue .reach__eyebrow,
+.section-blue .fleet-eyebrow .fleet-label,
+.section-blue .fleet-eyebrow .fleet-num,
+.section-blue .partner-content__eyebrow,
+.section-blue .contractor-reg__eyebrow {
+  color: #FFFFFF !important;
+}
+
+.section-blue .label b,
+.section-blue .works__eyebrow-num,
+.section-blue .div-eyebrow b,
+.section-blue .cat__title .label b,
+.section-blue .fleet-eyebrow .fleet-num {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 700;
+}
+
+.section-blue .works__eyebrow-sep,
+.section-blue .fleet-eyebrow .fleet-sep {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Chapter watermark number in services */
+.section-blue .chapter__no {
+  color: rgba(255, 255, 255, 0.22) !important;
+}
+
+/* Dividers & Accent bars */
+.section-blue hr,
+.section-blue .works__rule,
+.section-blue .div-eyebrow::after,
+.section-blue .cat-rule,
+.section-blue .sec-rule,
+.section-blue .fleet-rule-line,
+.section-blue .contractor-reg__rule {
+  background: rgba(255, 255, 255, 0.35) !important;
+}
+
+.section-blue .works__cta-bar {
+  border-top-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Links & CTA */
+.section-blue .link,
+.section-blue .works__cta {
+  color: #FFFFFF !important;
+  border-bottom-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.section-blue .link:hover,
+.section-blue .works__cta:hover {
+  color: #FFFFFF !important;
+  border-bottom-color: #FFFFFF !important;
+}
+
+.section-blue .link svg,
+.section-blue .works__cta svg {
+  color: #FFFFFF !important;
+}
+
+/* Ghost / Watermark text in .svc */
+.section-blue.svc .svc__word,
+.section-blue .svc__word {
+  color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.section-blue .cap,
+.section-blue figcaption {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+/* Dash lists (Services chapters) */
+.section-blue .dash {
+  border-top-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.section-blue .dash li {
+  border-bottom-color: rgba(255, 255, 255, 0.25) !important;
+  color: #FFFFFF !important;
+}
+
+.section-blue .dash li::before {
+  color: #FFFFFF !important;
+}
+
+/* Why Section Sectors List inside blue */
+.section-blue .why__list li {
+  border-top-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.section-blue .why__list li:last-child {
+  border-bottom-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.section-blue .sector {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.section-blue .sector h3 {
+  color: #FFFFFF !important;
+}
+
+.section-blue .sector.is-active,
+.section-blue .sector:hover {
+  color: #FFFFFF !important;
+}
+
+.section-blue .sector.is-active span {
+  color: #FFFFFF !important;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0.1rem 0.4rem;
+  border-radius: 2px;
+}
+
+.section-blue .sector svg {
+  color: #FFFFFF !important;
+}
+
+/* Cards on blue background */
+.section-blue .pcard,
+.section-blue .bld-card,
+.section-blue .rds-card,
+.section-blue .oncard-v2,
+.section-blue .equip-tile,
+.section-blue .reg-card,
+.section-blue .partner-feature__profile,
+.section-blue .partner-card__frame,
+.section-blue .div-card,
+.section-blue .val-card,
+.section-blue .careers-benefit-item,
+.section-blue .careers-form-card,
+.section-blue .contact-card-v2,
+.section-blue .contact-info-card,
+.section-blue .contact-form-card,
+.section-blue .reach__card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.45) !important;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.14) !important;
+}
+
+/* Ensure text inside cards is dark and readable */
+.section-blue .pcard h3,
+.section-blue .pcard .pcard__title,
+.section-blue .bld-card__title,
+.section-blue .rds-card__title,
+.section-blue .oncard-v2__title,
+.section-blue .equip-tile__name,
+.section-blue .reg-card h3,
+.section-blue .div-card h3,
+.section-blue .val-card h3,
+.section-blue .careers-form-card__heading,
+.section-blue .contact-card-v2 h3,
+.section-blue .contact-form-title,
+.section-blue .contact-info-val,
+.section-blue .reach__card-val,
+.section-blue .partner-card__caption-name {
   color: var(--ink) !important;
 }
 
-.night:not(.hero):not(.foot) .label,
-.reel.night .label,
-.creed.night .label,
-.section.night .label {
-  color: var(--brand-blue) !important;
-}
-
-.night:not(.hero):not(.foot) .label b,
-.reel.night .label b,
-.creed.night .label b,
-.section.night .label b {
-  color: var(--brand-blue-deep) !important;
-}
-
-.night:not(.hero):not(.foot) p,
-.reel.night p,
-.creed.night p,
-.section.night p {
+.section-blue .pcard p,
+.section-blue .pcard .pcard__desc,
+.section-blue .bld-card__desc,
+.section-blue .rds-card__desc,
+.section-blue .oncard-v2__desc,
+.section-blue .reg-card p,
+.section-blue .div-card p,
+.section-blue .val-card p,
+.section-blue .careers-form-card__sub,
+.section-blue .contact-form-desc,
+.section-blue .contact-info-sub,
+.section-blue .partner-card__caption-role {
   color: var(--ink-2) !important;
 }
 
-.night:not(.hero):not(.foot) .statement,
-.reel.night .statement,
-.creed.night .statement,
-.section.night .statement {
-  color: var(--ink) !important;
+.section-blue .pcard__loc,
+.section-blue .bld-card__loc,
+.section-blue .oncard-v2__foot,
+.section-blue .equip-tile__cat {
+  color: var(--ink-3) !important;
 }
 
-.night:not(.hero):not(.foot) em,
-.reel.night em,
-.creed.night em,
-.section.night em {
+.section-blue .pcard__dept,
+.section-blue .bld-reg-sector,
+.section-blue .reach__card-label,
+.section-blue .contact-info-label,
+.section-blue .contact-form-tag {
+  color: var(--brand-blue) !important;
+}
+
+.section-blue .pcard__link,
+.section-blue .bld-card__link,
+.section-blue .rds-card__link {
+  color: var(--brand-blue) !important;
+}
+
+.section-blue .pcard__link:hover,
+.section-blue .bld-card__link:hover,
+.section-blue .rds-card__link:hover {
+  color: var(--brand-blue-dark) !important;
+}
+
+/* Gallery filter buttons inside blue */
+.section-blue .gal-filter {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+}
+
+.section-blue .gal-filter:hover {
+  background: rgba(255, 255, 255, 0.28) !important;
+  border-color: #FFFFFF !important;
+}
+
+.section-blue .gal-filter.is-active {
+  background: #FFFFFF !important;
+  color: var(--brand-blue) !important;
+  border-color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Buttons in blue section */
+.section-blue .btn:not(.btn--primary) {
+  background: #FFFFFF !important;
+  color: var(--brand-blue) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+.section-blue .btn:not(.btn--primary):hover {
+  background: #F0F7FB !important;
+  color: var(--brand-blue-dark) !important;
+}
+
+.section-blue .btn--primary {
+  background: var(--brand-red) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 20px rgba(236, 32, 39, 0.45) !important;
+}
+
+/* Registrations & tables in blue */
+.section-blue .reg-card {
+  background: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.section-blue .reg-badge {
+  background: var(--brand-blue-pale) !important;
+  color: var(--brand-blue) !important;
+  border-color: rgba(0, 138, 203, 0.25) !important;
+}
+
+.section-blue .bld-registry,
+.section-blue .turnover-table {
+  background: #FFFFFF !important;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.15) !important;
+}
+
+.section-blue .turnover-table th {
+  background: var(--brand-blue-pale) !important;
   color: var(--brand-blue-deep) !important;
-}
-
-.night:not(.hero):not(.foot) .h-display,
-.night:not(.hero):not(.foot) .h-section,
-.night:not(.hero):not(.foot) h1,
-.night:not(.hero):not(.foot) h2,
-.night:not(.hero):not(.foot) h3,
-.night:not(.hero):not(.foot) h4 {
-  color: var(--ink) !important;
-}
-
-.night:not(.hero):not(.foot) .lede {
-  color: var(--ink) !important;
-}
-
-.night:not(.hero):not(.foot) .person {
-  border-top-color: var(--rule) !important;
-}
-
-.night:not(.hero):not(.foot) .person:last-child {
   border-bottom-color: var(--rule) !important;
+}
+
+.section-blue .turnover-table td {
+  color: var(--ink) !important;
+  border-bottom-color: var(--rule) !important;
+}
+
+.section-blue .turnover-table td.num {
+  color: var(--brand-blue) !important;
+  font-weight: 600;
+}
+
+.section-blue .turnover-table tr:hover td {
+  background: var(--brand-blue-pale) !important;
+}
+
+.section-blue .bld-reg-row {
+  border-bottom-color: var(--rule) !important;
+}
+
+.section-blue .bld-reg-name {
+  color: var(--ink) !important;
+}
+
+.section-blue .bld-reg-num {
+  color: var(--brand-blue) !important;
+}
+
+/* Forms inside blue section (Careers / Contact) */
+.section-blue .field label {
+  color: var(--ink) !important;
+}
+
+.section-blue .field input,
+.section-blue .field select,
+.section-blue .field textarea {
+  background: #F8FAFC !important;
+  border-color: var(--rule) !important;
+  color: var(--ink) !important;
+}
+
+.section-blue .field input:focus,
+.section-blue .field select:focus,
+.section-blue .field textarea:focus {
+  border-color: var(--brand-blue) !important;
+  background: #FFFFFF !important;
+}
+
+/* Reach section when blue */
+.reach.section-blue {
+  background: var(--brand-blue) !important;
+  color: #FFFFFF !important;
+}
+
+.reach.section-blue .reach__panel {
+  background: #FFFFFF !important;
+  color: var(--ink) !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18) !important;
+}
+
+.reach.section-blue .reach__title {
+  color: var(--ink) !important;
+}
+
+.reach.section-blue .reach__sub {
+  color: var(--ink-2) !important;
+}
+
+.reach.section-blue .reach__note {
+  color: var(--ink-3) !important;
 }
 
 /* ---------- type ---------- */
@@ -4568,7 +4960,7 @@ main:has(> .reach:last-child)+.foot {
   font-family: var(--f-display);
   font-size: clamp(2.3rem, 3.8vw, 3.8rem);
   font-weight: 700;
-  line-height: 1.05;
+  line-height: 1.08;
   letter-spacing: -0.025em;
   color: var(--ink);
   font-stretch: 88%;
@@ -4587,6 +4979,18 @@ main:has(> .reach:last-child)+.foot {
   color: var(--brand-blue);
 }
 
+/* Ensure title and accent are always 100% visible on blue backgrounds */
+.section-blue .fleet-text-col .fleet-title,
+.section-blue .fleet-title {
+  color: #FFFFFF !important;
+}
+
+.section-blue .fleet-text-col .fleet-title .accent-blue,
+.section-blue .fleet-title .accent-blue,
+.section-blue .accent-blue {
+  color: #FFFFFF !important;
+}
+
 .fleet-lede {
   font-family: var(--f-text);
   font-size: clamp(1.08rem, 1.25vw, 1.22rem);
@@ -4599,6 +5003,10 @@ main:has(> .reach:last-child)+.foot {
 
 .night .fleet-lede {
   color: var(--on-night);
+}
+
+.section-blue .fleet-lede {
+  color: #FFFFFF !important;
 }
 
 .fleet-body {
@@ -4614,6 +5022,10 @@ main:has(> .reach:last-child)+.foot {
   color: var(--on-night-2);
 }
 
+.section-blue .fleet-body {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
 .fleet-kpi-col {
   display: flex;
   align-items: center;
@@ -4621,39 +5033,60 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .fleet-kpi-card {
-  padding: 1.4rem 1.6rem;
+  padding: 1.5rem 1.8rem;
   border: 1px solid rgba(20, 21, 24, 0.14);
-  border-radius: 4px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   justify-content: center;
   white-space: nowrap;
-  background: rgba(255, 255, 255, 0.25);
+  background: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .night .fleet-kpi-card {
   border-color: var(--rule-night);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* High-contrast solid white KPI card on blue section */
+.section-blue .fleet-kpi-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 12px !important;
+  padding: 1.6rem 2rem !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18) !important;
+  align-items: center !important;
+  text-align: center !important;
 }
 
 .fleet-kpi-header {
   font-family: var(--f-mono);
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: 0.72rem;
+  font-weight: 700;
   letter-spacing: 0.16em;
-  color: var(--ink-3);
+  color: #475569;
   text-transform: uppercase;
   margin-bottom: 0.35rem;
 }
 
+.night .fleet-kpi-header {
+  color: var(--ink-3);
+}
+
+.section-blue .fleet-kpi-header {
+  color: #475569 !important;
+}
+
 .fleet-kpi-number {
-  font-family: var(--f-display);
+  font-family: var(--f-text);
   font-size: clamp(3.2rem, 4.4vw, 4.5rem);
-  font-weight: 700;
-  line-height: 0.92;
-  color: var(--blue);
-  font-stretch: 85%;
+  font-weight: 800;
+  line-height: 0.95;
+  color: var(--brand-blue);
+  letter-spacing: -0.03em;
   margin-bottom: 0.35rem;
 }
 
@@ -4661,13 +5094,25 @@ main:has(> .reach:last-child)+.foot {
   color: var(--brand-blue);
 }
 
+.section-blue .fleet-kpi-number {
+  color: var(--brand-blue) !important;
+}
+
 .fleet-kpi-footer {
   font-family: var(--f-mono);
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: 0.72rem;
+  font-weight: 700;
   letter-spacing: 0.16em;
-  color: var(--ink-3);
+  color: #475569;
   text-transform: uppercase;
+}
+
+.night .fleet-kpi-footer {
+  color: var(--ink-3);
+}
+
+.section-blue .fleet-kpi-footer {
+  color: #475569 !important;
 }
 
 .fleet-artwork-col {
@@ -4681,6 +5126,14 @@ main:has(> .reach:last-child)+.foot {
   max-width: 560px;
   display: flex;
   justify-content: flex-end;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.section-blue .fleet-artwork-box {
+  background: #FFFFFF !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22) !important;
+  border: 2px solid rgba(255, 255, 255, 0.25) !important;
 }
 
 .fleet-excavator-img {
@@ -4695,6 +5148,17 @@ main:has(> .reach:last-child)+.foot {
 .night .fleet-excavator-img {
   mix-blend-mode: normal;
   border-radius: 4px;
+}
+
+/* Preserve photographic yellow colors and crispness on blue section */
+.section-blue .fleet-excavator-img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 280px !important;
+  object-fit: cover !important;
+  mix-blend-mode: normal !important;
+  filter: none !important;
+  display: block !important;
 }
 
 /* 17 Equipment Fleet Cards Grid */
@@ -4725,62 +5189,77 @@ main:has(> .reach:last-child)+.foot {
   }
 }
 
+/* Solid pure white cards with crisp legibility */
 .fleet-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.05rem 1.25rem;
-  background: rgba(255, 255, 255, 0.65);
-  border: 1px solid rgba(20, 21, 24, 0.12);
-  border-radius: 10px;
-  min-height: 96px;
-  transition: transform 0.22s var(--ease), border-color 0.22s var(--ease), box-shadow 0.22s var(--ease), background-color 0.22s var(--ease);
-  box-shadow: 0 2px 6px rgba(20, 21, 24, 0.03);
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  padding: 1.1rem 1.25rem !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(20, 21, 24, 0.08) !important;
+  border-radius: 12px !important;
+  min-height: 96px !important;
+  transition: transform 0.22s var(--ease), border-color 0.22s var(--ease), box-shadow 0.22s var(--ease) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
 .night .fleet-card {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: var(--rule-night);
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: var(--rule-night) !important;
 }
 
-.fleet-card:hover {
-  transform: translateY(-3px);
-  background: #ffffff;
-  border-color: rgba(0, 138, 203, 0.4);
-  box-shadow: 0 10px 24px rgba(0, 138, 203, 0.1);
+.section-blue .fleet-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(20, 21, 24, 0.08) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12) !important;
+}
+
+.fleet-card:hover,
+.section-blue .fleet-card:hover {
+  transform: translateY(-4px) !important;
+  background: #FFFFFF !important;
+  border-color: var(--brand-blue) !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18) !important;
 }
 
 .night .fleet-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(0, 138, 203, 0.45);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(0, 138, 203, 0.6) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35) !important;
 }
 
 .fleet-card-media {
-  width: 78px;
-  height: 64px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 76px !important;
+  height: 62px !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #F8FAFC !important;
+  border-radius: 8px !important;
+  padding: 4px !important;
 }
 
 .fleet-card-media img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-  filter: contrast(1.04);
-  transition: transform 0.25s var(--ease);
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  mix-blend-mode: multiply !important;
+  filter: contrast(1.05) !important;
+  transition: transform 0.25s var(--ease) !important;
+}
+
+.night .fleet-card-media {
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 
 .night .fleet-card-media img {
-  mix-blend-mode: normal;
-  filter: contrast(1.05) brightness(0.95);
+  mix-blend-mode: normal !important;
+  filter: contrast(1.05) brightness(0.95) !important;
 }
 
 .fleet-card:hover .fleet-card-media img {
-  transform: scale(1.08);
+  transform: scale(1.08) !important;
 }
 
 .fleet-card-info {
@@ -4791,39 +5270,58 @@ main:has(> .reach:last-child)+.foot {
   flex: 1;
 }
 
-.fleet-card-title {
-  font-family: var(--f-display);
-  font-stretch: 88%;
-  font-size: 0.92rem;
-  font-weight: 600;
-  line-height: 1.25;
-  color: var(--ink);
-  margin-bottom: 0.35rem;
+/* Card title: High-contrast dark charcoal on white card */
+.fleet-card-title,
+.section-blue .fleet-card .fleet-card-title,
+.fleet-card .fleet-card-title {
+  font-family: var(--f-text) !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  color: var(--ink) !important;
+  letter-spacing: -0.01em !important;
+  margin-bottom: 0.35rem !important;
 }
 
-.night .fleet-card-title {
-  color: var(--on-night);
+.night .fleet-card-title,
+.night .section-blue .fleet-card .fleet-card-title {
+  color: var(--on-night) !important;
 }
 
-.fleet-card-count {
-  font-family: var(--f-display);
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 1;
-  color: var(--blue);
-  font-stretch: 85%;
+/* Card count: Clean modern digits */
+.fleet-card-count,
+.section-blue .fleet-card .fleet-card-count,
+.fleet-card .fleet-card-count {
+  display: inline-flex !important;
+  align-items: baseline !important;
+  gap: 4px !important;
+  font-feature-settings: "tnum" 1 !important;
 }
 
-.night .fleet-card-count {
-  color: var(--brand-blue);
+.fleet-num-val,
+.section-blue .fleet-card .fleet-num-val,
+.fleet-card .fleet-num-val {
+  font-family: var(--f-mono) !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  color: var(--brand-blue) !important;
+  line-height: 1 !important;
 }
 
-.fleet-num-unit {
-  font-family: var(--f-mono);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  margin-left: 3px;
+.night .fleet-num-val {
+  color: var(--brand-blue) !important;
+}
+
+.fleet-num-unit,
+.section-blue .fleet-card .fleet-num-unit,
+.fleet-card .fleet-num-unit {
+  font-family: var(--f-mono) !important;
+  font-size: 0.76rem !important;
+  font-weight: 600 !important;
+  color: #64748B !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-left: 2px !important;
 }
 
 /* legacy equip grid backwards compatibility */
