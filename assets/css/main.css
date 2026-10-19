@@ -230,13 +230,9 @@ ol {
   position: relative;
 }
 
-/* Headings inside blue section */
+/* Main Headings inside blue section — Normal White */
 .section-blue h1,
 .section-blue h2,
-.section-blue h3,
-.section-blue h4,
-.section-blue h5,
-.section-blue h6,
 .section-blue .h-display,
 .section-blue .h-section,
 .section-blue .div-title,
@@ -246,20 +242,20 @@ ol {
 .section-blue .why__intro h2,
 .section-blue .cat__title h2,
 .section-blue .cat__title .h-section,
-.section-blue .stat-callout__num,
-.section-blue .stat-callout__unit,
 .section-blue .careers-editorial-lead,
-.section-blue .careers-benefit-title,
+.section-blue .careers-heading,
 .section-blue .contact-hero-content h2,
 .section-blue .reach__title,
 .section-blue .chapter h2,
 .section-blue .cat-title,
 .section-blue .fleet-heading,
+.section-blue .fleet-title,
 .section-blue .val-heading,
 .section-blue .partner-content__title,
 .section-blue .contractor-reg__title,
 .section-blue .contact-hero__title,
-.section-blue .gal-title {
+.section-blue .gal-title,
+.section-blue .creed__title {
   color: #FFFFFF !important;
 }
 
@@ -295,10 +291,11 @@ ol {
   color: #FFFFFF !important;
 }
 
-/* Emphasized heading text inside blue section */
+/* Emphasized heading text & spans inside blue section main headings */
 .section-blue h1 em,
 .section-blue h2 em,
-.section-blue h3 em,
+.section-blue h1 span,
+.section-blue h2 span:not(.fleet-num):not(.works__eyebrow-num),
 .section-blue .h-display em,
 .section-blue .h-section em,
 .section-blue .div-title em,
@@ -306,9 +303,32 @@ ol {
 .section-blue .svc__head h2 em,
 .section-blue .why__intro h2 em,
 .section-blue .reach__title em,
-.section-blue .chapter h2 em {
+.section-blue .chapter h2 em,
+.section-blue .careers-heading em,
+.section-blue .careers-heading span,
+.section-blue .careers-heading__blue,
+.section-blue .fleet-title span,
+.section-blue .fleet-title .accent-blue {
   color: #FFFFFF !important;
-  font-style: italic;
+}
+
+.section-blue h1 em,
+.section-blue h2 em,
+.section-blue .contact-hero__title em {
+  font-style: italic !important;
+}
+
+/* Subheadings / secondary headings inside blue section (clean white) */
+.section-blue h3,
+.section-blue h4,
+.section-blue h5,
+.section-blue h6,
+.section-blue .careers-benefit-title,
+.section-blue .stat-callout__num,
+.section-blue .stat-callout__unit,
+.section-blue .sector h3,
+.section-blue .values__list h3 {
+  color: #FFFFFF !important;
 }
 
 /* Paragraphs & body copy inside blue section */
@@ -473,6 +493,7 @@ ol {
 .section-blue .oncard-v2,
 .section-blue .equip-tile,
 .section-blue .reg-card,
+.section-blue .contractor-card,
 .section-blue .partner-feature__profile,
 .section-blue .partner-card__frame,
 .section-blue .div-card,
@@ -496,6 +517,8 @@ ol {
 .section-blue .oncard-v2__title,
 .section-blue .equip-tile__name,
 .section-blue .reg-card h3,
+.section-blue .contractor-card__dept,
+.section-blue .contractor-card h3,
 .section-blue .div-card h3,
 .section-blue .val-card h3,
 .section-blue .careers-form-card__heading,
@@ -2073,7 +2096,7 @@ p+p {
   left: 0.8rem;
   right: 0.8rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   pointer-events: none;
   z-index: 2;
@@ -2088,10 +2111,7 @@ p+p {
 }
 
 .pcard__chip--seq {
-  background: rgba(16, 40, 61, 0.92);
-  color: #FFFFFF;
-  border: 1px solid rgba(0, 138, 203, 0.3);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: none !important;
 }
 
 .pcard__chip--cat {
@@ -2101,6 +2121,7 @@ p+p {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  margin-left: auto;
 }
 
 /* Blueprint Project Placeholder */
@@ -4752,39 +4773,43 @@ main:has(> .reach:last-child)+.foot {
   }
 }
 
-.contractor-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.85rem 1.65rem;
-  background: rgba(255, 255, 255, 0.62);
-  border: 1px solid rgba(20, 21, 24, 0.12);
-  border-left: 3.5px solid var(--blue);
-  border-radius: 4px;
-  min-height: 200px;
-  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s var(--ease);
-  box-shadow: 0 2px 6px rgba(20, 21, 24, 0.03);
+.contractor-card,
+.section-blue .contractor-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 1.85rem 1.65rem !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(20, 21, 24, 0.08) !important;
+  border-left: 4px solid var(--blue) !important;
+  border-radius: 8px !important;
+  min-height: 200px !important;
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s var(--ease) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
-.night .contractor-card {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: var(--rule-night);
-  border-left-color: var(--brand-blue);
+.night .contractor-card,
+.night .section-blue .contractor-card {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: var(--rule-night) !important;
+  border-left-color: var(--brand-blue) !important;
 }
 
-.contractor-card:hover {
-  transform: translateY(-3px);
-  background: #ffffff;
-  border-color: rgba(20, 21, 24, 0.2);
-  border-left-color: var(--blue);
-  box-shadow: 0 8px 24px rgba(0, 138, 203, 0.09);
+.contractor-card:hover,
+.section-blue .contractor-card:hover {
+  transform: translateY(-4px) !important;
+  background: #FFFFFF !important;
+  border-color: rgba(0, 138, 203, 0.3) !important;
+  border-left-color: var(--brand-red) !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16) !important;
 }
 
-.night .contractor-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(0, 138, 203, 0.4);
-  border-left-color: var(--brand-blue);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+.night .contractor-card:hover,
+.night .section-blue .contractor-card:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(0, 138, 203, 0.4) !important;
+  border-left-color: var(--brand-blue) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35) !important;
 }
 
 .contractor-card__top {
@@ -4795,92 +4820,112 @@ main:has(> .reach:last-child)+.foot {
   margin-bottom: 1.3rem;
 }
 
-.contractor-card__seq {
-  font-family: var(--f-mono);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--ink);
+.contractor-card__seq,
+.section-blue .contractor-card__seq {
+  font-family: var(--f-mono) !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  color: var(--blue) !important;
 }
 
 .night .contractor-card__seq {
-  color: var(--on-night);
+  color: var(--on-night) !important;
 }
 
-.contractor-card__line {
-  height: 1px;
-  background: rgba(20, 21, 24, 0.15);
+.contractor-card__line,
+.section-blue .contractor-card__line {
+  height: 1px !important;
+  background: rgba(20, 21, 24, 0.12) !important;
   flex: 1;
   margin: 0 0.9rem;
 }
 
 .night .contractor-card__line {
-  background: var(--rule-night);
+  background: var(--rule-night) !important;
 }
 
-.contractor-card__arrow {
+.contractor-card__arrow,
+.section-blue .contractor-card__arrow {
   width: 17px;
   height: 17px;
-  color: var(--ink-3);
+  color: var(--ink-3) !important;
   flex-shrink: 0;
   transition: transform 0.25s var(--ease), color 0.25s var(--ease);
 }
 
-.contractor-card:hover .contractor-card__arrow {
-  transform: translate(2px, -2px);
-  color: var(--blue);
+.contractor-card:hover .contractor-card__arrow,
+.section-blue .contractor-card:hover .contractor-card__arrow {
+  transform: translate(3px, -3px) !important;
+  color: var(--brand-red) !important;
 }
 
 .night .contractor-card:hover .contractor-card__arrow {
-  color: var(--brand-blue);
+  color: var(--brand-blue) !important;
 }
 
-.contractor-card__dept {
-  font-family: var(--f-text);
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.35;
-  color: var(--ink);
-  margin-bottom: 1.1rem;
-  min-height: 3.4rem;
-  display: flex;
-  align-items: center;
+.contractor-card__dept,
+.section-blue .contractor-card__dept,
+.section-blue .contractor-card .contractor-card__dept,
+.section-blue .contractor-card:hover .contractor-card__dept {
+  font-family: var(--f-text) !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+  color: var(--ink) !important;
+  margin-bottom: 1.1rem !important;
+  min-height: 3.4rem !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
-.night .contractor-card__dept {
-  color: var(--on-night);
+.night .contractor-card__dept,
+.night .section-blue .contractor-card__dept {
+  color: var(--on-night) !important;
 }
 
-.contractor-card__divider {
-  width: 34px;
-  height: 1px;
-  background: rgba(20, 21, 24, 0.2);
-  margin-bottom: 1.3rem;
+.contractor-card__divider,
+.section-blue .contractor-card__divider {
+  width: 36px !important;
+  height: 2px !important;
+  background: var(--blue) !important;
+  margin-bottom: 1.3rem !important;
+  border-radius: 2px !important;
 }
 
 .night .contractor-card__divider {
-  background: var(--rule-night);
+  background: var(--rule-night) !important;
 }
 
 .contractor-card__badge-wrap {
   margin-top: auto;
 }
 
-.contractor-card__badge {
-  font-family: var(--f-mono);
-  font-size: 0.84rem;
-  font-weight: 600;
-  color: var(--blue);
-  letter-spacing: 0.04em;
-  background: rgba(0, 138, 203, 0.09);
-  padding: 0.45rem 0.9rem;
-  border-radius: 2px;
-  width: fit-content;
-  display: inline-block;
+.contractor-card__badge,
+.section-blue .contractor-card__badge {
+  font-family: var(--f-mono) !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  color: var(--blue) !important;
+  letter-spacing: 0.04em !important;
+  background: #E8F4FC !important;
+  border: 1px solid rgba(0, 138, 203, 0.2) !important;
+  padding: 0.4rem 0.85rem !important;
+  border-radius: 4px !important;
+  width: fit-content !important;
+  display: inline-block !important;
+  transition: all 0.2s var(--ease) !important;
+}
+
+.contractor-card:hover .contractor-card__badge,
+.section-blue .contractor-card:hover .contractor-card__badge {
+  background: #FFF0F0 !important;
+  color: var(--brand-red) !important;
+  border-color: rgba(236, 32, 39, 0.25) !important;
 }
 
 .night .contractor-card__badge {
-  color: var(--brand-blue);
-  background: rgba(0, 138, 203, 0.15);
+  color: var(--brand-blue) !important;
+  background: rgba(0, 138, 203, 0.15) !important;
 }
 
 /* ==========================================================================
@@ -4979,7 +5024,7 @@ main:has(> .reach:last-child)+.foot {
   color: var(--brand-blue);
 }
 
-/* Ensure title and accent are always 100% visible on blue backgrounds */
+/* Ensure title and accent match clean white heading styling on blue backgrounds */
 .section-blue .fleet-text-col .fleet-title,
 .section-blue .fleet-title {
   color: #FFFFFF !important;
