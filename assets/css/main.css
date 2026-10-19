@@ -3439,11 +3439,7 @@ main:has(> .reach:last-child)+.foot {
 .contact-hero__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.92) 0%,
-      rgba(255, 255, 255, 0.76) 35%,
-      rgba(255, 255, 255, 0.65) 60%,
-      rgba(255, 255, 255, 0.95) 100%);
+  background: rgba(255, 255, 255, 0.55);
 }
 
 .about-hero__pattern,
