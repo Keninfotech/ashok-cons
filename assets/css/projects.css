@@ -4,18 +4,18 @@
    ========================================================================== */
 
 :root {
-  --bld-ivory: #F9F8F5;
+  --bld-ivory: #F2F7FB;
   --bld-card-bg: #FFFFFF;
   --bld-border: rgba(20, 21, 24, 0.12);
-  --bld-border-hover: rgba(36, 71, 201, 0.45);
-  --bld-cobalt: #2447C9;
-  --bld-cobalt-light: #EEF2FF;
+  --bld-border-hover: rgba(0, 138, 203, 0.45);
+  --bld-cobalt: #008ACB;
+  --bld-cobalt-light: #E8F4FC;
   --bld-burgundy: #EC2027;
-  --bld-burgundy-light: #FBF2ED;
-  --bld-gold: #C28B1E;
-  --bld-charcoal: #111214;
+  --bld-burgundy-light: #FFF0F0;
+  --bld-gold: #008ACB;
+  --bld-charcoal: #141518;
   --bld-card-shadow: 0 4px 20px -2px rgba(17, 18, 20, 0.05), 0 1px 3px rgba(17, 18, 20, 0.03);
-  --bld-card-shadow-hover: 0 20px 36px -6px rgba(17, 18, 20, 0.12), 0 8px 16px -4px rgba(36, 71, 201, 0.08);
+  --bld-card-shadow-hover: 0 20px 36px -6px rgba(17, 18, 20, 0.12), 0 8px 16px -4px rgba(0, 138, 203, 0.12);
 }
 
 /* --------------------------------------------------------------------------
@@ -71,7 +71,7 @@
 .proj-metric-item:hover {
   transform: translateY(-2px);
   border-color: var(--bld-cobalt);
-  box-shadow: 0 6px 18px rgba(36, 71, 201, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 138, 203, 0.08);
 }
 
 .proj-metric-val {
@@ -167,7 +167,7 @@
   background: var(--bld-cobalt);
   color: #FFFFFF;
   border-color: var(--bld-cobalt);
-  box-shadow: 0 4px 14px rgba(36, 71, 201, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 138, 203, 0.35);
 }
 
 .proj-pill__count {
@@ -291,7 +291,7 @@
 
 /* Blueprint Graphic for projects without direct photography */
 .bld-card__media--blueprint {
-  background: radial-gradient(circle at 50% 50%, #1e3a8a 0%, #0f172a 100%);
+  background: radial-gradient(circle at 50% 50%, #064B78 0%, #10283D 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -313,7 +313,7 @@
 .bld-card__blueprint-icon {
   width: 52px;
   height: 52px;
-  color: #93c5fd;
+  color: #C3D5E4;
   z-index: 2;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
   transition: transform 0.5s var(--ease);
@@ -330,10 +330,10 @@
   font: 500 0.72rem/1 var(--f-mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #bfdbfe;
-  background: rgba(15, 23, 42, 0.7);
+  color: #C3D5E4;
+  background: rgba(16, 40, 61, 0.85);
   padding: 0.3rem 0.65rem;
-  border: 1px solid rgba(147, 197, 253, 0.3);
+  border: 1px solid rgba(195, 213, 228, 0.3);
   border-radius: 2px;
 }
 
@@ -497,7 +497,7 @@
   color: var(--bld-cobalt);
   padding: 0.5rem 0.75rem;
   background: var(--bld-cobalt-light);
-  border: 1px solid rgba(36, 71, 201, 0.15);
+  border: 1px solid rgba(0, 138, 203, 0.15);
   border-radius: 2px;
   transition: all 0.25s ease;
   cursor: pointer;
@@ -537,7 +537,7 @@
 }
 
 .bld-reg-row:hover {
-  background-color: rgba(36, 71, 201, 0.02);
+  background-color: rgba(0, 138, 203, 0.04);
 }
 
 .bld-reg-summary {
@@ -683,7 +683,7 @@
 .rds-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--bld-card-shadow-hover);
-  border-color: rgba(36, 71, 201, 0.4);
+  border-color: rgba(0, 138, 203, 0.4);
 }
 
 /* Panoramic Visual Column */
@@ -784,7 +784,7 @@
   background: var(--bld-burgundy-light);
   padding: 0.25rem 0.6rem;
   border-radius: 2px;
-  border: 1px solid rgba(101, 27, 36, 0.15);
+  border: 1px solid rgba(236, 32, 39, 0.15);
 }
 
 .rds-card__status-tag {
@@ -884,7 +884,7 @@
   text-transform: uppercase;
   color: var(--bld-cobalt);
   padding: 0.45rem 0.8rem;
-  border: 1px solid rgba(36, 71, 201, 0.25);
+  border: 1px solid rgba(0, 138, 203, 0.25);
   border-radius: 2px;
   background: #FFFFFF;
   transition: all 0.25s ease;
@@ -974,7 +974,7 @@
 }
 
 .ongoing-hero-card:hover {
-  border-color: rgba(36, 71, 201, 0.4);
+  border-color: rgba(0, 138, 203, 0.4);
   box-shadow: 0 16px 36px -4px rgba(20, 21, 24, 0.12);
 }
 
@@ -1064,8 +1064,8 @@
 
 /* Real-Time Milestone Progress Bar */
 .ongoing-milestone {
-  background: rgba(36, 71, 201, 0.04);
-  border: 1px solid rgba(36, 71, 201, 0.14);
+  background: rgba(0, 138, 203, 0.04);
+  border: 1px solid rgba(0, 138, 203, 0.14);
   padding: 1rem;
   border-radius: 2px;
   margin-bottom: 1.4rem;
@@ -1144,7 +1144,7 @@
 }
 
 .ongoing-hero-action:hover {
-  background: #173873;
+  background: #006FA8;
 }
 
 .ongoing-hero-action svg {
@@ -1184,7 +1184,7 @@
 
 .oncard-v2:hover {
   transform: translateY(-4px);
-  border-color: rgba(36, 71, 201, 0.4);
+  border-color: rgba(0, 138, 203, 0.4);
   box-shadow: 0 14px 28px -4px rgba(20, 21, 24, 0.12);
 }
 
@@ -1289,9 +1289,9 @@
   text-transform: uppercase;
   color: var(--bld-cobalt);
   padding: 0.45rem 0.65rem;
-  border: 1px solid rgba(36, 71, 201, 0.25);
+  border: 1px solid rgba(0, 138, 203, 0.25);
   border-radius: 2px;
-  background: rgba(36, 71, 201, 0.05);
+  background: rgba(0, 138, 203, 0.05);
   cursor: pointer;
   transition: all 0.25s ease;
 }
@@ -1364,7 +1364,7 @@
 .equip-tile:hover {
   transform: translateY(-4px);
   border-color: var(--bld-cobalt);
-  box-shadow: 0 10px 24px -4px rgba(36, 71, 201, 0.12);
+  box-shadow: 0 10px 24px -4px rgba(0, 138, 203, 0.12);
 }
 
 .equip-tile.is-hidden {
@@ -1387,7 +1387,7 @@
   align-items: center;
   justify-content: center;
   color: var(--bld-cobalt);
-  border: 1px solid rgba(36, 71, 201, 0.15);
+  border: 1px solid rgba(0, 138, 203, 0.15);
   transition: transform 0.3s var(--ease), background 0.3s ease;
 }
 
@@ -1408,7 +1408,7 @@
   background: var(--bld-cobalt-light);
   padding: 0.35rem 0.65rem;
   border-radius: 3px;
-  border: 1px solid rgba(36, 71, 201, 0.2);
+  border: 1px solid rgba(0, 138, 203, 0.2);
 }
 
 .equip-tile:hover .equip-tile__qty-badge {
