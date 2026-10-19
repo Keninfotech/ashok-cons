@@ -99,12 +99,12 @@
     </g>
 
     <!-- Main Title -->
-    <text x="0" y="-22" font-family="'Newsreader', Georgia, serif" font-size="27" font-weight="500" fill="#1b1a18" text-anchor="middle" letter-spacing="-0.02em">
+    <text x="0" y="-22" font-family="'Cormorant Garamond', Georgia, serif" font-size="28" font-weight="600" fill="#1b1a18" text-anchor="middle" letter-spacing="-0.02em">
       Pipelines &amp; Utility Schemes
     </text>
 
     <!-- Subtitle / Context -->
-    <text x="0" y="10" font-family="'Archivo', sans-serif" font-size="12" font-weight="400" fill="#524f49" text-anchor="middle" letter-spacing="0.01em">
+    <text x="0" y="10" font-family="'Inter', sans-serif" font-size="12" font-weight="400" fill="#524f49" text-anchor="middle" letter-spacing="0.01em">
       TWAD Board &amp; AMRUT 2.0 Potable Water Distribution Networks
     </text>
 

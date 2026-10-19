@@ -23,7 +23,7 @@ sitemap.xml, robots.txt
 ## Design notes
 
 - Art direction: an architectural monograph. Concrete-paper neutrals and ink black, with cobalt blue (from the logo) as the single accent.
-- Type: Archivo, condensed, for display; Newsreader for text; IBM Plex Mono for labels and captions. All three load from Google Fonts.
+- Type: Cormorant Garamond for display and headings; Inter for body copy; IBM Plex Mono for labels and captions. All load from Google Fonts.
 - Motion: one idea per section, never repeated site-wide. GSAP, ScrollTrigger and Lenis load from the jsDelivr CDN. If they fail to load, or the visitor prefers reduced motion, every page still shows all its content, just without animation.
 
 ## Run locally
