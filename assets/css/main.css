@@ -245,8 +245,8 @@ ol {
 
 /* ---------- type ---------- */
 .label {
-  font: 500 .72rem/1.4 var(--f-mono);
-  letter-spacing: .06em;
+  font: 600 clamp(0.92rem, 1.2vw, 1.08rem)/1.4 var(--f-mono);
+  letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--ink-2);
 }
@@ -256,7 +256,7 @@ ol {
 }
 
 .label b {
-  font-weight: 500;
+  font-weight: 700;
   color: var(--blue);
 }
 
@@ -814,7 +814,7 @@ p+p {
   justify-content: space-between;
   gap: 1rem;
   margin-top: .7rem;
-  font: 400 .72rem/1.4 var(--f-mono);
+  font: 400 .82rem/1.4 var(--f-mono);
   color: var(--ink-3);
 }
 
@@ -1675,7 +1675,7 @@ p+p {
 }
 
 .pcard__dept {
-  font: 600 0.72rem/1.3 var(--f-mono);
+  font: 600 0.82rem/1.3 var(--f-mono);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #008ACB;
