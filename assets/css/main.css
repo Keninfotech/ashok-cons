@@ -323,7 +323,6 @@ ol {
 .section-blue h4,
 .section-blue h5,
 .section-blue h6,
-.section-blue .careers-benefit-title,
 .section-blue .stat-callout__num,
 .section-blue .stat-callout__unit,
 .section-blue .sector h3,
@@ -343,7 +342,6 @@ ol {
 .section-blue .sec-lead,
 .section-blue .div-desc,
 .section-blue .careers-editorial-body,
-.section-blue .careers-benefit-desc,
 .section-blue .contact-lead-desc,
 .section-blue .reach__sub,
 .section-blue .reach__note,
@@ -498,6 +496,7 @@ ol {
 .section-blue .partner-card__frame,
 .section-blue .div-card,
 .section-blue .val-card,
+.section-blue .careers-contact-card,
 .section-blue .careers-benefit-item,
 .section-blue .careers-form-card,
 .section-blue .contact-card-v2,
@@ -522,6 +521,8 @@ ol {
 .section-blue .div-card h3,
 .section-blue .val-card h3,
 .section-blue .careers-form-card__heading,
+.section-blue .careers-contact-val,
+.section-blue .careers-benefit-title,
 .section-blue .contact-card-v2 h3,
 .section-blue .contact-form-title,
 .section-blue .contact-info-val,
@@ -539,6 +540,7 @@ ol {
 .section-blue .div-card p,
 .section-blue .val-card p,
 .section-blue .careers-form-card__sub,
+.section-blue .careers-benefit-desc,
 .section-blue .contact-form-desc,
 .section-blue .contact-info-sub,
 .section-blue .partner-card__caption-role {
@@ -554,6 +556,7 @@ ol {
 
 .section-blue .pcard__dept,
 .section-blue .bld-reg-sector,
+.section-blue .careers-contact-label,
 .section-blue .reach__card-label,
 .section-blue .contact-info-label,
 .section-blue .contact-form-tag {
@@ -703,6 +706,141 @@ ol {
 
 .reach.section-blue .reach__note {
   color: var(--ink-3) !important;
+}
+
+/* Careers section when blue */
+.careers-redesign-section.section-blue {
+  background-color: var(--brand-blue) !important;
+}
+
+.section-blue .careers-bg-blend {
+  background: linear-gradient(to right,
+      var(--brand-blue) 0%,
+      rgba(0, 138, 203, 0.98) 12%,
+      rgba(0, 138, 203, 0.85) 30%,
+      rgba(0, 138, 203, 0.45) 55%,
+      transparent 75%) !important;
+}
+
+.section-blue .careers-bg-blueprint {
+  opacity: 0.16 !important;
+  mix-blend-mode: screen !important;
+}
+
+.section-blue .careers-eyebrow-label {
+  color: #FFFFFF !important;
+}
+
+.section-blue .careers-eyebrow-sep {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.section-blue .careers-eyebrow-num {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+
+.section-blue .careers-rule-line {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.section-blue .careers-accent-bar {
+  background: #FFFFFF !important;
+}
+
+/* Contact Cards on blue */
+.section-blue .careers-contact-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+  padding: 1.15rem 1.25rem !important;
+}
+
+.section-blue .careers-contact-icon {
+  background: var(--brand-blue-light) !important;
+  border: 1px solid rgba(0, 138, 203, 0.2) !important;
+  color: var(--brand-blue) !important;
+  border-radius: 50% !important;
+}
+
+.section-blue .careers-contact-label {
+  color: var(--brand-blue) !important;
+  font-family: var(--f-text) !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+}
+
+.section-blue .careers-contact-val {
+  color: var(--ink) !important;
+  font-family: var(--f-text) !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+}
+
+.section-blue .careers-contact-arrow {
+  color: var(--brand-blue) !important;
+}
+
+/* Benefits Row on blue */
+.section-blue .careers-benefits-row {
+  border-top-color: rgba(255, 255, 255, 0.3) !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1.15rem !important;
+  padding-top: 2rem !important;
+}
+
+.section-blue .careers-benefit-item {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  border-radius: 6px !important;
+  padding: 1.2rem 1.05rem !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 0.75rem !important;
+}
+
+.section-blue .careers-benefit-icon {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 6px !important;
+  background: var(--brand-blue-light) !important;
+  border: 1px solid rgba(0, 138, 203, 0.2) !important;
+  color: var(--brand-blue) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.section-blue .careers-benefit-icon svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.section-blue .careers-benefit-text {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.3rem !important;
+}
+
+.section-blue .careers-benefit-title {
+  color: var(--ink) !important;
+  font-family: var(--f-text) !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+}
+
+.section-blue .careers-benefit-desc {
+  color: var(--ink-2) !important;
+  font-family: var(--f-text) !important;
+  font-size: 0.82rem !important;
+  line-height: 1.4 !important;
 }
 
 /* ---------- type ---------- */
@@ -1287,29 +1425,337 @@ p+p {
   }
 }
 
-/* ---------- home: about ---------- */
-.about {
-  padding: clamp(5rem, 13vw, 12rem) 0 clamp(4rem, 9vw, 8rem);
+/* ==========================================================================
+   Home Page: About Us Redesign (3-Column Layout Matching Reference)
+   ========================================================================== */
+.about-redesign {
+  background-color: #F0F6FB;
+  padding: clamp(3.5rem, 5.5vw, 5.5rem) 0;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 138, 203, 0.12);
 }
 
-.about__label {
-  margin-bottom: 1.5rem;
+.about-redesign__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 1.05fr);
+  gap: clamp(1.4rem, 2.2vw, 2.5rem);
+  align-items: center;
 }
 
-.about__statement .word {
-  opacity: .16;
+/* --- Left Column --- */
+.about-redesign__col-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.about__low {
-  margin-top: clamp(3.5rem, 8vw, 7rem);
-  row-gap: 3rem;
-  align-items: end;
+.about-redesign__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
 }
 
-.about__fig img {
+.about-redesign__eyebrow-line {
+  width: 26px;
+  height: 2px;
+  background-color: var(--brand-blue, #008ACB);
+  display: inline-block;
+  border-radius: 1px;
+}
+
+.about-redesign__eyebrow-text {
+  font-family: var(--f-text);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #006FA8;
+  text-transform: uppercase;
+}
+
+.about-redesign__heading {
+  font-family: var(--f-text);
+  font-size: clamp(1.5rem, 2.05vw, 1.95rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: #0F2438;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.15rem;
+}
+
+.about-redesign__desc {
+  font-family: var(--f-text);
+  font-size: clamp(0.88rem, 0.95vw, 0.94rem);
+  line-height: 1.6;
+  color: #4A5568;
+  margin-bottom: 1.8rem;
+}
+
+.about-redesign__action {
+  display: flex;
+  align-items: center;
+}
+
+.about-redesign__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.72rem 1.55rem;
+  background-color: #0A3156;
+  color: #FFFFFF !important;
+  font-family: var(--f-text);
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.25s var(--ease), transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.about-redesign__btn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.25s var(--ease);
+}
+
+.about-redesign__btn:hover {
+  background-color: #006FA8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(10, 49, 86, 0.25);
+}
+
+.about-redesign__btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* --- Center Column (Image) --- */
+.about-redesign__col-center {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-redesign__figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-redesign__img-wrap {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px -4px rgba(15, 36, 56, 0.12);
+  background: #FFFFFF;
+}
+
+.about-redesign__img-wrap img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: auto;
+  aspect-ratio: 4 / 3.25;
   object-fit: cover;
+  display: block;
+  transition: transform 0.8s var(--ease);
+}
+
+.about-redesign__figure:hover .about-redesign__img-wrap img {
+  transform: scale(1.025);
+}
+
+.about-redesign__cap {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+  font-family: var(--f-text);
+  font-size: 0.8rem;
+  color: #4A5568;
+}
+
+.about-redesign__pin {
+  width: 15px;
+  height: 15px;
+  color: #006FA8;
+  flex-shrink: 0;
+}
+
+.about-redesign__cap-title {
+  font-weight: 600;
+  color: #1A202C;
+}
+
+.about-redesign__cap-sep {
+  color: #CBD5E1;
+}
+
+.about-redesign__cap-loc {
+  color: #4A5568;
+}
+
+.about-redesign__cap-rule {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(74, 85, 104, 0.2);
+  margin-left: 0.35rem;
+}
+
+/* --- Right Column (Card) --- */
+.about-redesign__col-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-redesign__card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 138, 203, 0.16);
+  border-radius: 8px;
+  padding: clamp(1.4rem, 2vw, 1.85rem);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.about-redesign__card-text {
+  font-family: var(--f-text);
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: #4A5568;
+  margin: 0;
+}
+
+.about-redesign__card-divider {
+  height: 1px;
+  background-color: rgba(0, 138, 203, 0.12);
+  margin: 1.25rem 0;
+}
+
+.about-redesign__stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.15rem 0.9rem;
+}
+
+.about-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.about-stat-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #006FA8;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 111, 168, 0.25);
+}
+
+.about-stat-symbol {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.about-stat-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.about-stat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.about-stat-num {
+  font-family: var(--f-text);
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #0F2438;
+}
+
+.about-stat-lbl {
+  font-family: var(--f-text);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #64748B;
+  text-transform: uppercase;
+}
+
+.about-redesign__card-foot {
+  margin-top: 1.35rem;
+  padding-top: 1.05rem;
+  border-top: 1px solid rgba(0, 138, 203, 0.1);
+}
+
+.about-redesign__card-link {
+  font-family: var(--f-text);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #006FA8 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.about-redesign__card-link svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s;
+}
+
+.about-redesign__card-link:hover {
+  color: #004B78 !important;
+}
+
+.about-redesign__card-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* --- Responsive Breakpoints --- */
+@media (max-width: 1040px) {
+  .about-redesign__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .about-redesign__col-left {
+    grid-column: 1 / 3;
+    max-width: 68ch;
+  }
+
+  .about-redesign__col-center {
+    grid-column: 1 / 2;
+  }
+
+  .about-redesign__col-right {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width: 720px) {
+  .about-redesign__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-redesign__col-left,
+  .about-redesign__col-center,
+  .about-redesign__col-right {
+    grid-column: 1 / -1;
+  }
+
+  .about-redesign__stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 .cap {
@@ -6012,6 +6458,7 @@ main:has(> .reach:last-child)+.foot {
   position: relative;
   background: var(--paper);
   padding-block: clamp(4.5rem, 7vw, 7.5rem);
+  scroll-margin-top: calc(var(--hdr) + 1.5rem);
   overflow: hidden;
   z-index: 1;
 }
@@ -6275,7 +6722,7 @@ main:has(> .reach:last-child)+.foot {
 /* Official Contact Details Cards */
 .careers-contact-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.2rem;
   margin-top: 2.2rem;
   margin-bottom: 2.4rem;
@@ -6338,10 +6785,10 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .careers-contact-label {
-  font-family: var(--f-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  font-weight: 600;
+  font-family: var(--f-text);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
   text-transform: uppercase;
   color: var(--ink-3);
 }
@@ -6351,9 +6798,9 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .careers-contact-val {
-  font-family: var(--f-mono);
-  font-size: 0.88rem;
-  font-weight: 500;
+  font-family: var(--f-text);
+  font-size: 0.92rem;
+  font-weight: 600;
   color: var(--ink);
   display: inline-flex;
   align-items: center;
@@ -6424,10 +6871,10 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .careers-benefit-title {
-  font-family: var(--f-mono);
-  font-size: 0.78rem;
+  font-family: var(--f-text);
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--ink);
 }
@@ -6476,10 +6923,10 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .careers-form-card__tag {
-  font-family: var(--f-mono);
+  font-family: var(--f-text);
   font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--brand-blue);
 }
@@ -6499,9 +6946,9 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .careers-form-card__num {
-  font-family: var(--f-mono);
+  font-family: var(--f-text);
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ink-3);
 }
 
@@ -6556,10 +7003,10 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .careers-app-form .field label {
-  font-family: var(--f-mono);
-  font-size: 0.72rem;
+  font-family: var(--f-text);
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--ink-2);
 }
@@ -6714,8 +7161,8 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .careers-upload-hint {
-  font-family: var(--f-mono);
-  font-size: 0.72rem;
+  font-family: var(--f-text);
+  font-size: 0.78rem;
   color: var(--ink-3);
 }
 
@@ -6732,10 +7179,10 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .careers-upload-badge {
-  font-family: var(--f-mono);
-  font-size: 0.72rem;
+  font-family: var(--f-text);
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   color: var(--ink-2);
 }
 
@@ -6744,8 +7191,8 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .careers-upload-size {
-  font-family: var(--f-mono);
-  font-size: 0.68rem;
+  font-family: var(--f-text);
+  font-size: 0.72rem;
   color: var(--ink-3);
 }
 

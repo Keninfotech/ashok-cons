@@ -60,23 +60,136 @@
   </div>
 </section>
 
-<section class="about" id="about" aria-labelledby="about-label">
-  <div class="wrap grid">
-    <h2 class="label about__label" id="about-label"><b>01</b> About us</h2>
-    <p class="statement about__statement" data-scrub>Ashok Construction is one of the leading construction companies in Namakkal, Tamil Nadu. Since our inception in 2017, we have achieved a commendable track record delivering a diverse range of projects for leading South Indian organizations, expanding our portfolio over the last nine years.</p>
-  </div>
-  <div class="wrap grid about__low">
-    <figure class="about__fig"><img src="./assets/img/gallery/paramathi-court.webp" srcset="./assets/img/gallery/paramathi-court.webp 768w" sizes="(min-width: 900px) 40vw, 100vw" alt="Paramathi Combined Court Building and Judicial Quarters built by Ashok Construction" width="768" height="660" loading="lazy" decoding="async">
-      <figcaption class="cap"><span>Fig. 01 &mdash; Combined Court Building</span><span>Paramathi, Namakkal</span></figcaption></figure>
-    <div class="about__side">
-      <p class="lede">Based in the prominent transportation and industrial hub of Namakkal, Tamil Nadu, Ashok Construction undertakes public works, highways, bridges, rural development, water supply pipelines, and institutional and private building construction with an unwavering emphasis on quality, efficiency, and timely delivery.</p>
-      <dl class="figures">
-        <div><dd>&#8377;182 Cr</dd><dt>Annual Turnover (25–26)</dt></div>
-        <div><dd>Class 1A</dd><dt>PWD Contractor</dt></div>
-        <div><dd>9+ Yrs</dd><dt>Construction Excellence</dt></div>
-        <div><dd>25+</dd><dt>Tipper Fleet &amp; RMC Plant</dt></div>
-      </dl>
-      <a class="link" href="about-us/">Know more about our leadership &amp; journey <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+<section class="about-redesign" id="about" aria-labelledby="about-label">
+  <div class="wrap">
+    <div class="about-redesign__grid">
+      
+      <!-- LEFT COLUMN: Narrative & Journey CTA -->
+      <div class="about-redesign__col-left">
+        <div class="about-redesign__eyebrow">
+          <span class="about-redesign__eyebrow-line" aria-hidden="true"></span>
+          <span class="about-redesign__eyebrow-text" id="about-label">ABOUT US</span>
+        </div>
+        
+        <h2 class="about-redesign__heading">
+          Ashok Construction is one of the leading construction companies in Namakkal, Tamil Nadu.
+        </h2>
+        
+        <p class="about-redesign__desc">
+          Since our inception in 2017, we have achieved a commendable track record delivering a diverse range of projects for leading South Indian organizations, expanding our portfolio over the last nine years.
+        </p>
+        
+        <div class="about-redesign__action">
+          <a class="about-redesign__btn" href="about-us/">
+            <span>Our Journey</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- CENTER COLUMN: Feature Image with Location Caption -->
+      <div class="about-redesign__col-center">
+        <figure class="about-redesign__figure">
+          <div class="about-redesign__img-wrap">
+            <img src="./assets/img/gallery/paramathi-court.webp" srcset="./assets/img/gallery/paramathi-court.webp 768w" sizes="(min-width: 1040px) 36vw, 100vw" alt="Combined Court Building and Judicial Quarters at Paramathi, Namakkal built by Ashok Construction" width="768" height="660" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="about-redesign__cap">
+            <svg class="about-redesign__pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <span class="about-redesign__cap-title">Combined Court Building</span>
+            <span class="about-redesign__cap-sep">|</span>
+            <span class="about-redesign__cap-loc">Paramathi, Namakkal</span>
+            <span class="about-redesign__cap-rule" aria-hidden="true"></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- RIGHT COLUMN: Overview & Key Statistics Card -->
+      <div class="about-redesign__col-right">
+        <div class="about-redesign__card">
+          <p class="about-redesign__card-text">
+            Based in the prominent transportation and industrial hub of Namakkal, Tamil Nadu, Ashok Construction undertakes public works, highways, bridges, rural development, water supply pipelines, and institutional and private building construction with an unwavering emphasis on quality, efficiency, and timely delivery.
+          </p>
+          
+          <div class="about-redesign__card-divider" aria-hidden="true"></div>
+          
+          <!-- 2x2 Stats Grid with Icons -->
+          <div class="about-redesign__stats-grid">
+            
+            <!-- Stat 1: Turnover -->
+            <div class="about-stat-item">
+              <div class="about-stat-icon" aria-hidden="true">
+                <span class="about-stat-symbol">&#8377;</span>
+              </div>
+              <div class="about-stat-info">
+                <span class="about-stat-num">&#8377;182 Cr</span>
+                <span class="about-stat-lbl">ANNUAL TURNOVER (25&ndash;26)</span>
+              </div>
+            </div>
+
+            <!-- Stat 2: Class 1A -->
+            <div class="about-stat-item">
+              <div class="about-stat-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a8 8 0 0 0-16 0v2z"/>
+                  <path d="M10 10V5a2 2 0 0 1 4 0v5"/>
+                </svg>
+              </div>
+              <div class="about-stat-info">
+                <span class="about-stat-num">Class 1A</span>
+                <span class="about-stat-lbl">PWD CONTRACTOR</span>
+              </div>
+            </div>
+
+            <!-- Stat 3: Years -->
+            <div class="about-stat-item">
+              <div class="about-stat-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+              </div>
+              <div class="about-stat-info">
+                <span class="about-stat-num">9+ Yrs</span>
+                <span class="about-stat-lbl">CONSTRUCTION EXCELLENCE</span>
+              </div>
+            </div>
+
+            <!-- Stat 4: Fleet -->
+            <div class="about-stat-item">
+              <div class="about-stat-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div class="about-stat-info">
+                <span class="about-stat-num">25+</span>
+                <span class="about-stat-lbl">TIPPER FLEET &amp; RMC PLANT</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="about-redesign__card-foot">
+            <a class="about-redesign__card-link" href="about-us/">
+              <span>Know more about our leadership &amp; journey</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
