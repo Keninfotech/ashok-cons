@@ -2297,16 +2297,23 @@ p+p {
   position: absolute;
   inset: 0;
   clip-path: inset(0 0 100% 0);
-  transition: clip-path .9s var(--ease-io);
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+  will-change: clip-path, opacity;
+  transition: clip-path .9s var(--ease-io), opacity .2s linear;
 }
 
 .why__visual figure.is-active {
   clip-path: inset(0);
-  z-index: 1;
+  opacity: 1;
+  z-index: 2;
 }
 
 .why__visual figure.is-prev {
   clip-path: inset(0);
+  opacity: 1;
+  z-index: 1;
 }
 
 .why__visual img {

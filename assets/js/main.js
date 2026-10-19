@@ -301,24 +301,57 @@
 
   /* ---------------------------------------------------------------- sectors: content changes with the reader */
   $$('.why').forEach((sec) => {
-    const items = $$('.sector', sec), figs = $$('.why__visual figure', sec), cap = $('.why__cap span', sec);
+    const items = $$('.sector', sec), figs = $$('.why__visual figure', sec), caps = $$('.why__cap span', sec);
+    if (!items.length || items.length !== figs.length) return;
     let active = 0;
-    const set = (i) => {
+    let requested = 0;
+    let hovered = -1;
+
+    // These four images are part of one interaction, not decorative below-the-fold
+    // content. Eagerly decode them so a class change never reveals an unloaded frame.
+    const ready = figs.map((fig) => {
+      const img = $('img', fig);
+      if (!img) return Promise.resolve();
+      img.loading = 'eager';
+      // A completed failed request must not leave the sector state waiting forever.
+      if (img.complete) return img.naturalWidth && img.decode ? img.decode().catch(() => {}) : Promise.resolve();
+      return new Promise((resolve) => {
+        img.addEventListener('load', () => {
+          if (img.decode) img.decode().catch(() => {}).finally(resolve);
+          else resolve();
+        }, { once: true });
+        img.addEventListener('error', resolve, { once: true });
+      });
+    });
+
+    const apply = (i) => {
       if (i === active) return;
-      figs.forEach((f, k) => { f.classList.toggle('is-prev', k === active); f.classList.toggle('is-active', k === i); });
+      figs.forEach((f, k) => {
+        f.classList.toggle('is-prev', k === active);
+        f.classList.toggle('is-active', k === i);
+      });
       items.forEach((it, k) => it.classList.toggle('is-active', k === i));
-      if (cap) cap.textContent = items[i].dataset.caption;
+      if (caps[0]) caps[0].textContent = items[i].dataset.caption || '';
+      if (caps[1]) caps[1].textContent = items[i].dataset.location || '';
       active = i;
     };
+    const set = (i) => {
+      if (i === active || i < 0 || i >= figs.length) return;
+      requested = i;
+      ready[i].then(() => { if (requested === i) apply(i); });
+    };
     items.forEach((it, i) => {
-      it.addEventListener('pointerenter', () => set(i));
+      // Hover is an explicit choice. Keep it in control until the visitor leaves
+      // the item, rather than letting the scroll position immediately replace it.
+      it.addEventListener('pointerenter', () => { hovered = i; set(i); });
+      it.addEventListener('pointerleave', () => { hovered = -1; pick(); });
       it.addEventListener('focus', () => set(i));
     });
     // the active item is the last one whose top has passed 55% of the viewport
     let frame = 0;
     const pick = () => {
       frame = 0;
-      if (!desktop()) return;
+      if (!desktop() || hovered !== -1) return;
       let i = 0;
       items.forEach((it, k) => { if (it.getBoundingClientRect().top < innerHeight * 0.55) i = k; });
       set(i);
