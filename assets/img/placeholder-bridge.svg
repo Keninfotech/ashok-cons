@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 533" width="800" height="533" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6f3ed"/>
+      <stop offset="50%" stop-color="#eee9df"/>
+      <stop offset="100%" stop-color="#e5dfd3"/>
+    </linearGradient>
+
+    <!-- Blueprint Grid -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#d5cebf" stroke-width="0.75" stroke-opacity="0.6"/>
+      <path d="M 20 0 L 20 40 M 0 20 L 40 20" fill="none" stroke="#e4ded2" stroke-width="0.4" stroke-opacity="0.8"/>
+    </pattern>
+
+    <!-- Bridge Pier Gradient -->
+    <linearGradient id="concreteGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#808d9e"/>
+      <stop offset="50%" stop-color="#bcc8d6"/>
+      <stop offset="100%" stop-color="#808d9e"/>
+    </linearGradient>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1b1a18" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base & Grid -->
+  <rect width="800" height="533" fill="url(#bgGrad)"/>
+  <rect width="800" height="533" fill="url(#gridPattern)"/>
+
+  <!-- Technical Framing & Coordinate Borders -->
+  <rect x="24" y="24" width="752" height="485" fill="none" stroke="#b8afa0" stroke-width="1.2" stroke-dasharray="8 4"/>
+  <rect x="30" y="30" width="740" height="473" fill="none" stroke="#8a857c" stroke-width="0.6"/>
+
+  <!-- Corner Registration Crosshairs -->
+  <g stroke="#004de6" stroke-width="1.2">
+    <path d="M 18 24 L 30 24 M 24 18 L 24 30"/>
+    <path d="M 770 24 L 782 24 M 776 18 L 776 30"/>
+    <path d="M 18 509 L 30 509 M 24 503 L 24 515"/>
+    <path d="M 770 509 L 782 509 M 776 503 L 776 515"/>
+  </g>
+
+  <!-- Engineering CAD Schematic: Bridge Elevation & River Training -->
+  <g opacity="0.36" stroke="#1b1a18">
+    <!-- River Bed & Water Line -->
+    <path d="M 40 400 Q 200 395 400 405 T 760 398" fill="none" stroke="#004de6" stroke-width="1.5" stroke-dasharray="10 5"/>
+    <text x="54" y="390" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#004de6">HIGH FLOOD LEVEL (HFL)</text>
+
+    <!-- Bridge Deck Slab & Girders -->
+    <rect x="40" y="160" width="720" height="24" rx="2" fill="#7a8b9e" stroke="#2c3a47" stroke-width="1.5"/>
+    <rect x="40" y="184" width="720" height="12" fill="#586777" stroke="#2c3a47" stroke-width="1"/>
+    <!-- Crash Barriers -->
+    <rect x="40" y="146" width="720" height="14" fill="none" stroke="#2c3a47" stroke-width="1.2" stroke-dasharray="6 3"/>
+
+    <!-- Left Pier -->
+    <polygon points="175,196 225,196 215,360 185,360" fill="url(#concreteGrad)" stroke="#2c3a47" stroke-width="1.4"/>
+    <rect x="165" y="196" width="70" height="16" rx="2" fill="#4a5a6d" stroke="#1b1a18" stroke-width="1.2"/>
+    <!-- Well Foundation Left -->
+    <rect x="170" y="360" width="60" height="60" fill="#3a4856" stroke="#1b1a18" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+    <!-- Right Pier -->
+    <polygon points="575,196 625,196 615,360 585,360" fill="url(#concreteGrad)" stroke="#2c3a47" stroke-width="1.4"/>
+    <rect x="565" y="196" width="70" height="16" rx="2" fill="#4a5a6d" stroke="#1b1a18" stroke-width="1.2"/>
+    <!-- Well Foundation Right -->
+    <rect x="570" y="360" width="60" height="60" fill="#3a4856" stroke="#1b1a18" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+    <!-- Dimension Callouts -->
+    <line x1="200" y1="130" x2="600" y2="130" stroke="#8a857c" stroke-width="1"/>
+    <text x="350" y="122" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#6b665c">EFFECTIVE BRIDGE SPAN (PSC GIRDERS)</text>
+  </g>
+
+  <!-- Central Technical Placeholder Card Badge -->
+  <g transform="translate(400, 266)" filter="url(#cardShadow)">
+    <rect x="-240" y="-120" width="480" height="240" rx="8" fill="#ffffff" fill-opacity="0.94" stroke="#d5cebf" stroke-width="1.5"/>
+    <rect x="-234" y="-114" width="468" height="228" rx="6" fill="none" stroke="#004de6" stroke-width="0.8" stroke-opacity="0.3"/>
+
+    <!-- Category Eyebrow Pill -->
+    <g transform="translate(0, -78)">
+      <rect x="-105" y="-13" width="210" height="26" rx="13" fill="#edf2f7" stroke="#cbd5e1" stroke-width="1"/>
+      <circle cx="-85" cy="0" r="4" fill="#004de6"/>
+      <text x="-72" y="4" font-family="'IBM Plex Mono', monospace" font-size="10.5" font-weight="600" fill="#0f172a" letter-spacing="1.2">CIVIL &amp; STRUCTURAL</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="-22" font-family="'Newsreader', Georgia, serif" font-size="27" font-weight="500" fill="#1b1a18" text-anchor="middle" letter-spacing="-0.02em">
+      Bridges &amp; Cross-Drainage
+    </text>
+
+    <!-- Subtitle / Context -->
+    <text x="0" y="10" font-family="'Archivo', sans-serif" font-size="12" font-weight="400" fill="#524f49" text-anchor="middle" letter-spacing="0.01em">
+      High-Level River Bridges, Flyovers &amp; Culvert Infrastructure
+    </text>
+
+    <line x1="-140" y1="34" x2="140" y2="34" stroke="#e2ded4" stroke-width="1"/>
+
+    <!-- Status & Dimension Tag -->
+    <g transform="translate(0, 68)">
+      <g stroke="#004de6" stroke-width="1.6" fill="none" transform="translate(-165, -11)">
+        <rect x="0" y="3" width="22" height="16" rx="2"/>
+        <circle cx="11" cy="11" r="4.5"/>
+        <path d="M 6 3 L 8 0 L 14 0 L 16 3"/>
+      </g>
+      <text x="-135" y="2" font-family="'IBM Plex Mono', monospace" font-size="10.5" font-weight="500" fill="#004de6" letter-spacing="0.5">
+        PROJECT PHOTO PLACEHOLDER
+      </text>
+      <text x="145" y="2" font-family="'IBM Plex Mono', monospace" font-size="10.5" font-weight="400" fill="#8a857c" text-anchor="end">
+        800 &times; 533 PX
+      </text>
+    </g>
+  </g>
+
+  <!-- Technical Footer Stamp -->
+  <g transform="translate(48, 492)">
+    <text x="0" y="0" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#8a857c" letter-spacing="0.8">
+      ASHOK CONSTRUCTION &bull; HIGHWAYS &amp; BRIDGES &bull; NAMAKKAL
+    </text>
+  </g>
+  <g transform="translate(752, 492)">
+    <text x="0" y="0" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#8a857c" text-anchor="end" letter-spacing="0.8">
+      SEC-03 / BRIDGES
+    </text>
+  </g>
+</svg>
