@@ -3762,11 +3762,12 @@ main:has(> .reach:last-child)+.foot {
   }
 
   .company-profile h2 {
+    max-width: 20ch;
     font-size: clamp(3rem, 6vh, 5.5rem);
   }
 
   .company-profile__image {
-    height: clamp(8rem, 19vh, 18rem);
+    height: clamp(15rem, 30vh, 25rem);
     margin-top: clamp(1.5rem, 3vh, 3.5rem);
   }
 
