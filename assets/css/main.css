@@ -8371,3 +8371,48 @@ main:has(> .reach:last-child)+.foot {
   border-color: var(--rule-night);
   color: var(--on-night-2);
 }
+
+/* Partner Feature on Blue Background */
+.section-blue .partner-content__eyebrow {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.section-blue .partner-content__eyebrow-num {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+
+.section-blue .partner-content__title {
+  color: #FFFFFF !important;
+}
+
+.section-blue .partner-content__quote-icon {
+  color: #FFFFFF !important;
+  opacity: 0.55;
+}
+
+.section-blue .partner-content__quote p {
+  color: rgba(255, 255, 255, 0.94) !important;
+}
+
+.section-blue .partner-content__quote p:first-of-type {
+  color: #FFFFFF !important;
+}
+
+.section-blue .partner-content__signoff {
+  border-top-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.section-blue .partner-content__author-name {
+  color: #FFFFFF !important;
+}
+
+.section-blue .partner-content__author-title {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.section-blue .partner-pillar {
+  background: rgba(255, 255, 255, 0.14) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #FFFFFF !important;
+}
