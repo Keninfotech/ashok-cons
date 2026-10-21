@@ -4114,6 +4114,314 @@ main:has(> .reach:last-child)+.foot {
   margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
+/* Vision & mission page */
+.vm-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #fff 0%, #f8fbfd 58%, #e6f4fb 100%);
+}
+
+.vm-hero::after {
+  content: "";
+  position: absolute;
+  right: -8rem;
+  bottom: -12rem;
+  width: 36rem;
+  height: 32rem;
+  border: 1px solid rgba(0, 138, 203, .16);
+  transform: rotate(35deg);
+  pointer-events: none;
+}
+
+.vm-hero .mast__grid { position: relative; z-index: 1; }
+.vm-hero .h-display em { color: var(--brand-red); }
+
+.vm-statement {
+  position: relative;
+  isolation: isolate;
+  min-height: min(44rem, 88svh);
+  overflow: hidden;
+}
+
+.vm-statement::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: min(48vw, 48rem);
+  height: min(48vw, 48rem);
+  border: 1px solid currentColor;
+  opacity: .12;
+  transform: rotate(45deg);
+}
+
+.vm-statement--vision::before { right: -22rem; top: -20rem; }
+.vm-statement--mission::before { left: -22rem; bottom: -20rem; color: var(--blue); }
+
+.vm-statement .label {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  letter-spacing: .16em;
+}
+
+.vm-statement .label b {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font: 600 .72rem/1 var(--f-mono);
+}
+
+.vm-statement .statement {
+  max-width: 23ch;
+  letter-spacing: -.035em;
+}
+
+.vm-statement--mission {
+  background: #fdfaf5;
+}
+
+.vm-statement--mission .label { color: var(--brand-red); }
+.vm-statement--mission .statement em { color: var(--brand-red); }
+
+.vm-statements {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  padding: 0;
+  background: #fdfaf5;
+}
+
+.vm-statements .vm-statement {
+  min-height: min(58rem, 100svh);
+  padding-block: clamp(4rem, 7vw, 7rem);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.vm-statements .vm-statement--mission {
+  text-align: left;
+}
+
+.vm-statements .vm-statement--mission .statement {
+  text-align: left;
+}
+
+.vm-statements .vm-statement .wrap {
+  width: 100%;
+  max-width: none;
+  position: relative;
+  z-index: 1;
+}
+
+.vm-statements .vm-statement .label {
+  grid-column: 1 / -1;
+  margin: 0 0 clamp(3rem, 6vw, 6.5rem);
+}
+
+.vm-statements .vm-statement .label::after {
+  content: "";
+  width: clamp(4.5rem, 8vw, 8rem);
+  height: 1px;
+  margin-left: .35rem;
+  background: currentColor;
+  opacity: .55;
+}
+
+.vm-statements .vm-statement .statement {
+  grid-column: 1 / -1;
+  max-width: 18ch;
+  font-size: clamp(2.25rem, 3.45vw, 4.1rem);
+  line-height: 1.08;
+}
+
+.vm-statements .vm-statement--vision {
+  background: linear-gradient(135deg, rgba(0, 39, 73, .84), rgba(0, 99, 165, .7)), url("../img/contact-architecture-bg.jpg") center / cover !important;
+}
+
+.vm-statements .vm-statement--vision .statement em {
+  color: #40b9ff !important;
+}
+
+.vm-statements .vm-statement--mission {
+  overflow: hidden;
+  background: #fdfaf5;
+}
+
+.vm-statements .vm-statement--mission::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0 0 0 42%;
+  background: linear-gradient(90deg, #fdfaf5 0%, rgba(253, 250, 245, .18) 56%), url("../img/contact-architecture-bg.jpg") center right / cover;
+  opacity: .38;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 42%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 42%);
+}
+
+.vm-statements .vm-statement::before {
+  width: min(48vw, 46rem);
+  height: min(48vw, 46rem);
+  border-radius: 50%;
+  transform: none;
+  z-index: 0;
+}
+
+.vm-statements .vm-statement--vision::before { right: -31rem; top: -20rem; }
+.vm-statements .vm-statement--mission::before { left: auto; right: -29rem; bottom: -20rem; }
+
+@media (max-width: 760px) {
+  .vm-statements { grid-template-columns: 1fr; }
+  .vm-statements .vm-statement { min-height: min(42rem, 90svh); }
+  .vm-statements .vm-statement .statement { max-width: 22ch; }
+}
+
+.vm-values {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #077fb9, #04527e) !important;
+}
+
+.vm-values::after {
+  content: "VALUES";
+  position: absolute;
+  right: -1.5rem;
+  bottom: -3.4rem;
+  color: rgba(255, 255, 255, .055);
+  font: 600 clamp(7rem, 20vw, 20rem)/1 var(--f-display);
+  letter-spacing: -.08em;
+  pointer-events: none;
+}
+
+.vm-values .wrap { position: relative; z-index: 1; }
+.vm-values .values__head { margin-bottom: clamp(2rem, 4vw, 3.5rem); }
+.vm-values .values__list { border-top-color: rgba(255, 255, 255, .3); }
+.vm-values .values__list li { padding: clamp(1.6rem, 3vw, 3rem) 0; border-bottom-color: rgba(255, 255, 255, .25); }
+.vm-values .values__list span { color: #bcecff; }
+.vm-values .values__list h3 { max-width: 31ch; font-size: clamp(1.35rem, 2vw, 2rem); }
+
+.vm-values {
+  background: linear-gradient(90deg, rgba(253, 250, 245, .98) 0%, rgba(253, 250, 245, .92) 58%, rgba(244, 249, 251, .55) 100%), url("../img/contact-architecture-bg.jpg") right center / auto 100% no-repeat !important;
+  color: var(--ink);
+}
+
+.vm-values::after {
+  content: "VALUES";
+  color: rgba(6, 74, 120, .06);
+  right: -1.5rem;
+  bottom: -4rem;
+}
+
+.vm-values .values__head { align-items: end; }
+.vm-values .values__head > div { grid-column: 1 / 7; }
+.vm-values .values__head > p { grid-column: 7 / 11; margin: 0 0 .6rem; padding-left: 2rem; border-left: 1px solid #617183; color: #606975 !important; max-width: 26ch; }
+.vm-values .values__head .label { margin-bottom: 1rem; color: #50545a !important; }
+.vm-values .values__head .label::before { content: ""; display: inline-block; width: 4.5rem; height: 2px; margin: 0 1rem .25rem 0; background: var(--blue); }
+.vm-values .h-section { font-size: clamp(3.8rem, 6vw, 6.6rem); color: var(--ink) !important; }
+.vm-values .h-section em { color: #07518a !important; }
+
+.vm-values .values__list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+  border: 0;
+}
+
+.vm-values .values__list li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 6.6rem minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  column-gap: 1.35rem;
+  min-height: 16.5rem;
+  padding: 2rem !important;
+  border: 1px solid rgba(22, 31, 42, .11) !important;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .72);
+  box-shadow: 0 10px 28px rgba(26, 34, 40, .045);
+}
+
+.vm-values .values__list li::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 2;
+  align-self: start;
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 2px solid #07518a;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, transparent 38%, rgba(7, 81, 138, .1) 40%);
+}
+
+.vm-values .values__list span { grid-column: 1; grid-row: 1; margin: 0; color: rgba(25, 37, 50, .2) !important; font: 400 clamp(2.5rem, 3.5vw, 3.9rem)/.8 var(--f-display); }
+.vm-values .values__list h3 { grid-column: 2; grid-row: 1; align-self: end; margin: 0; color: var(--ink) !important; font-size: clamp(1.55rem, 2vw, 2.25rem); }
+.vm-values .values__list h3::after { content: ""; display: block; width: 3rem; height: 2px; margin-top: .8rem; background: #07518a; }
+.vm-values .values__list p { grid-column: 2; grid-row: 2; align-self: start; margin: 1rem 0 0; max-width: 30ch; color: #5b626c !important; font-size: clamp(1rem, 1.15vw, 1.2rem); line-height: 1.48; }
+.vm-values__foot { margin: clamp(2rem, 4vw, 4rem) 0 0; color: #5b626c !important; }
+.vm-values__foot::before { content: ""; display: inline-block; width: 4.5rem; height: 2px; margin: 0 1rem .25rem 0; background: var(--blue); }
+
+@media (max-width: 800px) {
+  .vm-values .values__head > div,
+  .vm-values .values__head > p { grid-column: 1 / -1; }
+  .vm-values .values__head > p { padding-left: 1.25rem; }
+  .vm-values .values__list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  .vm-values .values__list li { grid-template-columns: 4.8rem minmax(0, 1fr); padding: 1.5rem !important; min-height: 0; }
+  .vm-values .values__list li::before { width: 3.3rem; height: 3.3rem; }
+}
+
+/* Keep the complete Core Values composition within common laptop viewports. */
+@media (min-width: 961px) {
+  .vm-values {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding-block: clamp(2rem, 4vh, 3.5rem);
+  }
+
+  .vm-values .wrap { width: 100%; }
+  .vm-values .values__head { margin-bottom: clamp(1.25rem, 2.5vh, 2.25rem); }
+  .vm-values .values__list { gap: clamp(.75rem, 1.4vh, 1.15rem); }
+
+  .vm-values .values__list li {
+    min-height: clamp(10.5rem, 20vh, 13.25rem);
+    padding: clamp(1.25rem, 2.2vh, 2rem) !important;
+  }
+
+  .vm-values .values__list h3 { font-size: clamp(1.35rem, 1.7vw, 2rem); }
+  .vm-values .values__list p { font-size: clamp(.94rem, 1vw, 1.1rem); }
+  .vm-values__foot { margin-top: clamp(1.25rem, 2.5vh, 2.25rem); }
+}
+
+.vm-promise { background: #fdfaf5; }
+.vm-promise .edit { align-items: center; }
+.vm-promise .edit__a { position: relative; }
+.vm-promise .edit__a::before {
+  content: "Our promise";
+  position: absolute;
+  z-index: 1;
+  top: 1.2rem;
+  left: 1.2rem;
+  padding: .45rem .7rem;
+  background: var(--brand-red);
+  color: #fff;
+  font: 600 .65rem/1 var(--f-mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.vm-promise .edit__b { padding: clamp(1.5rem, 4vw, 4rem); border-left: 2px solid var(--brand-red); }
+.vm-promise .h-section em { color: var(--brand-red); }
+
+@media (max-width: 959px) {
+  .vm-statement { min-height: auto; }
+  .vm-statement .statement { max-width: none; }
+  .vm-statements .vm-statement .statement { max-width: 22ch; }
+  .vm-promise .edit__b { padding: 1.5rem 0 0; border-left: 0; border-top: 2px solid var(--brand-red); }
+}
+
 @media (min-width: 960px) {
   .values__head h2 {
     grid-column: 1 / 6;
