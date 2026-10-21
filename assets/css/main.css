@@ -4343,15 +4343,40 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .vm-values .values__list li::before {
-  content: "";
+  display: none;
+}
+
+.vm-values .values__icon {
   grid-column: 1;
   grid-row: 2;
   align-self: start;
   width: 4.25rem;
   height: 4.25rem;
-  border: 2px solid #07518a;
   border-radius: 50%;
-  background: radial-gradient(circle at center, transparent 38%, rgba(7, 81, 138, .1) 40%);
+  background: #EAF2F8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #07518a;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vm-values .values__list li:hover .values__icon {
+  transform: translateY(-2px);
+  background: #DFECF5;
+  box-shadow: 0 6px 16px rgba(7, 81, 138, 0.12);
+}
+
+.vm-values .values__icon svg {
+  width: 2.1rem;
+  height: 2.1rem;
+  stroke: #07518a;
+  color: #07518a;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
 }
 
 .vm-values .values__list span { grid-column: 1; grid-row: 1; margin: 0; color: rgba(25, 37, 50, .2) !important; font: 400 clamp(2.5rem, 3.5vw, 3.9rem)/.8 var(--f-display); }
@@ -4370,7 +4395,8 @@ main:has(> .reach:last-child)+.foot {
 
 @media (max-width: 520px) {
   .vm-values .values__list li { grid-template-columns: 4.8rem minmax(0, 1fr); padding: 1.5rem !important; min-height: 0; }
-  .vm-values .values__list li::before { width: 3.3rem; height: 3.3rem; }
+  .vm-values .values__icon { width: 3.3rem; height: 3.3rem; }
+  .vm-values .values__icon svg { width: 1.65rem; height: 1.65rem; }
 }
 
 /* Keep the complete Core Values composition within common laptop viewports. */
