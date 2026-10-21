@@ -4055,7 +4055,7 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .creed .statement {
-  font-size: clamp(1.9rem, 4.2vw, 4.4rem);
+  font-size: clamp(1.25rem, 1.8vw, 1.85rem);
 }
 
 @media (min-width: 960px) {
@@ -4206,8 +4206,8 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .vm-statements .vm-statement {
-  min-height: min(58rem, 100svh);
-  padding-block: clamp(4rem, 7vw, 7rem);
+  min-height: min(46rem, 88svh);
+  padding-block: clamp(3.5rem, 6vw, 6rem);
   border-radius: 0;
   box-shadow: none;
 }
@@ -4229,7 +4229,7 @@ main:has(> .reach:last-child)+.foot {
 
 .vm-statements .vm-statement .label {
   grid-column: 1 / -1;
-  margin: 0 0 clamp(3rem, 6vw, 6.5rem);
+  margin: 0 0 clamp(2rem, 4vw, 3.5rem);
 }
 
 .vm-statements .vm-statement .label::after {
@@ -4243,9 +4243,10 @@ main:has(> .reach:last-child)+.foot {
 
 .vm-statements .vm-statement .statement {
   grid-column: 1 / -1;
-  max-width: 18ch;
-  font-size: clamp(2.25rem, 3.45vw, 4.1rem);
-  line-height: 1.08;
+  max-width: 32ch;
+  font-size: clamp(1.25rem, 1.8vw, 1.85rem);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
 }
 
 .vm-statements .vm-statement--vision {
@@ -4285,8 +4286,8 @@ main:has(> .reach:last-child)+.foot {
 
 @media (max-width: 760px) {
   .vm-statements { grid-template-columns: 1fr; }
-  .vm-statements .vm-statement { min-height: min(42rem, 90svh); }
-  .vm-statements .vm-statement .statement { max-width: 22ch; }
+  .vm-statements .vm-statement { min-height: auto; }
+  .vm-statements .vm-statement .statement { max-width: 100%; }
 }
 
 .vm-values {
@@ -4500,7 +4501,7 @@ main:has(> .reach:last-child)+.foot {
 @media (max-width: 959px) {
   .vm-statement { min-height: auto; }
   .vm-statement .statement { max-width: none; }
-  .vm-statements .vm-statement .statement { max-width: 22ch; }
+  .vm-statements .vm-statement .statement { max-width: 32ch; }
   .vm-promise .edit__b { padding: 1.5rem 0 0; border-left: 0; border-top: 2px solid var(--brand-red); }
 }
 
