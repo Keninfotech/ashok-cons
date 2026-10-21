@@ -2592,7 +2592,7 @@ p+p {
   flex-direction: column;
   background: #FFFFFF;
   border: 1px solid var(--rule);
-  border-radius: 6px;
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 4px 16px -2px rgba(17, 18, 20, 0.05), 0 1px 3px rgba(17, 18, 20, 0.03);
   transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.3s ease, opacity 0.3s ease;
@@ -2617,6 +2617,7 @@ p+p {
   overflow: hidden;
   background-color: var(--brand-blue-pale);
   border-bottom: 1px solid var(--rule);
+  border-radius: 0;
 }
 
 .pcard__media img {
@@ -2624,6 +2625,7 @@ p+p {
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 0 !important;
   transition: transform 0.65s var(--ease);
 }
 
@@ -3413,6 +3415,8 @@ main:has(> .reach:last-child)+.foot {
    About Us — Architectural Hero with Drone Video Background (Services Style)
    ========================================================================== */
 .about-hero,
+.management-hero,
+.vm-hero,
 .services-hero,
 .projects-hero,
 .careers-hero,
@@ -3485,6 +3489,8 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .about-hero>.wrap,
+.management-hero>.wrap,
+.vm-hero>.wrap,
 .services-hero>.wrap,
 .projects-hero>.wrap,
 .careers-hero>.wrap,
@@ -3494,6 +3500,12 @@ main:has(> .reach:last-child)+.foot {
   width: 100%;
 }
 
+.about-hero h1,
+.about-hero .mast__lede,
+.management-hero h1,
+.management-hero .mast__lede,
+.vm-hero h1,
+.vm-hero .mast__lede,
 .services-hero h1,
 .services-hero .mast__lede,
 .projects-hero h1,
@@ -4142,7 +4154,7 @@ main:has(> .reach:last-child)+.foot {
 .vm-hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(120deg, #fff 0%, #f8fbfd 58%, #e6f4fb 100%);
+  background: var(--paper);
 }
 
 .vm-hero::after {
@@ -4710,7 +4722,7 @@ main:has(> .reach:last-child)+.foot {
   overflow: hidden;
   background: var(--paper-2);
   cursor: zoom-in;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 .gitem img {
@@ -4720,11 +4732,23 @@ main:has(> .reach:last-child)+.foot {
   aspect-ratio: 768 / 660;
   transition: transform 0.8s var(--ease);
   display: block;
+  border-radius: 0 !important;
 }
 
 .gitem:hover img,
 .gitem:focus-visible img {
   transform: scale(1.05);
+}
+
+/* Crop out baked-in white margins, inner rounding & drop shadow so photo fits flush edge-to-edge */
+.gitem img[src*="namakkal-bypass-ring-road-phase-4"] {
+  transform: scale(1.36);
+  transform-origin: 50% 48%;
+}
+
+.gitem:hover img[src*="namakkal-bypass-ring-road-phase-4"],
+.gitem:focus-visible img[src*="namakkal-bypass-ring-road-phase-4"] {
+  transform: scale(1.44);
 }
 
 /* Dark Gradient Scrim to ensure 100% legibility on any image */
@@ -6167,7 +6191,7 @@ main:has(> .reach:last-child)+.foot {
 .section-blue .contractor-card {
   position: relative;
   display: grid !important;
-  grid-template-columns: 5.2rem minmax(0, 1fr) 2.8rem;
+  grid-template-columns: 5.2rem minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr) auto;
   align-items: center;
   gap: clamp(.8rem, 1.5vw, 1.6rem);
@@ -6232,15 +6256,9 @@ main:has(> .reach:last-child)+.foot {
   border-radius: 3px !important;
 }
 
-.contractor-card__arrow {
-  grid-column: 3;
-  grid-row: 1 / 3;
-  width: 2.8rem !important;
-  height: 2.8rem !important;
-  padding: .75rem;
-  color: #7d1727 !important;
-  background: #f8eee3;
-  border-radius: 50%;
+.contractor-card__arrow,
+.section-blue .contractor-card__arrow {
+  display: none !important;
 }
 
 @media (max-width: 1040px) {
@@ -6254,7 +6272,7 @@ main:has(> .reach:last-child)+.foot {
   .contractor-reg__grid { grid-template-columns: 1fr; }
   .contractor-reg__grid > .contractor-reg__desc { grid-column: 1; }
   .contractor-card__seq { width: 4.25rem; height: 4.25rem; }
-  .contractor-card { grid-template-columns: 4.25rem minmax(0, 1fr) 2.5rem; }
+  .contractor-card { grid-template-columns: 4.25rem minmax(0, 1fr); }
 }
 
 /* ==========================================================================
@@ -6911,7 +6929,7 @@ main:has(> .reach:last-child)+.foot {
 /* Individual Vertical Card */
 .div-card {
   background: #FFFFFF;
-  border-radius: 6px;
+  border-radius: 0;
   border: 1px solid var(--rule);
   box-shadow: 0 4px 14px rgba(22, 24, 28, 0.04);
   display: flex;
@@ -6931,7 +6949,7 @@ main:has(> .reach:last-child)+.foot {
   width: 100%;
   aspect-ratio: 16 / 11;
   overflow: hidden;
-  border-radius: 5px 5px 0 0;
+  border-radius: 0;
   position: relative;
   background-color: var(--brand-blue-pale);
 }
@@ -6941,6 +6959,7 @@ main:has(> .reach:last-child)+.foot {
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 0 !important;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -7056,7 +7075,7 @@ main:has(> .reach:last-child)+.foot {
   margin-top: 1.6rem;
   max-width: 680px;
   background: #FFFFFF;
-  border-radius: 6px;
+  border-radius: 0;
   border: 1px solid var(--rule);
   box-shadow: 0 4px 14px rgba(22, 24, 28, 0.04);
   display: grid;
@@ -7085,6 +7104,7 @@ main:has(> .reach:last-child)+.foot {
   height: 100%;
   min-height: 180px;
   overflow: hidden;
+  border-radius: 0;
   position: relative;
   background-color: var(--brand-blue-pale);
 }
@@ -7094,6 +7114,7 @@ main:has(> .reach:last-child)+.foot {
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 0 !important;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 

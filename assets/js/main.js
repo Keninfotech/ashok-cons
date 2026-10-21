@@ -79,7 +79,7 @@
   });
 
   /* video background */
-  const heroVideos = $$('#aboutHeroVideo, #servicesHeroVideo, #projectsHeroVideo, #careersHeroVideo, #contactHeroVideo');
+  const heroVideos = $$('#aboutHeroVideo, #servicesHeroVideo, #projectsHeroVideo, #careersHeroVideo, #contactHeroVideo, #managementHeroVideo, #vmHeroVideo');
   if (heroVideos.length && reduce) {
     heroVideos.forEach((v) => v.pause());
   }
