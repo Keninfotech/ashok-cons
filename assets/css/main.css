@@ -1362,6 +1362,8 @@ p+p {
 
 .hero__title em {
   font-size: .95em;
+  color: var(--brand-blue);
+  font-style: italic;
 }
 
 .ln {
@@ -3516,6 +3518,13 @@ main:has(> .reach:last-child)+.foot {
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
+.services-hero h1 em,
+.projects-hero h1 em,
+.contact-hero h1 em {
+  color: var(--blue) !important;
+  font-style: italic;
+}
+
 @media (min-width: 900px) {
 
   .services-hero h1,
@@ -4170,7 +4179,7 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .vm-hero .mast__grid { position: relative; z-index: 1; }
-.vm-hero .h-display em { color: var(--brand-red); }
+.vm-hero .h-display em { color: var(--brand-red) !important; font-style: italic; }
 
 .vm-statement {
   position: relative;
