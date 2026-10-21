@@ -4571,14 +4571,21 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .dash li {
-  padding: .75rem 0;
+  position: relative;
+  padding: .85rem 0 .85rem 1.75rem;
   border-bottom: 1px solid var(--rule);
-  font: 400 .8rem/1.5 var(--f-mono);
+  font: 400 .95rem/1.6 var(--f-text);
   color: var(--ink);
+  letter-spacing: -0.01em;
 }
 
 .dash li::before {
-  content: "\2014\00a0\00a0";
+  content: "•";
+  position: absolute;
+  left: 0.25rem;
+  top: 0.85rem;
+  font-size: 1.25rem;
+  line-height: 1;
   color: var(--blue);
 }
 
