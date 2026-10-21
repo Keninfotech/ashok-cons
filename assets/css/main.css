@@ -1726,6 +1726,18 @@ p+p {
   height: 1.2em;
   line-height: 1.2em;
   white-space: pre;
+  vertical-align: -0.12em;
+}
+
+[data-casino-trigger] {
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+[data-casino-trigger]:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 113, 183, 0.35) !important;
+  box-shadow: 0 10px 24px -8px rgba(0, 113, 183, 0.12);
 }
 
 .about-stat-lbl {
