@@ -202,6 +202,13 @@ ol {
   margin-inline: auto;
 }
 
+/* Page breadcrumb / metadata strips are intentionally omitted site-wide. */
+nav[aria-label="Breadcrumb"],
+.contact-crumbs,
+.about-hero__meta-top {
+  display: none !important;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -3497,6 +3504,14 @@ main:has(> .reach:last-child)+.foot {
   .contact-hero .mast__lede {
     grid-column: 8 / 13;
     padding-bottom: 0.5rem;
+  }
+
+  /* Internal-page introductions follow their title; the home page uses its own hero. */
+  .mast .mast__lede {
+    grid-column: 1 / 8;
+    max-width: 38ch;
+    margin-top: clamp(1.25rem, 3vh, 2.5rem);
+    padding-bottom: 0;
   }
 }
 
