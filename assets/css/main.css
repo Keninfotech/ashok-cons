@@ -1411,11 +1411,7 @@ p+p {
 
 @media (min-width: 900px) {
   .hero__title {
-    grid-column: 1 / 8;
-  }
-
-  .titleblock {
-    grid-column: 8 / 13;
+    grid-column: 1 / 13;
   }
 }
 
