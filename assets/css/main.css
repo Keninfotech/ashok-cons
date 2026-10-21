@@ -4303,8 +4303,34 @@ main:has(> .reach:last-child)+.foot {
 .vm-values .values__list h3 { max-width: 31ch; font-size: clamp(1.35rem, 2vw, 2rem); }
 
 .vm-values {
-  background: linear-gradient(90deg, rgba(253, 250, 245, .98) 0%, rgba(253, 250, 245, .92) 58%, rgba(244, 249, 251, .55) 100%), url("../img/contact-architecture-bg.jpg") right center / auto 100% no-repeat !important;
+  background: #fdfaf5 !important;
   color: var(--ink);
+}
+
+.vm-values::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background: url("../img/gallery/kauvery-hospital-panoramic.webp") right center / cover no-repeat;
+  opacity: .42;
+  -webkit-mask-image: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 0, 0, 0.04) 10%, 
+    rgba(0, 0, 0, 0.18) 25%, 
+    rgba(0, 0, 0, 0.45) 50%, 
+    rgba(0, 0, 0, 0.75) 75%, 
+    #000 100%
+  );
+  mask-image: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 0, 0, 0.04) 10%, 
+    rgba(0, 0, 0, 0.18) 25%, 
+    rgba(0, 0, 0, 0.45) 50%, 
+    rgba(0, 0, 0, 0.75) 75%, 
+    #000 100%
+  );
 }
 
 .vm-values::after {
@@ -4338,7 +4364,9 @@ main:has(> .reach:last-child)+.foot {
   padding: 2rem !important;
   border: 1px solid rgba(22, 31, 42, .11) !important;
   border-radius: 8px;
-  background: rgba(255, 255, 255, .72);
+  background: rgba(255, 255, 255, .78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 10px 28px rgba(26, 34, 40, .045);
 }
 
@@ -4383,8 +4411,25 @@ main:has(> .reach:last-child)+.foot {
 .vm-values .values__list h3 { grid-column: 2; grid-row: 1; align-self: end; margin: 0; color: var(--ink) !important; font-size: clamp(1.55rem, 2vw, 2.25rem); }
 .vm-values .values__list h3::after { content: ""; display: block; width: 3rem; height: 2px; margin-top: .8rem; background: #07518a; }
 .vm-values .values__list p { grid-column: 2; grid-row: 2; align-self: start; margin: 1rem 0 0; max-width: 30ch; color: #5b626c !important; font-size: clamp(1rem, 1.15vw, 1.2rem); line-height: 1.48; }
-.vm-values__foot { margin: clamp(2rem, 4vw, 4rem) 0 0; color: #5b626c !important; }
-.vm-values__foot::before { content: ""; display: inline-block; width: 4.5rem; height: 2px; margin: 0 1rem .25rem 0; background: var(--blue); }
+.vm-values .vm-values__foot,
+.vm-values__foot {
+  margin: clamp(2rem, 4vw, 4rem) 0 0;
+  color: #3f4753 !important;
+  font-family: var(--f-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.vm-values .vm-values__foot::before,
+.vm-values__foot::before {
+  content: "";
+  display: inline-block;
+  width: 4.5rem;
+  height: 2px;
+  margin: 0 1rem .25rem 0;
+  background: var(--blue);
+}
 
 @media (max-width: 800px) {
   .vm-values .values__head > div,
@@ -4559,7 +4604,7 @@ main:has(> .reach:last-child)+.foot {
   }
 
   .mast--projects h1 {
-    grid-column: 1 / 8;
+    grid-column: 1 / 13;
   }
 }
 
