@@ -54,6 +54,7 @@
 
   --pad: clamp(1rem, 3.2vw, 3rem);
   --gap: clamp(.75rem, 1.6vw, 1.5rem);
+  --image-radius: clamp(1.25rem, 3.2vw, 2rem);
   --hdr: 82px;
   --ease: cubic-bezier(.22, .9, .25, 1);
   --ease-io: cubic-bezier(.7, 0, .2, 1);
@@ -97,6 +98,17 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+/* A consistent soft-corner treatment for all photography and gallery artwork. */
+img:not(.brand__logo) {
+  border-radius: var(--image-radius);
+}
+
+/* Projects use a crisp, square-edged gallery treatment throughout. */
+.projects-page,
+.projects-page * {
+  border-radius: 0 !important;
 }
 
 svg {
@@ -1544,7 +1556,7 @@ p+p {
 }
 
 .about-redesign__img-wrap {
-  border-radius: 8px;
+  border-radius: var(--image-radius);
   overflow: hidden;
   box-shadow: 0 10px 28px -4px rgba(15, 36, 56, 0.12);
   background: #FFFFFF;
@@ -1556,6 +1568,7 @@ p+p {
   aspect-ratio: 4 / 3.25;
   object-fit: cover;
   display: block;
+  border-radius: inherit;
   transition: transform 0.8s var(--ease);
 }
 
@@ -3735,7 +3748,7 @@ main:has(> .reach:last-child)+.foot {
   margin-top: 2.4rem;
   object-fit: cover;
   object-position: center 68%;
-  clip-path: polygon(0 19%, 80% 0, 100% 100%, 0 100%);
+  clip-path: none;
   opacity: .88;
 }
 
@@ -6558,7 +6571,7 @@ main:has(> .reach:last-child)+.foot {
   padding: 1.1rem 1.25rem !important;
   background: #FFFFFF !important;
   border: 1px solid rgba(20, 21, 24, 0.08) !important;
-  border-radius: 12px !important;
+  border-radius: 0 !important;
   min-height: 96px !important;
   transition: transform 0.22s var(--ease), border-color 0.22s var(--ease), box-shadow 0.22s var(--ease) !important;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
@@ -6597,7 +6610,7 @@ main:has(> .reach:last-child)+.foot {
   align-items: center !important;
   justify-content: center !important;
   background: #F8FAFC !important;
-  border-radius: 8px !important;
+  border-radius: 0 !important;
   padding: 4px !important;
 }
 
@@ -6608,6 +6621,7 @@ main:has(> .reach:last-child)+.foot {
   mix-blend-mode: multiply !important;
   filter: contrast(1.05) !important;
   transition: transform 0.25s var(--ease) !important;
+  border-radius: 0 !important;
 }
 
 .night .fleet-card-media {
