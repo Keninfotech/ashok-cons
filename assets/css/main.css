@@ -3939,7 +3939,7 @@ main:has(> .reach:last-child)+.foot {
   grid-template-columns: 3rem 1fr 1.4rem;
   align-items: center;
   gap: 1rem;
-  padding: clamp(1rem, 2.4vw, 1.8rem) 0;
+  padding: clamp(0.85rem, 1.8vw, 1.35rem) 0;
 }
 
 .index span {
@@ -3948,7 +3948,7 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .index h3 {
-  font: 600 clamp(2rem, 5.6vw, 5rem)/1 var(--f-display);
+  font: 500 clamp(1.4rem, 3vw, 2.4rem)/1.15 var(--f-display);
   font-stretch: 62%;
   transition: color .3s;
 }
