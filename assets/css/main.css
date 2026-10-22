@@ -4127,6 +4127,14 @@ main:has(> .reach:last-child)+.foot {
     padding-left: clamp(1.5rem, 2.5vw, 3.5rem);
     border-left: 1px solid #ded8d0;
   }
+
+  .person--no-number .person__name {
+    grid-column: 1 / 5;
+  }
+
+  .person--no-number .person__bio {
+    grid-column: 5 / 13;
+  }
 }
 
 .turnover {
