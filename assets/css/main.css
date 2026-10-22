@@ -4264,7 +4264,7 @@ main:has(> .reach:last-child)+.foot {
 }
 
 .vm-hero .mast__grid { position: relative; z-index: 1; }
-.vm-hero .h-display em { color: var(--brand-red) !important; font-style: italic; }
+.vm-hero .h-display em { color: var(--blue) !important; font-style: italic; }
 
 .vm-statement {
   position: relative;
