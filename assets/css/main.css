@@ -4016,12 +4016,6 @@ main:has(> .reach:last-child)+.foot {
   flex-direction: column;
 }
 
-.management-page > .mast { order: 0; }
-.management-page > .leadership { order: 1; }
-.management-page > .partner-feature { order: 2; }
-.management-page > .contractor-reg-section { order: 3; }
-.management-page > .reach { order: 4; }
-
 .leadership {
   padding-block: clamp(2rem, 4vw, 4.5rem);
   background: #fdfaf5;
@@ -9033,17 +9027,46 @@ main:has(> .reach:last-child)+.foot {
   overflow: hidden;
 }
 
-.partner-feature--stone {
-  background: var(--paper-2);
+.partner-feature--white {
+  background: #FFFFFF;
+  color: var(--ink);
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
 
-.partner-feature--night {
-  background: var(--night);
-  color: var(--on-night);
-  border-top: 1px solid var(--rule-night);
-  border-bottom: 1px solid var(--rule-night);
+.partner-feature--white .partner-card__frame {
+  background: #f8fafc;
+  box-shadow: 0 20px 40px -10px rgba(10, 49, 86, 0.12), 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.partner-feature--white .partner-card__caption {
+  background: #f8fafc;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--brand-red, #EC2027);
+}
+
+.partner-feature--white .partner-card__accent-corner {
+  border-top: 3px solid var(--brand-red, #EC2027);
+  border-left: 3px solid var(--brand-red, #EC2027);
+}
+
+.partner-feature--white .partner-content__eyebrow {
+  color: var(--brand-red, #EC2027);
+}
+
+.partner-feature--white .partner-content__eyebrow-num {
+  background: var(--brand-red, #EC2027);
+}
+
+.partner-feature--white .partner-content__quote-icon {
+  color: var(--brand-red, #EC2027);
+  opacity: 0.2;
+}
+
+.partner-feature--white .partner-pillar {
+  background: rgba(10, 49, 86, 0.04);
+  color: var(--ink-2);
+  border: 1px solid var(--rule);
 }
 
 .partner-feature__grid {
