@@ -3634,7 +3634,13 @@ main:has(> .reach:last-child)+.foot {
 
 @media (min-width: 900px) {
   .about-hero__title {
-    grid-column: 1 / 8;
+    grid-column: 1 / 10;
+  }
+
+  .about-hero .mast__lede {
+    grid-column: 1 / 9;
+    max-width: 48ch;
+    margin-top: 0;
   }
 
   .about-hero__side {
