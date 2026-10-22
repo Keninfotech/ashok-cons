@@ -680,6 +680,18 @@
   .rds-card {
     grid-template-columns: 42% 58%;
   }
+
+  .rds-card:nth-child(even) {
+    grid-template-columns: 58% 42%;
+  }
+
+  .rds-card:nth-child(even) .rds-card__media {
+    order: 2;
+  }
+
+  .rds-card:nth-child(even) .rds-card__spec {
+    order: 1;
+  }
 }
 
 .rds-card:hover {
