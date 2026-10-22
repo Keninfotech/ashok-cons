@@ -489,16 +489,53 @@
 
   // Category filter tabs
   const filterBtns = $$('.gal-filter');
+  const subnavEl = $('#gal-buildings-subnav');
+  const subfilterBtns = $$('.gal-subfilter');
+
+  function applyGalleryFilter() {
+    const activeMainBtn = $('.gal-filter.is-active');
+    const mainCat = activeMainBtn ? activeMainBtn.dataset.filter : 'all';
+    const activeSubBtn = $('.gal-subfilter.is-active');
+    const subCat = activeSubBtn ? activeSubBtn.dataset.subfilter : 'all';
+
+    $$('.gitem').forEach((item) => {
+      const itemCats = (item.dataset.cat || '').split(' ').filter(Boolean);
+      let match = false;
+      if (mainCat === 'all') {
+        match = true;
+      } else if (mainCat === 'completed-buildings') {
+        if (itemCats.includes('completed-buildings')) {
+          match = subCat === 'all' || itemCats.includes(subCat);
+        } else {
+          match = false;
+        }
+      } else {
+        match = itemCats.includes(mainCat);
+      }
+      item.classList.toggle('is-hidden', !match);
+    });
+  }
+
   if (filterBtns.length) {
     filterBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
         const cat = btn.dataset.filter;
         filterBtns.forEach((b) => b.classList.toggle('is-active', b === btn));
-        $$('.gitem').forEach((item) => {
-          const itemCat = item.dataset.cat || '';
-          const match = cat === 'all' || itemCat.split(' ').includes(cat);
-          item.classList.toggle('is-hidden', !match);
-        });
+        if (subnavEl) {
+          subnavEl.classList.toggle('is-visible', cat === 'completed-buildings');
+        }
+        // Reset subfilter to 'all' when switching main tab
+        subfilterBtns.forEach((sb) => sb.classList.toggle('is-active', sb.dataset.subfilter === 'all'));
+        applyGalleryFilter();
+      });
+    });
+  }
+
+  if (subfilterBtns.length) {
+    subfilterBtns.forEach((sbtn) => {
+      sbtn.addEventListener('click', () => {
+        subfilterBtns.forEach((sb) => sb.classList.toggle('is-active', sb === sbtn));
+        applyGalleryFilter();
       });
     });
   }
