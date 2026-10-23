@@ -3675,6 +3675,11 @@ main:has(> .reach:last-child)+.foot {
   max-width: 58ch;
 }
 
+.management-hero__img {
+  object-position: center 30%;
+  filter: contrast(1.05) brightness(0.98);
+}
+
 .about-hero__grid {
   row-gap: clamp(1.2rem, 2.5vh, 2.4rem);
   align-items: end;
