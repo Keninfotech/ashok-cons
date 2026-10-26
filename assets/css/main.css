@@ -3671,13 +3671,7 @@ main:has(> .reach:last-child)+.foot {
 .projects-hero__pattern,
 .careers-hero__pattern,
 .contact-hero__pattern {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(20, 21, 24, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(20, 21, 24, 0.035) 1px, transparent 1px);
-  background-size: 36px 36px;
-  opacity: 0.75;
+  display: none !important;
 }
 
 .about-hero>.wrap,
