@@ -3636,7 +3636,9 @@ main:has(> .reach:last-child)+.foot {
 .about-hero__video,
 .services-hero__video,
 .projects-hero__video,
+.projects-hero__img,
 .careers-hero__video,
+.careers-hero__img,
 .contact-hero__video {
   width: 100%;
   height: 100%;
